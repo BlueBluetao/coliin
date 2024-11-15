@@ -4,7 +4,6 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Business Structure - Coliin</title>
-    <!-- 相同的CSS引入 -->
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/bootstrap.css">
@@ -18,223 +17,35 @@
 
 <body>
     <div id="page" class="site">
-        <!-- 复用index.html的header -->
+        <!-- Header Container -->
+        <div id="header-container"></div>
 
         <!-- Hero Section -->
-        <section class="page-header" style="background-image: url('images/business/business-banner.jpg');">
+        <div class="page-header" style="background: url('images/solutions/solution.png') no-repeat center center;">
             <div class="container">
-                <div class="page-title">
-                    <h1>Business Structure</h1>
-                    <div class="breadcrumbs">
-                        <ul>
-                            <li><a href="index.html">Home</a></li>
-                            <li>Business</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Business Overview -->
-        <section class="no-padding-top">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <h4 class="text-primary">OVERVIEW</h4>
-                        <h2>Our Business Divisions</h2>
-                        <p>Our integrated business structure enables us to provide comprehensive manufacturing solutions across multiple industries.</p>
-                        <div class="coliin-space-30"></div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-4">
-                        <div class="division-box">
-                            <div class="division-icon">
-                                <i class="icon ion-md-build"></i>
-                            </div>
-                            <h3>Manufacturing Solutions</h3>
-                            <ul>
-                                <li>CNC Machining</li>
-                                <li>3D Printing</li>
-                                <li>Sheet Metal Processing</li>
-                                <li>Mold & Die Making</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="division-box">
-                            <div class="division-icon">
-                                <i class="icon ion-md-cog"></i>
-                            </div>
-                            <h3>Automotive Division</h3>
-                            <ul>
-                                <li>Key Cutting Solutions</li>
-                                <li>Professional Tools</li>
-                                <li>Diagnostic Equipment</li>
-                                <li>Custom Solutions</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="division-box">
-                            <div class="division-icon">
-                                <i class="icon ion-md-globe"></i>
-                            </div>
-                            <h3>Supply Chain Services</h3>
-                            <ul>
-                                <li>Global Sourcing</li>
-                                <li>Inventory Management</li>
-                                <li>Quality Control</li>
-                                <li>Logistics Solutions</li>
+                <div class="breadc-box no-line">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h2 class="page-title">Business Structure</h2>
+                            <ul id="breadcrumbs" class="breadcrumbs none-style">
+                                <li><a href="index.html">Home</a></li>
+                                <li class="active">Business</li>
                             </ul>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
 
-        <!-- Business Model -->
-        <section class="bg-light">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12 text-center">
-                        <h4 class="text-primary">BUSINESS MODEL</h4>
-                        <h2>How We Operate</h2>
-                        <div class="coliin-space-30"></div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-3">
-                        <div class="model-box text-center">
-                            <div class="model-icon">
-                                <i class="icon ion-md-search"></i>
-                            </div>
-                            <h3>Research & Development</h3>
-                            <p>Continuous innovation and technology advancement</p>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="model-box text-center">
-                            <div class="model-icon">
-                                <i class="icon ion-md-construct"></i>
-                            </div>
-                            <h3>Manufacturing</h3>
-                            <p>State-of-the-art production facilities</p>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="model-box text-center">
-                            <div class="model-icon">
-                                <i class="icon ion-md-cube"></i>
-                            </div>
-                            <h3>Distribution</h3>
-                            <p>Global distribution network</p>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="model-box text-center">
-                            <div class="model-icon">
-                                <i class="icon ion-md-people"></i>
-                            </div>
-                            <h3>Service</h3>
-                            <p>Comprehensive after-sales support</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Market Coverage -->
-        <section>
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <h4 class="text-primary">MARKET COVERAGE</h4>
-                        <h2>Global Presence</h2>
-                        <div class="coliin-space-30"></div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="market-content">
-                            <h3>Regional Operations</h3>
-                            <div class="market-map">
-                                <img src="images/business/global-presence.jpg" alt="Global Presence">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="market-stats">
-                            <div class="stat-item">
-                                <h4>20+</h4>
-                                <p>Countries Served</p>
-                            </div>
-                            <div class="stat-item">
-                                <h4>50+</h4>
-                                <p>Distribution Centers</p>
-                            </div>
-                            <div class="stat-item">
-                                <h4>1000+</h4>
-                                <p>Employees Worldwide</p>
-                            </div>
-                            <div class="stat-item">
-                                <h4>24/7</h4>
-                                <p>Customer Support</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Strategic Partners -->
-        <section class="bg-light">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <h4 class="text-primary">PARTNERSHIPS</h4>
-                        <h2>Strategic Alliances</h2>
-                        <div class="coliin-space-30"></div>
-                    </div>
-                </div>
-                <div class="partner-slider" data-show="5" data-arrow="true">
-                    <!-- Partner logos will be displayed here -->
-                    <div class="partner-item">
-                        <img src="images/partners/partner-1.png" alt="Partner 1">
-                    </div>
-                    <!-- More partner items -->
-                </div>
-            </div>
-        </section>
-
-        <!-- Quote Section -->
-        <section class="quote-section">
-            <div class="container">
-                <div class="quote-content text-center">
-                    <h2>Partner With Us</h2>
-                    <p>Explore business opportunities with Coliin</p>
-                    <a href="contact.html" class="btn btn-primary">Contact Us</a>
-                    <div class="certifications">
-                        <img src="images/itar.png" alt="ITAR Registered">
-                        <img src="images/iso.png" alt="ISO Certified">
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Footer -->
-        <footer id="site-footer" class="site-footer bg-footer">
-            <!-- Footer content -->
-        </footer>
+        <!-- Scripts -->
+        <script src='js/jquery.min.js'></script>
+        <script src='js/loadComponents.js'></script>
+        <script src='js/slick.min.js'></script>
+        <script src='js/jquery.sticky.js'></script>
+        <script src='js/countto.min.js'></script>
+        <script src='js/jquery.magnific-popup.min.js'></script>
+        <script src='js/jquery.isotope.min.js'></script>
+        <script src='js/scripts.js'></script>
     </div>
-
-    <!-- Scripts -->
-    <script src='js/jquery.min.js'></script>
-    <script src='js/slick.min.js'></script>
-    <script src='js/jquery.sticky.js'></script>
-    <script src='js/countto.min.js'></script>
-    <script src='js/jquery.magnific-popup.min.js'></script>
-    <script src='js/jquery.isotope.min.js'></script>
-    <script src='js/scripts.js'></script>
 </body>
 </html> 

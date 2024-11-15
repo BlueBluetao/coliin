@@ -4,7 +4,6 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Contact Us - Coliin</title>
-    <!-- 相同的CSS引入 -->
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/bootstrap.css">
@@ -18,165 +17,35 @@
 
 <body>
     <div id="page" class="site">
-        <!-- 复用index.html的header -->
+        <!-- Header Container -->
+        <div id="header-container"></div>
 
         <!-- Hero Section -->
-        <section class="page-header" style="background-image: url('images/contact/contact-banner.jpg');">
+        <div class="page-header" style="background: url('images/solutions/solution.png') no-repeat center center;">
             <div class="container">
-                <div class="page-title">
-                    <h1>Contact Us</h1>
-                    <div class="breadcrumbs">
-                        <ul>
-                            <li><a href="index.html">Home</a></li>
-                            <li>Contact</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Contact Information -->
-        <section class="no-padding-top">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-4">
-                        <div class="contact-info-box">
-                            <div class="info-icon">
-                                <i class="icon ion-md-pin"></i>
-                            </div>
-                            <h3>Our Location</h3>
-                            <p>Forusbeen 50, 4035 Stavanger, Norway</p>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="contact-info-box">
-                            <div class="info-icon">
-                                <i class="icon ion-md-call"></i>
-                            </div>
-                            <h3>Phone Number</h3>
-                            <p>+84 0378 260 852</p>
-                            <p>+84 0378 260 853</p>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="contact-info-box">
-                            <div class="info-icon">
-                                <i class="icon ion-md-mail"></i>
-                            </div>
-                            <h3>Email Address</h3>
-                            <p>info.coliin@gmail.com</p>
-                            <p>support.coliin@gmail.com</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Contact Form -->
-        <section>
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="contact-form-box">
-                            <h4 class="text-primary">GET IN TOUCH</h4>
-                            <h2>Send Us a Message</h2>
-                            <div class="coliin-space-30"></div>
-                            <form id="contact-form" class="contact-form">
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <input type="text" name="name" class="form-control" placeholder="Your Name *" required>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <input type="email" name="email" class="form-control" placeholder="Email Address *" required>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <input type="text" name="subject" class="form-control" placeholder="Subject">
-                                </div>
-                                <div class="form-group">
-                                    <textarea name="message" class="form-control" rows="6" placeholder="Your Message *" required></textarea>
-                                </div>
-                                <button type="submit" class="btn btn-primary">Send Message</button>
-                            </form>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="map-box">
-                            <h4 class="text-primary">LOCATION</h4>
-                            <h2>Find Us on Map</h2>
-                            <div class="coliin-space-30"></div>
-                            <!-- Google Map Embed -->
-                            <div class="google-map">
-                                <iframe src="https://www.google.com/maps/embed?pb=..." width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Global Presence -->
-        <section class="bg-light">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12 text-center">
-                        <h4 class="text-primary">GLOBAL PRESENCE</h4>
-                        <h2>Our Offices Worldwide</h2>
-                        <div class="coliin-space-30"></div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-4">
-                        <div class="office-box">
-                            <h3>Europe</h3>
-                            <ul>
-                                <li><i class="icon ion-md-pin"></i>Norway (Headquarters)</li>
-                                <li><i class="icon ion-md-pin"></i>Germany</li>
-                                <li><i class="icon ion-md-pin"></i>United Kingdom</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="office-box">
-                            <h3>Asia</h3>
-                            <ul>
-                                <li><i class="icon ion-md-pin"></i>China</li>
-                                <li><i class="icon ion-md-pin"></i>Japan</li>
-                                <li><i class="icon ion-md-pin"></i>Singapore</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="office-box">
-                            <h3>Americas</h3>
-                            <ul>
-                                <li><i class="icon ion-md-pin"></i>United States</li>
-                                <li><i class="icon ion-md-pin"></i>Canada</li>
-                                <li><i class="icon ion-md-pin"></i>Brazil</li>
+                <div class="breadc-box no-line">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h2 class="page-title">Contact Us</h2>
+                            <ul id="breadcrumbs" class="breadcrumbs none-style">
+                                <li><a href="index.html">Home</a></li>
+                                <li class="active">Contact</li>
                             </ul>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
 
-        <!-- Footer -->
-        <footer id="site-footer" class="site-footer bg-footer">
-            <!-- Footer content -->
-        </footer>
+        <!-- Scripts -->
+        <script src='js/jquery.min.js'></script>
+        <script src='js/loadComponents.js'></script>
+        <script src='js/slick.min.js'></script>
+        <script src='js/jquery.sticky.js'></script>
+        <script src='js/countto.min.js'></script>
+        <script src='js/jquery.magnific-popup.min.js'></script>
+        <script src='js/jquery.isotope.min.js'></script>
+        <script src='js/scripts.js'></script>
     </div>
-
-    <!-- Scripts -->
-    <script src='js/jquery.min.js'></script>
-    <script src='js/slick.min.js'></script>
-    <script src='js/jquery.sticky.js'></script>
-    <script src='js/countto.min.js'></script>
-    <script src='js/jquery.magnific-popup.min.js'></script>
-    <script src='js/jquery.isotope.min.js'></script>
-    <script src='js/scripts.js'></script>
 </body>
 </html> 

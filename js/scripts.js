@@ -671,4 +671,114 @@ if ($('.image-link').length) {
 
     });// JavaScript Document
 }
+
+// @cursor start
+// Video Player Functionality
+$(document).ready(function() {
+    const video = document.getElementById('tech-video');
+    const playButton = $('.play-button');
+    
+    // Play/Pause toggle
+    playButton.on('click', function() {
+        if (video.paused) {
+            video.play();
+            $(this).addClass('playing');
+            $(this).html('<i class="icon ion-md-pause"></i>');
+        } else {
+            video.pause();
+            $(this).removeClass('playing');
+            $(this).html('<i class="icon ion-md-play"></i>');
+        }
+    });
+
+    // Update play button when video ends
+    video.addEventListener('ended', function() {
+        playButton.removeClass('playing');
+        playButton.html('<i class="icon ion-md-play"></i>');
+    });
+
+    // Add fullscreen functionality
+    video.addEventListener('dblclick', function() {
+        if (video.requestFullscreen) {
+            video.requestFullscreen();
+        } else if (video.webkitRequestFullscreen) {
+            video.webkitRequestFullscreen();
+        } else if (video.msRequestFullscreen) {
+            video.msRequestFullscreen();
+        }
+    });
+});
+// @cursor end
+
+// @cursor start
+// Stats Animation
+$(document).ready(function() {
+    function isElementInViewport(el) {
+        if (typeof jQuery === "function" && el instanceof jQuery) {
+            el = el[0];
+        }
+        var rect = el.getBoundingClientRect();
+        return (
+            rect.top >= 0 &&
+            rect.left >= 0 &&
+            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+            rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+        );
+    }
+
+    function animateStats() {
+        $('.tech-stats .stat-box').each(function() {
+            if (isElementInViewport($(this)) && !$(this).hasClass('animated')) {
+                $(this).addClass('animated');
+                $(this).find('.counter').addClass('animate');
+                $(this).find('p').addClass('animate');
+                
+                // Animate the counter
+                var $counter = $(this).find('.counter');
+                var target = parseInt($counter.text());
+                $({ Counter: 0 }).animate({
+                    Counter: target
+                }, {
+                    duration: 2000,
+                    easing: 'swing',
+                    step: function() {
+                        if ($counter.text().includes('.')) {
+                            $counter.text(this.Counter.toFixed(3));
+                        } else if ($counter.text().includes('/')) {
+                            $counter.text(Math.ceil(this.Counter));
+                        } else {
+                            $counter.text(Math.ceil(this.Counter));
+                        }
+                    }
+                });
+            }
+        });
+    }
+
+    // Run on scroll and on page load
+    $(window).on('scroll load', animateStats);
+});
+// @cursor end
+
+// @cursor start
+// Initialize progress bars
+$(document).ready(function() {
+    $('.progress-bar').each(function() {
+        const progress = $(this).data('progress');
+        $(this).css('--progress', progress + '%');
+    });
+
+    // Animate on scroll
+    function checkProgress() {
+        $('.advantage-item').each(function() {
+            if (isElementInViewport($(this))) {
+                $(this).addClass('in-view');
+            }
+        });
+    }
+
+    // Run on scroll and page load
+    $(window).on('scroll load', checkProgress);
+});
+// @cursor end
 } )( jQuery );
