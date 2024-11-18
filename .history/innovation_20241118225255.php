@@ -70,7 +70,7 @@ include 'includes/header.php';
                 <div class="col-md-6">
                     <div class="image-box">
                         <!-- <img src="images/innovation/skilled-team.jpg" alt="Expert Manufacturing Team"> -->
-                        <img src="images/solutions/solution_demo.jpg" alt="Expert Manufacturing Team">
+                        <img src="images/solutions/solution.png" alt="Expert Manufacturing Team">
                     </div>
                 </div>
             </div>
