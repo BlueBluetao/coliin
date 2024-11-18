@@ -95,7 +95,7 @@ include 'includes/header.php';
                 <div class="video-container">
                     <div class="video-wrapper">
                         <video id="tech-video" poster="images/advantages/video-poster.jpg">
-                            <source src="videos/demo.mp4" type="video/mp4">
+                            <source src="videos/manufacturing-process.mp4" type="video/mp4">
                             Your browser does not support the video tag.
                         </video>
                         <div class="play-button">

@@ -1,28 +1,28 @@
 <?php
 /**
  * Quote Section Component
- * @param string $quote_title - Quote title
- * @param string $quote_description - Quote description
+ * @param string $quote_title - 报价标题
+ * @param string $quote_description - 报价描述
  */
 
-// Set default values
-$quote_title = $quote_title ?? 'Let us understand your needs';
-$quote_description = $quote_description ?? 'Professional manufacturing solutions';
+// 设置默认值
+$quote_title = $quote_title ?? '让我们了解您的需求';
+$quote_description = $quote_description ?? '专业的制造解决方案';
 
-// Common quote component configuration
+// 通用的报价组件配置
 $quote_config = [
     'button' => [
-        'text' => 'Get a Quote',
+        'text' => '获取报价',
         'url' => 'get-a-quote.php'
     ],
     'certifications' => [
         [
             'image' => 'images/itar.png',
-            'alt' => 'ITAR Registered'
+            'alt' => 'ITAR认证'
         ],
         [
             'image' => 'images/iso.png',
-            'alt' => 'ISO Certified'
+            'alt' => 'ISO认证'
         ]
     ]
 ];
@@ -34,22 +34,22 @@ $quote_config = [
         <div class="row flex-row align-items-center">
             <div class="col-md-7">
                 <div class="content-box quote-content">
-                    <span class="text-primary quote-tag">Get a Quote</span>
+                    <span class="text-primary quote-tag">获取报价</span>
                     <h2 class="quote-title"><?php echo $quote_title; ?></h2>
                     <p class="quote-description"><?php echo $quote_description; ?></p>
                     
                     <div class="quote-features">
                         <div class="feature-item">
                             <i class="icon ion-ios-checkmark-circle"></i>
-                            <span>Quick Response</span>
+                            <span>快速响应</span>
                         </div>
                         <div class="feature-item">
                             <i class="icon ion-ios-checkmark-circle"></i>
-                            <span>Expert Assessment</span>
+                            <span>专业评估</span>
                         </div>
                         <div class="feature-item">
                             <i class="icon ion-ios-checkmark-circle"></i>
-                            <span>Precise Quotation</span>
+                            <span>精准报价</span>
                         </div>
                     </div>
 

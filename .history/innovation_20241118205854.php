@@ -89,8 +89,7 @@ include 'includes/header.php';
                 <?php 
                 $materials = [
                     [
-                        // 'image' => 'images/innovation/high-strength-alloy.jpg',
-                        'image' => 'images/solutions/solution.png',
+                        'image' => 'images/innovation/high-strength-alloy.jpg',
                         'title' => 'High-Strength Alloy Steel',
                         'description' => 'Premium alloy steels offering exceptional strength and durability',
                         'features' => [
@@ -100,8 +99,7 @@ include 'includes/header.php';
                         ]
                     ],
                     [
-                        // 'image' => 'images/innovation/stainless-steel.jpg',
-                        'image' => 'images/solutions/solution.png',
+                        'image' => 'images/innovation/stainless-steel.jpg',
                         'title' => 'Premium Stainless Steel',
                         'description' => 'High-grade stainless steel with excellent corrosion resistance',
                         'features' => [
@@ -111,8 +109,7 @@ include 'includes/header.php';
                         ]
                     ],
                     [
-                        // 'image' => 'images/innovation/special-alloys.jpg',
-                        'image' => 'images/solutions/solution.png',
+                        'image' => 'images/innovation/special-alloys.jpg',
                         'title' => 'Specialized Alloys',
                         'description' => 'Custom alloy solutions for specific application requirements',
                         'features' => [

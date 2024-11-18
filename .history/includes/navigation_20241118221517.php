@@ -77,7 +77,7 @@
                                     <li class="menu-item"><a href="business.php">Business</a></li>
                                     <li class="menu-item"><a href="clients.php">Clients</a></li>
                                     <li class="menu-item"><a href="cases.php">Cases</a></li>
-                                    <li class="menu-item"><a href="contact-us.php">Contact Us</a></li>
+                                    <li class="menu-item"><a href="contact.php">Contact Us</a></li>
                                 </ul>
                             </li>
                         </ul>

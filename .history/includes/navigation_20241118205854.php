@@ -71,13 +71,12 @@
                                 <a href="innovation.php">Innovation</a>
                             </li>
                             <li class="menu-item menu-item-has-children">
-                                <a href="about-company.php">Contact</a>
+                                <a href="contact.php">Contact</a>
                                 <ul class="sub-menu">
                                     <li class="menu-item"><a href="about-company.php">About Us</a></li>
                                     <li class="menu-item"><a href="business.php">Business</a></li>
                                     <li class="menu-item"><a href="clients.php">Clients</a></li>
                                     <li class="menu-item"><a href="cases.php">Cases</a></li>
-                                    <li class="menu-item"><a href="contact-us.php">Contact Us</a></li>
                                 </ul>
                             </li>
                         </ul>

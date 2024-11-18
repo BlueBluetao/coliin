@@ -26,7 +26,7 @@ $nav_menu = [
         'Business' => 'business.php',
         'Clients' => 'clients.php',
         'Cases' => 'cases.php',
-        'Contact Us' => 'contact-us.php'
+        'Contact Us' => 'contact.php'
     ]
 ];
 

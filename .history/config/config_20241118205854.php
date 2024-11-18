@@ -25,8 +25,7 @@ $nav_menu = [
         'About Us' => 'about-company.php',
         'Business' => 'business.php',
         'Clients' => 'clients.php',
-        'Cases' => 'cases.php',
-        'Contact Us' => 'contact-us.php'
+        'Cases' => 'cases.php'
     ]
 ];
 
@@ -204,11 +203,11 @@ $solutions_data = [
 
 // 合作伙伴配置
 $partners = [
-    ['logo' => 'images/partner-logo-1.png', 'name' => 'Partner 1'],
-    ['logo' => 'images/partner-logo-2.png', 'name' => 'Partner 2'],
-    ['logo' => 'images/partner-logo-3.png', 'name' => 'Partner 3'],
-    ['logo' => 'images/partner-logo-4.png', 'name' => 'Partner 4'],
-    ['logo' => 'images/partner-logo-5.png', 'name' => 'Partner 5']
+    ['logo' => 'demo/300x200.png', 'name' => 'Partner 1'],
+    ['logo' => 'demo/300x200.png', 'name' => 'Partner 2'],
+    ['logo' => 'demo/300x200.png', 'name' => 'Partner 3'],
+    ['logo' => 'demo/300x200.png', 'name' => 'Partner 4'],
+    ['logo' => 'demo/300x200.png', 'name' => 'Partner 5']
 ];
 
 // 工作流程配置
