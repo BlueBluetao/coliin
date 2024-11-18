@@ -40,8 +40,7 @@ require_once 'includes/solution-hero-section.php';
             </div>
             <div class="col-md-6">
                 <div class="image-box">
-                    <img src="images/solutions/solution_demo.jpg" alt="CNC Machine" class="img-fluid rounded">
-                    <!-- <img src="images/solutions/cnc-machine.jpg" alt="CNC Machine" class="img-fluid rounded"> -->
+                    <img src="images/solutions/cnc-machine.jpg" alt="CNC Machine" class="img-fluid rounded">
                 </div>
             </div>
         </div>
