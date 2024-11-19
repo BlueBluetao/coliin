@@ -1,5 +1,6 @@
 <?php
-require_once 'config/config.php';  // 引入配置文件
+require_once 'config/config.php';
+require_once 'config/supply_chain_config.php';
 require_once 'includes/header.php';
 require_once 'includes/navigation.php';
 
@@ -8,138 +9,15 @@ $page_title = "Supply Chain Management - Coliin";
 $page_description = "Comprehensive supply chain management services optimizing your procurement process and reducing operational costs.";
 $current_page = 'supply-chain';
 
-// 页面数据配置
-$overview = [
-    'title' => 'Integrated Supply Chain Solutions',
-    'description' => 'Comprehensive supply chain management services optimizing your procurement process and reducing operational costs.',
-    'features' => [
-        'Global Sourcing Network',
-        'Quality Assurance',
-        'Inventory Management',
-        'Just-in-Time Delivery'
-    ]
-];
+// 使用配置文件中的变量
+$overview = $supply_chain_overview;
+$stats = $supply_chain_stats;
+$services = $supply_chain_services;
+$process_steps = $supply_chain_process;
+$benefits = $supply_chain_benefits;
+$quote_title = $supply_chain_quote['title'];
+$quote_description = $supply_chain_quote['description'];
 
-$stats = [
-    [
-        'number' => '5000+',
-        'title' => 'Supplier Network'
-    ],
-    [
-        'number' => '98.5%',
-        'title' => 'Quote Accuracy'
-    ],
-    [
-        'number' => '30',
-        'title' => 'Countries Covered'
-    ],
-    [
-        'number' => '15min',
-        'title' => 'Average Quote Time'
-    ]
-];
-
-$services = [
-    [
-        'title' => 'Intelligent Pricing System',
-        'description' => 'AI-powered pricing system delivering cost control and efficiency optimization',
-        'image' => 'images/supply-chain/ai-pricing.jpg',
-        'features' => [
-            'Real-time Data Analysis',
-            'Multi-dimensional Cost Analysis',
-            'Smart Supplier Matching',
-            'Automated Quotation Process'
-        ]
-    ],
-    [
-        'title' => 'Algorithm Model Optimization',
-        'description' => 'Machine learning-driven pricing models ensuring quote accuracy',
-        // 'image' => 'images/services/algorithm.jpg',
-        'image' => 'images/supply-chain/ai-pricing.jpg',
-        'features' => [
-            'Historical Data Analysis',
-            'Market Trend Prediction',
-            'Dynamic Pricing Strategy',
-            'Continuous Optimization'
-        ]
-    ],
-    [
-        'title' => 'Risk Control & Early Warning',
-        'description' => 'Comprehensive monitoring and alert system ensuring supply chain stability',
-        'image' => 'images/supply-chain/ai-pricing.jpg',
-        // 'image' => 'images/services/risk-control.jpg',
-        'features' => [
-            'Real-time Risk Monitoring',
-            'Alert Mechanism',
-            'Emergency Response',
-            'Supply Chain Optimization'
-        ]
-    ]
-];
-
-$process_steps = [
-    [
-        'number' => '01',
-        'title' => 'Planning',
-        'description' => 'Demand forecasting and resource planning'
-    ],
-    [
-        'number' => '02',
-        'title' => 'Sourcing',
-        'description' => 'Supplier selection and procurement'
-    ],
-    [
-        'number' => '03',
-        'title' => 'Manufacturing',
-        'description' => 'Production and quality control'
-    ],
-    [
-        'number' => '04',
-        'title' => 'Delivery',
-        'description' => 'Logistics and distribution'
-    ]
-];
-
-$benefits = [
-    [
-        'icon' => 'ion-md-cash',
-        'title' => 'Cost Reduction',
-        'description' => 'Optimize procurement costs and improve operational efficiency'
-    ],
-    [
-        'icon' => 'ion-md-time',
-        'title' => 'Time Saving',
-        'description' => 'Reduce lead times and improve delivery performance'
-    ],
-    [
-        'icon' => 'ion-md-analytics',
-        'title' => 'Risk Management',
-        'description' => 'Minimize supply chain risks and ensure business continuity'
-    ]
-];
-
-$supplier_regions = [
-    [
-        'region' => 'Asia Pacific',
-        'number' => '2000+'
-    ],
-    [
-        'region' => 'Europe',
-        'number' => '1500+'
-    ],
-    [
-        'region' => 'North America',
-        'number' => '1000+'
-    ],
-    [
-        'region' => 'Other Regions',
-        'number' => '500+'
-    ]
-];
-
-// Quote section 配置
-$quote_title = "Optimize Your Supply Chain";
-$quote_description = "Contact us to discuss your supply chain management needs";
 
 include 'includes/header.php';
 ?>
@@ -193,7 +71,7 @@ include 'includes/header.php';
             <?php foreach($stats as $stat): ?>
             <div class="col-md-3">
                 <div class="stat-box">
-                    <div class="stat-number"><?php echo $stat['number']; ?></div>
+                    <div class="stat-number animate-number"><?php echo $stat['number']; ?></div>
                     <div class="stat-title"><?php echo $stat['title']; ?></div>
                 </div>
             </div>
@@ -237,27 +115,27 @@ include 'includes/header.php';
 </section>
 
 <!-- Process Flow -->
-<section>
+<section class="process-section">
     <div class="container">
         <div class="row">
-            <div class="col-md-12">
+            <div class="col-md-12 text-center">
                 <h4 class="text-primary">PROCESS</h4>
                 <h2>Supply Chain Process</h2>
-                <div class="coliin-space-30"></div>
             </div>
         </div>
-        <div class="process-flow">
-            <div class="row">
-                <?php foreach($process_steps as $step): ?>
-                <div class="col-md-3">
-                    <div class="process-step">
-                        <div class="step-number"><?php echo $step['number']; ?></div>
-                        <h3><?php echo $step['title']; ?></h3>
-                        <p><?php echo $step['description']; ?></p>
-                    </div>
+        <div class="process-timeline">
+            <?php foreach($process_steps as $step): ?>
+            <div class="process-step">
+                <div class="step-icon" style="color: <?php echo $step['color']; ?>">
+                    <i class="icon <?php echo $step['icon']; ?>"></i>
                 </div>
-                <?php endforeach; ?>
+                <div class="step-content">
+                    <div class="step-number animate-number"><?php echo $step['number']; ?></div>
+                    <h3><?php echo $step['title']; ?></h3>
+                    <p><?php echo $step['description']; ?></p>
+                </div>
             </div>
+            <?php endforeach; ?>
         </div>
     </div>
 </section>
@@ -303,7 +181,7 @@ include 'includes/header.php';
                     <?php foreach($supplier_regions as $region): ?>
                     <div class="stat-item">
                         <span class="region"><?php echo $region['region']; ?></span>
-                        <span class="number"><?php echo $region['number']; ?></span>
+                        <span class="number animate-number"><?php echo $region['number']; ?></span>
                     </div>
                     <?php endforeach; ?>
                 </div>
@@ -312,4 +190,7 @@ include 'includes/header.php';
     </div>
 </section>
 
-<?php include 'includes/footer.php'; ?> 
+<?php include 'includes/footer.php'; ?>
+
+<!-- 在 footer 之前添加 JS 文件 -->
+<script src="js/number-animation.js"></script> 
