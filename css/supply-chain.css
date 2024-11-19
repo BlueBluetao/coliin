@@ -91,17 +91,6 @@
     margin: 60px 0;
 }
 
-.process-timeline::before {
-    content: '';
-    position: absolute;
-    top: 35px;
-    left: 0;
-    right: 0;
-    height: 2px;
-    background: linear-gradient(90deg, #4CAF50 0%, #2196F3 33%, #FF9800 66%, #E91E63 100%);
-    z-index: 1;
-}
-
 /* Overview 图片高级效果 */
 .image-box-premium {
     position: relative;

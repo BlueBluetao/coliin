@@ -160,9 +160,6 @@ include 'includes/header.php';
         <div class="process-timeline">
             <?php foreach($process_steps as $step): ?>
             <div class="process-step">
-                <div class="step-icon" style="color: <?php echo $step['color']; ?>">
-                    <i class="icon <?php echo $step['icon']; ?>"></i>
-                </div>
                 <div class="step-content">
                     <div class="step-number"><?php echo $step['number']; ?></div>
                     <h3><?php echo $step['title']; ?></h3>
