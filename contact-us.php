@@ -57,7 +57,6 @@ include 'includes/header.php';
                                 </div>
                                 <div class="col-md-12">
                                     <input type="submit" value="Submit" class="wpcf7-form-control wpcf7-submit btn btn-primary">
-                                    <input type="submit" value="Subscribe" class="wpcf7-form-control wpcf7-submit btn btn-border">
                                 </div>
                             </div>
                         </form>
@@ -73,17 +72,15 @@ include 'includes/header.php';
                     <div class="col-md-12">
                         <h3>View map:</h3>
                         <div class="map">
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d52963.585075701754!2d151.09267899747485!3d-33.935364681316976!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b12ba2323eb31f3%3A0x9c1faff5827b168a!2sBexley%20North%20Station!5e0!3m2!1svi!2s!4v1571651963999!5m2!1svi!2s" 
+                            <iframe 
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d217785.07967205757!2d121.21668883205673!3d31.225344876851747!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x35b27040b1f53c33%3A0x295129423c364a1!2z5Lit5Zu95rWZ5rGf5Y2X6YGT5Lit5b-D5Yy6!5e0!3m2!1szh-CN!2scn!4v1710910844659!5m2!1szh-CN!2scn" 
                                 width="100%" 
                                 height="600" 
-                                frameborder="0" 
                                 style="border:0;" 
-                                allowfullscreen="">
+                                allowfullscreen="" 
+                                loading="lazy" 
+                                referrerpolicy="no-referrer-when-downgrade">
                             </iframe>
-                        </div>
-                        <div class="text-center">
-                            <a href="#" class="btn btn-primary btn-m-r">Get direction</a>
-                            <a href="#" class="btn btn-border">Google Map</a>
                         </div>
                     </div>
                 </div>

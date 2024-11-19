@@ -2,7 +2,7 @@
 // 网站基础配置
 define('SITE_NAME', 'Coliin');
 define('SITE_URL', 'http://localhost'); 
-define('COMPANY_ADDRESS', ' Pudong New Area, Shanghai, China');
+define('COMPANY_ADDRESS', ' Jiading Area, Shanghai, China');
 define('COMPANY_PHONE', '+86 21 59186319');
 define('COMPANY_EMAIL', 'allenlv@coliin.com');
 
