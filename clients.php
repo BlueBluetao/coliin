@@ -1,23 +1,30 @@
 <?php 
 require_once 'config/config.php';
-$page_title = "Our Clients - " . SITE_NAME;
-include 'includes/header.php'; 
+require_once 'config/clients_config.php';
+$page_title = $clients_config['page_title'] . " - " . SITE_NAME;
+include 'includes/header.php';
 ?>
 
+<link rel="stylesheet" href="css/clients-page.css">
+
 <div id="page" class="site">
-    <!-- 引入导航 -->
     <?php include 'includes/navigation.php'; ?>
 
     <!-- Hero Section -->
-    <div class="page-header" style="background: url('images/solutions/solution.png') no-repeat center center;">
+    <div class="page-header" style="background: url('<?php echo $clients_config['hero']['background_image']; ?>') no-repeat center center;">
         <div class="container">
             <div class="breadc-box no-line">
                 <div class="row">
                     <div class="col-md-12">
-                        <h2 class="page-title">Our Clients</h2>
+                        <h2 class="page-title"><?php echo $clients_config['hero']['title']; ?></h2>
                         <ul id="breadcrumbs" class="breadcrumbs none-style">
-                            <li><a href="index.php">Home</a></li>
-                            <li class="active">Clients</li>
+                            <?php foreach($clients_config['hero']['breadcrumbs'] as $item): ?>
+                                <?php if($item['link']): ?>
+                                    <li><a href="<?php echo $item['link']; ?>"><?php echo $item['title']; ?></a></li>
+                                <?php else: ?>
+                                    <li class="active"><?php echo $item['title']; ?></li>
+                                <?php endif; ?>
+                            <?php endforeach; ?>
                         </ul>
                     </div>
                 </div>
@@ -25,19 +32,27 @@ include 'includes/header.php';
         </div>
     </div>
 
-    <!-- Main Content -->
     <div id="content" class="site-content">
         <!-- Partners Section -->
-        <section>
+        <section class="partners-section">
             <div class="container">
                 <div class="row">
-                    <div class="col-sm-12">
-                        <h3>Partnerships & Affiliations</h3>
+                    <div class="col-sm-12 text-center">
+                        <h3 class="section-title">Partnerships & Affiliations</h3>
+                        <p class="section-description">Trusted by industry leaders worldwide</p>
                     </div>
-                    <?php foreach($partners as $partner): ?>
-                    <div class="col-md-3 col-sm-6">
-                        <div class="partner-list">
-                            <img src="<?php echo $partner['logo']; ?>" alt="<?php echo $partner['name']; ?>">
+                </div>
+                <div class="row partners-grid">
+                    <?php foreach($clients_config['partners'] as $partner): ?>
+                    <div class="col-lg-6">
+                        <div class="partner-item">
+                            <div class="partner-logo">
+                                <img src="<?php echo $partner['logo']; ?>" alt="<?php echo $partner['name']; ?>">
+                            </div>
+                            <div class="partner-info">
+                                <h4><?php echo $partner['name']; ?></h4>
+                                <p><?php echo $partner['description']; ?></p>
+                            </div>
                         </div>
                     </div>
                     <?php endforeach; ?>
@@ -54,39 +69,26 @@ include 'includes/header.php';
                     </div>
                 </div>
                 <div class="row">
+                    <?php foreach($clients_config['testimonials'] as $testimonial): ?>
                     <div class="col-md-6">
                         <div class="testi-box list-testi">
                             <div class="testi-content">
-                                <p>"I am so happy, my dear friend, so absorbed in the exquisite sense of mere tranquil existence, that I neglect my talents. I should be incapable of drawing a single stroke at the present moment."</p>
+                                <p>"<?php echo $testimonial['content']; ?>"</p>
                             </div>
                             <div class="testi-info">
-                                <img src="images/testi-img-1.png" alt="" class="circle-img">
-                                <h4>Emilia Clarke<span>Manager Avenger company</span></h4>
+                                <img src="<?php echo $testimonial['image']; ?>" alt="" class="circle-img">
+                                <h4><?php echo $testimonial['name']; ?><span><?php echo $testimonial['position']; ?></span></h4>
                             </div>
                         </div>
                     </div>
-
-                    <div class="col-md-6">
-                        <div class="testi-box list-testi">
-                            <div class="testi-content">
-                                <p>"A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart."</p>
-                            </div>
-                            <div class="testi-info">
-                                <img src="images/testi-img-2.png" alt="" class="circle-img">
-                                <h4>Micheal Sejuro<span>Manager Fusion themes company</span></h4>
-                            </div>
-                        </div>
-                    </div>
+                    <?php endforeach; ?>
                 </div>
             </div>
         </section>
 
         <?php
-        // 配置报价部分的文案
-        $quote_title = "Ready to work with us?";
-        $quote_description = "Get in touch for a custom quote for your project";
-        
-        // 引入quote-section组件
+        $quote_title = $clients_config['quote_section']['title'];
+        $quote_description = $clients_config['quote_section']['description'];
         include 'includes/quote-section.php';
         ?>
     </div>

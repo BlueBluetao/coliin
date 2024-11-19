@@ -1,0 +1,103 @@
+/* Partners Section Styles */
+.partners-section {
+    padding: 80px 0;
+}
+
+.section-title {
+    font-size: 36px;
+    color: #1a1a1a;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.section-description {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 50px;
+}
+
+.partners-grid {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+}
+
+.partners-grid .col-lg-6 {
+    padding: 15px;
+}
+
+.partner-item {
+    background: #fff;
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.05);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.partner-logo {
+    text-align: center;
+    margin-bottom: 20px;
+    min-height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.partner-logo img {
+    max-width: 220px;
+    max-height: 80px;
+    object-fit: contain;
+}
+
+.partner-info {
+    text-align: center;
+}
+
+.partner-info h4 {
+    font-size: 18px;
+    color: #1a1a1a;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.partner-info p {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 991px) {
+    .partners-grid .col-lg-6 {
+        width: 100%;
+    }
+    
+    .partner-item {
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 767px) {
+    .section-title {
+        font-size: 28px;
+    }
+    
+    .partner-logo img {
+        max-width: 180px;
+        max-height: 60px;
+    }
+    
+    .partners-section {
+        padding: 50px 0;
+    }
+}
+
+/* 添加简单的hover效果 */
+.partner-item:hover {
+    box-shadow: 0 5px 25px rgba(0,0,0,0.1);
+    transform: translateY(-2px);
+    transition: all 0.3s ease;
+} 
