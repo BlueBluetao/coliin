@@ -1,0 +1,264 @@
+/* 供应链页面特定样式 */
+.premium-image {
+    position: relative;
+    padding: 20px;
+    transition: all 0.3s ease;
+}
+
+.premium-image .image-wrapper {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+
+.premium-image img {
+    transition: transform 0.5s ease;
+    width: 100%;
+    height: auto;
+}
+
+.premium-image:hover img {
+    transform: scale(1.03);
+}
+
+.premium-image .image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, rgba(0,0,0,0.05) 0%, rgba(255,255,255,0.15) 100%);
+    pointer-events: none;
+}
+
+.premium-image .floating-shape {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border: 2px solid rgba(0,123,255,0.1);
+    border-radius: 8px;
+    z-index: -1;
+}
+
+.premium-image .floating-shape.top-right {
+    top: -15px;
+    right: -15px;
+    animation: float 6s ease-in-out infinite;
+}
+
+.premium-image .floating-shape.bottom-left {
+    bottom: -15px;
+    left: -15px;
+    animation: float 6s ease-in-out infinite reverse;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+/* 响应式支持 */
+@media (max-width: 768px) {
+    .premium-image {
+        padding: 10px;
+    }
+    
+    .premium-image .floating-shape {
+        width: 60px;
+        height: 60px;
+    }
+}
+
+/* Process Flow Styles */
+.process-section {
+    padding: 80px 0;
+    background: #f8f9fa;
+    overflow: hidden;
+}
+
+.process-timeline {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    margin: 60px 0;
+}
+
+.process-timeline::before {
+    content: '';
+    position: absolute;
+    top: 35px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #4CAF50 0%, #2196F3 33%, #FF9800 66%, #E91E63 100%);
+    z-index: 1;
+}
+
+/* Overview 图片高级效果 */
+.image-box-premium {
+    position: relative;
+    padding: 25px;
+    margin: 15px;
+}
+
+.image-box-premium .image-inner {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+    transform: translateY(0);
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.image-box-premium img {
+    width: 100%;
+    height: auto;
+    transform: scale(1.01);
+    transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.image-box-premium:hover .image-inner {
+    transform: translateY(-10px);
+    box-shadow: 0 30px 50px rgba(0,0,0,0.18);
+}
+
+.image-box-premium:hover img {
+    transform: scale(1.05);
+}
+
+.image-box-premium .image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+        45deg,
+        rgba(33,150,243,0.15),
+        rgba(33,150,243,0.05)
+    );
+    z-index: 1;
+}
+
+.image-box-premium .accent-circle {
+    position: absolute;
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, rgba(33,150,243,0.1), rgba(33,150,243,0.05));
+    top: -90px;
+    right: -90px;
+    z-index: 0;
+    animation: rotate 20s linear infinite;
+}
+
+.image-box-premium .stats-card {
+    position: absolute;
+    background: rgba(255,255,255,0.98);
+    padding: 12px 20px;
+    border-radius: 10px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 2;
+    transition: transform 0.3s ease;
+}
+
+.image-box-premium .stats-card:hover {
+    transform: translateY(-5px);
+}
+
+.stats-card.top-right {
+    top: 30px;
+    right: 30px;
+    animation: float 6s ease-in-out infinite;
+}
+
+.stats-card.bottom-left {
+    bottom: 30px;
+    left: 30px;
+    animation: float 6s ease-in-out infinite reverse;
+}
+
+.stats-card i {
+    font-size: 24px;
+    color: #2196F3;
+    margin-bottom: 5px;
+}
+
+.stats-card .value {
+    font-size: 20px;
+    font-weight: 700;
+    color: #333;
+    line-height: 1;
+}
+
+.stats-card .label {
+    font-size: 12px;
+    color: #666;
+    margin-top: 4px;
+}
+
+.image-box-premium .decorative-line {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60%;
+    height: 3px;
+    background: linear-gradient(90deg, #2196F3, transparent);
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+@keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* 响应式适配 */
+@media (max-width: 768px) {
+    .image-box-premium {
+        padding: 15px;
+        margin: 10px;
+    }
+    
+    .stats-card {
+        padding: 8px 15px;
+    }
+    
+    .stats-card.top-right {
+        top: 15px;
+        right: 15px;
+    }
+    
+    .stats-card.bottom-left {
+        bottom: 15px;
+        left: 15px;
+    }
+    
+    .stats-card i {
+        font-size: 20px;
+    }
+    
+    .stats-card .value {
+        font-size: 16px;
+    }
+    
+    .stats-card .label {
+        font-size: 10px;
+    }
+}
+
+/* 其他现有的供应链相关样式... */ 

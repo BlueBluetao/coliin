@@ -38,7 +38,7 @@ $supply_chain_services = [
     [
         'title' => 'Intelligent Pricing System',
         'description' => 'AI-powered pricing system delivering cost control and efficiency optimization',
-        'image' => 'images/supply-chain/ai-pricing.jpg',
+        'image' => 'images/supply-chain/supply-1.jpeg',
         'features' => [
             'Real-time Data Analysis',
             'Multi-dimensional Cost Analysis',
@@ -49,7 +49,7 @@ $supply_chain_services = [
     [
         'title' => 'Algorithm Model Optimization',
         'description' => 'Machine learning-driven pricing models ensuring quote accuracy',
-        'image' => 'images/supply-chain/ai-pricing.jpg',
+        'image' => 'images/supply-chain/supply-2.jpeg',
         'features' => [
             'Historical Data Analysis',
             'Market Trend Prediction',
@@ -60,7 +60,7 @@ $supply_chain_services = [
     [
         'title' => 'Risk Control & Early Warning',
         'description' => 'Comprehensive monitoring and alert system ensuring supply chain stability',
-        'image' => 'images/supply-chain/ai-pricing.jpg',
+        'image' => 'images/supply-chain/supply-3.jpeg',
         'features' => [
             'Real-time Risk Monitoring',
             'Alert Mechanism',
@@ -74,31 +74,47 @@ $supply_chain_services = [
 $supply_chain_process = [
     [
         'number' => '01',
-        'title' => 'Planning',
-        'description' => 'Demand forecasting and resource planning',
+        'title' => 'Intelligent Demand Analysis',
+        'description' => 'AI-powered algorithms for rapid requirement analysis, eliminating engineering drawing process with 97% reduction in manual intervention',
         'icon' => 'ion-md-analytics',
-        'color' => '#4CAF50'
+        'color' => '#4CAF50',
+        'stats' => [
+            ['number' => '97%', 'text' => 'Manual Reduction'],
+            ['number' => '100%', 'text' => 'Analysis Accuracy']
+        ]
     ],
     [
         'number' => '02',
-        'title' => 'Sourcing',
-        'description' => 'Supplier selection and procurement',
+        'title' => 'Smart Supplier Collaboration',
+        'description' => 'Real-time integration with 1000+ suppliers network, intelligent matching and optimization for stable material supply',
         'icon' => 'ion-md-people',
-        'color' => '#2196F3'
+        'color' => '#2196F3',
+        'stats' => [
+            ['number' => '1000+', 'text' => 'Active Suppliers'],
+            ['number' => '99.9%', 'text' => 'Supply Reliability']
+        ]
     ],
     [
         'number' => '03',
-        'title' => 'Manufacturing',
-        'description' => 'Production and quality control',
-        'icon' => 'ion-md-build',
-        'color' => '#FF9800'
+        'title' => 'Intelligent Risk Control',
+        'description' => 'Real-time monitoring of price fluctuations, inventory levels, and exchange rates for dynamic supply chain optimization',
+        'icon' => 'ion-md-warning',
+        'color' => '#FF9800',
+        'stats' => [
+            ['number' => 'Real-time', 'text' => 'Risk Monitoring'],
+            ['number' => '25%', 'text' => 'Inventory Optimization']
+        ]
     ],
     [
         'number' => '04',
-        'title' => 'Delivery',
-        'description' => 'Logistics and distribution',
-        'icon' => 'ion-md-car',
-        'color' => '#E91E63'
+        'title' => 'Ultimate Delivery Efficiency',
+        'description' => 'Sample delivery time reduced from industry average of 30-60 days to 3 days, dramatically improving market response',
+        'icon' => 'ion-md-rocket',
+        'color' => '#E91E63',
+        'stats' => [
+            ['number' => '3 Days', 'text' => 'Sample Delivery'],
+            ['number' => '95%', 'text' => 'On-time Delivery']
+        ]
     ]
 ];
 

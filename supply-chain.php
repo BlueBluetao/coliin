@@ -22,6 +22,9 @@ $quote_description = $supply_chain_quote['description'];
 include 'includes/header.php';
 ?>
 
+<!-- 在 header 之前添加新的 CSS 文件引入 -->
+<link rel="stylesheet" href="css/supply-chain.css">
+
 <!-- Hero Section -->
 <div class="page-header" style="background: url('images/solutions/solution.png') no-repeat center center;">
     <div class="container">
@@ -56,8 +59,23 @@ include 'includes/header.php';
                 </div>
             </div>
             <div class="col-md-6">
-                <div class="image-box">
-                    <img src="images/supply-chain-overview.jpg" alt="Supply Chain Management" class="img-fluid rounded">
+                <div class="image-box-premium">
+                    <div class="image-inner">
+                        <img src="images/supply-chain/supply-overview.jpeg" alt="Supply Chain Management" class="img-fluid">
+                        <div class="image-overlay"></div>
+                        <div class="accent-circle"></div>
+                    </div>
+                    <div class="stats-card top-right">
+                        <i class="icon ion-md-trending-up"></i>
+                        <span class="value">98%</span>
+                        <span class="label">Efficiency Boost</span>
+                    </div>
+                    <div class="stats-card bottom-left">
+                        <i class="icon ion-md-pulse"></i>
+                        <span class="value">24/7</span>
+                        <span class="label">Real-time Monitoring</span>
+                    </div>
+                    <div class="decorative-line"></div>
                 </div>
             </div>
         </div>
@@ -94,18 +112,33 @@ include 'includes/header.php';
         <div class="row">
             <?php foreach($services as $service): ?>
             <div class="col-lg-4 col-md-6">
-                <div class="service-box hover-box">
-                    <div class="service-thumb">
-                        <a href="#"><img src="<?php echo $service['image']; ?>" alt="<?php echo $service['title']; ?>"></a>
-                    </div>
-                    <div class="service-content">
-                        <h4><?php echo $service['title']; ?></h4>
-                        <p><?php echo $service['description']; ?></p>
-                        <ul class="service-list">
-                            <?php foreach($service['features'] as $feature): ?>
-                            <li><i class="icon ion-md-checkmark-circle"></i><?php echo $feature; ?></li>
-                            <?php endforeach; ?>
-                        </ul>
+                <div class="service-box">
+                    <div class="service-box-inner">
+                        <div class="service-front">
+                            <div class="service-thumb">
+                                <a href="#"><img src="<?php echo $service['image']; ?>" alt="<?php echo $service['title']; ?>"></a>
+                            </div>
+                            <div class="service-content">
+                                <h4><?php echo $service['title']; ?></h4>
+                                <p><?php echo $service['description']; ?></p>
+                                <ul class="service-list">
+                                    <?php foreach($service['features'] as $feature): ?>
+                                    <li><i class="icon ion-md-checkmark-circle"></i><?php echo $feature; ?></li>
+                                    <?php endforeach; ?>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="service-back">
+                            <h4><?php echo $service['title']; ?></h4>
+                            <div class="service-stats">
+                                <?php foreach($service['stats'] as $stat): ?>
+                                <div class="stat-item">
+                                    <div class="stat-value animate-number"><?php echo $stat['number']; ?></div>
+                                    <div class="stat-label"><?php echo $stat['text']; ?></div>
+                                </div>
+                                <?php endforeach; ?>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -119,8 +152,9 @@ include 'includes/header.php';
     <div class="container">
         <div class="row">
             <div class="col-md-12 text-center">
-                <h4 class="text-primary">PROCESS</h4>
-                <h2>Supply Chain Process</h2>
+                <h4 class="text-primary">INTELLIGENT PROCESS</h4>
+                <h2>Smart Supply Chain Process</h2>
+                <p class="lead">End-to-end intelligent solutions from demand analysis to delivery</p>
             </div>
         </div>
         <div class="process-timeline">
@@ -130,9 +164,18 @@ include 'includes/header.php';
                     <i class="icon <?php echo $step['icon']; ?>"></i>
                 </div>
                 <div class="step-content">
-                    <div class="step-number animate-number"><?php echo $step['number']; ?></div>
+                    <div class="step-number"><?php echo $step['number']; ?></div>
                     <h3><?php echo $step['title']; ?></h3>
                     <p><?php echo $step['description']; ?></p>
+                    <!-- 添加关键数据统计 -->
+                    <div class="step-stats">
+                        <?php foreach($step['stats'] as $stat): ?>
+                        <div class="stat-item">
+                            <div class="stat-value animate-number"><?php echo $stat['number']; ?></div>
+                            <div class="stat-label"><?php echo $stat['text']; ?></div>
+                        </div>
+                        <?php endforeach; ?>
+                    </div>
                 </div>
             </div>
             <?php endforeach; ?>
@@ -193,4 +236,29 @@ include 'includes/header.php';
 <?php include 'includes/footer.php'; ?>
 
 <!-- 在 footer 之前添加 JS 文件 -->
-<script src="js/number-animation.js"></script> 
+<script src="js/number-animation.js"></script>
+
+<!-- 在世界地图中添加动态点 -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const mapPoints = [
+        {x: 75, y: 40}, // 亚太地区
+        {x: 48, y: 30}, // 欧洲
+        {x: 25, y: 35}, // 北美
+        // 添加更多地点...
+    ];
+    
+    const map = document.querySelector('.world-map');
+    
+    mapPoints.forEach(point => {
+        const dot = document.createElement('div');
+        dot.className = 'map-point';
+        dot.style.left = point.x + '%';
+        dot.style.top = point.y + '%';
+        map.appendChild(dot);
+    });
+});
+</script>
+
+<!-- 在 header 中添加新的 CSS 文件 -->
+<link rel="stylesheet" href="css/supply-chain-animations.css"> 

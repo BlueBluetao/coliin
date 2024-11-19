@@ -1,0 +1,168 @@
+/* 高级动画效果 */
+
+/* 渐变背景动画 */
+.bg-gradient {
+    background: linear-gradient(-45deg, #1a2a6c, #b21f1f, #fdbb2d);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+}
+
+@keyframes gradientBG {
+    0% { background-position: 0% 50% }
+    50% { background-position: 100% 50% }
+    100% { background-position: 0% 50% }
+}
+
+/* 图标呼吸灯效果 */
+.step-icon {
+    position: relative;
+}
+
+.step-icon::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: inherit;
+    filter: blur(10px);
+    opacity: 0;
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); opacity: 0; }
+    50% { transform: scale(1.2); opacity: 0.3; }
+    100% { transform: scale(1); opacity: 0; }
+}
+
+/* 连接线动画 */
+.process-timeline::before {
+    background: linear-gradient(90deg, #4CAF50, #2196F3, #FF9800, #E91E63);
+    background-size: 300% 100%;
+    animation: gradientLine 6s linear infinite;
+}
+
+@keyframes gradientLine {
+    0% { background-position: 100% 0; }
+    100% { background-position: 0 0; }
+}
+
+/* 3D 翻转卡片效果 */
+.service-box {
+    perspective: 1000px;
+    background: transparent;
+}
+
+.service-box-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.service-box:hover .service-box-inner {
+    transform: rotateY(180deg);
+}
+
+.service-front, .service-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+.service-back {
+    transform: rotateY(180deg);
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 30px;
+}
+
+/* 数字滚动特效 */
+.stat-number {
+    position: relative;
+    overflow: hidden;
+}
+
+.stat-number::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: rgba(255,255,255,0.5);
+    transform: translateX(-100%);
+    animation: statLine 2s ease-out forwards;
+}
+
+@keyframes statLine {
+    to { transform: translateX(0); }
+}
+
+/* 悬浮光效 */
+.step-content {
+    position: relative;
+    overflow: hidden;
+}
+
+.step-content::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+        45deg,
+        transparent,
+        rgba(255,255,255,0.1),
+        transparent
+    );
+    transform: rotate(45deg);
+    animation: lightEffect 3s infinite;
+}
+
+@keyframes lightEffect {
+    0% { transform: rotate(45deg) translateY(-100%); }
+    100% { transform: rotate(45deg) translateY(100%); }
+}
+
+/* 世界地图动画 */
+.world-map {
+    position: relative;
+    overflow: hidden;
+}
+
+.map-point {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #2196F3;
+    animation: mapPulse 2s infinite;
+}
+
+@keyframes mapPulse {
+    0% { transform: scale(1); opacity: 1; }
+    100% { transform: scale(3); opacity: 0; }
+}
+
+/* 响应式动画调整 */
+@media (max-width: 768px) {
+    .service-box-inner {
+        transform-style: flat;
+    }
+    
+    .service-box:hover .service-box-inner {
+        transform: none;
+    }
+    
+    .service-back {
+        display: none;
+    }
+} 
