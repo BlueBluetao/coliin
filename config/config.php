@@ -2,9 +2,9 @@
 // 网站基础配置
 define('SITE_NAME', 'Coliin');
 define('SITE_URL', 'http://localhost'); 
-define('COMPANY_ADDRESS', 'Forusbeen 50, 4035 Stavanger, Norway');
-define('COMPANY_PHONE', '+84 0378 260 852');
-define('COMPANY_EMAIL', 'info.coliin@gmail.com');
+define('COMPANY_ADDRESS', ' Pudong New Area, Shanghai, China');
+define('COMPANY_PHONE', '+86 21 59186319');
+define('COMPANY_EMAIL', 'allenlv@coliin.com');
 
 // 导航菜单配置
 $nav_menu = [
