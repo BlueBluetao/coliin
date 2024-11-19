@@ -6645,7 +6645,7 @@ table .cart-subtotal {
     margin-bottom: 30px;
 }
 
-.feature-item {
+.quote-features .feature-item {
     display: flex;
     align-items: center;
     gap: 10px;
@@ -6656,17 +6656,18 @@ table .cart-subtotal {
     transition: all 0.3s ease;
 }
 
-.feature-item:hover {
+.quote-features .feature-item:hover {
     transform: translateY(-3px);
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    cursor: pointer;
 }
 
-.feature-item i {
+.quote-features .feature-item i {
     color: #ffd100;
     font-size: 20px;
 }
 
-.feature-item span {
+.quote-features .feature-item span {
     font-weight: 500;
     color: #03132b;
 }
