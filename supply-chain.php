@@ -121,20 +121,16 @@ include 'includes/header.php';
                             <div class="service-content">
                                 <h4><?php echo $service['title']; ?></h4>
                                 <p><?php echo $service['description']; ?></p>
-                                <ul class="service-list">
-                                    <?php foreach($service['features'] as $feature): ?>
-                                    <li><i class="icon ion-md-checkmark-circle"></i><?php echo $feature; ?></li>
-                                    <?php endforeach; ?>
-                                </ul>
+                                
                             </div>
                         </div>
                         <div class="service-back">
                             <h4><?php echo $service['title']; ?></h4>
-                            <div class="service-stats">
-                                <?php foreach($service['stats'] as $stat): ?>
-                                <div class="stat-item">
-                                    <div class="stat-value animate-number"><?php echo $stat['number']; ?></div>
-                                    <div class="stat-label"><?php echo $stat['text']; ?></div>
+                            <div class="service-features">
+                                <?php foreach($service['features'] as $feature): ?>
+                                <div class="feature-item">
+                                    <i class="icon ion-md-checkmark-circle"></i>
+                                    <span><?php echo $feature; ?></span>
                                 </div>
                                 <?php endforeach; ?>
                             </div>
