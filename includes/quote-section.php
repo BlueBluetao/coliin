@@ -17,12 +17,20 @@ $quote_config = [
     ],
     'certifications' => [
         [
-            'image' => 'images/itar.png',
-            'alt' => 'ITAR Registered'
+            'image' => 'images/certifications/itar.png',
+            'alt' => 'ITAR Certified'
         ],
         [
-            'image' => 'images/iso.png',
+            'image' => 'images/certifications/iso.png',
             'alt' => 'ISO Certified'
+        ],
+        [
+            'image' => 'images/certifications/sa8000.png',
+            'alt' => 'SA8000 Social Accountability'
+        ],
+        [
+            'image' => 'images/certifications/iatf16949.png',
+            'alt' => 'IATF16949 Quality'
         ]
     ]
 ];
