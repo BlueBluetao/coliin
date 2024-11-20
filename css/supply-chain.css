@@ -408,17 +408,21 @@
     padding: 15px;
 }
 
-.stat-value {
-    font-size: 28px;
-    font-weight: bold;
-    margin-bottom: 5px;
-    color: #fff;
+
+/* 统计数据标签样式 */
+.stat-label {
+    color: #5360a5;  /* 改为中灰色，让文字更容易看清 */
+    font-size: 14px;
+    margin-top: 5px;
 }
 
-.stat-label {
-    font-size: 14px;
-    color: rgba(255, 255, 255, 0.8);
+/* 数值样式 */
+.stat-value {
+    color: #5360a5;  /* 使用蓝色，让数字更醒目 */
+    font-weight: 600;
+    font-size: 18px;
 }
+
 
 /* 响应式调整 */
 @media (max-width: 768px) {
