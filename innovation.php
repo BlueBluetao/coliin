@@ -92,44 +92,32 @@ include 'includes/header.php';
     <!-- Innovation & Solutions Section -->
     <section class="solutions-section">
         <div class="container">
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="content-box">
-                        <div class="section-tag">
-                            <span>PROCESS INNOVATION</span>
+            <div class="section-header text-center">
+                <div class="section-tag">
+                    <span>PROCESS INNOVATION</span>
+                </div>
+                <h2 class="section-title"><?php echo SOLUTIONS_TITLE; ?></h2>
+                <p class="section-desc"><?php echo SOLUTIONS_DESC; ?></p>
+            </div>
+            
+            <div class="innovation-process">
+                <?php foreach($INNOVATION_PROCESS as $index => $process): ?>
+                <div class="process-step">
+                    <div class="step-number">
+                        <span><?php echo str_pad($index + 1, 2, '0', STR_PAD_LEFT); ?></span>
+                    </div>
+                    <div class="step-content">
+                        <div class="step-icon">
+                            <i class="icon <?php echo $process['icon']; ?>"></i>
                         </div>
-                        <h2 class="section-title"><?php echo SOLUTIONS_TITLE; ?></h2>
-                        <p class="section-desc"><?php echo SOLUTIONS_DESC; ?></p>
-                        
-                        <div class="innovation-process">
-                            <?php foreach($INNOVATION_PROCESS as $process): ?>
-                            <div class="process-step">
-                                <div class="step-number">
-                                    <i class="icon <?php echo $process['icon']; ?>"></i>
-                                </div>
-                                <div class="step-content">
-                                    <h4><?php echo $process['title']; ?></h4>
-                                    <p><?php echo $process['description']; ?></p>
-                                </div>
-                            </div>
-                            <?php endforeach; ?>
+                        <h4><?php echo $process['title']; ?></h4>
+                        <p><?php echo $process['description']; ?></p>
+                        <div class="step-details">
+                            <?php echo $process['extended_desc']; ?>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6">
-                    <div class="solutions-showcase">
-                        <div class="showcase-grid">
-                            <?php foreach($SOLUTIONS_SHOWCASE as $showcase): ?>
-                            <div class="showcase-item">
-                                <img src="<?php echo $showcase['image']; ?>" alt="<?php echo $showcase['title']; ?>">
-                                <div class="showcase-overlay">
-                                    <h4><?php echo $showcase['title']; ?></h4>
-                                </div>
-                            </div>
-                            <?php endforeach; ?>
-                        </div>
-                    </div>
-                </div>
+                <?php endforeach; ?>
             </div>
         </div>
     </section>

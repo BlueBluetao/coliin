@@ -37,7 +37,7 @@ define('MATERIALS_SECTION_DESC', 'Utilizing cutting-edge materials and treatment
 
 $MATERIALS_DATA = [
     [
-        'image' => 'images/solutions/solution.png',
+        'image' => 'images/innovation/m1.png',
         'title' => 'High-Strength Alloy Steel',
         'description' => 'Premium alloy steels offering exceptional strength and durability',
         'features' => [
@@ -47,7 +47,7 @@ $MATERIALS_DATA = [
         ]
     ],
     [
-        'image' => 'images/solutions/solution.png',
+        'image' => 'images/innovation/m2.png',
         'title' => 'Premium Stainless Steel',
         'description' => 'High-grade stainless steel with excellent corrosion resistance',
         'features' => [
@@ -57,7 +57,7 @@ $MATERIALS_DATA = [
         ]
     ],
     [
-        'image' => 'images/solutions/solution.png',
+        'image' => 'images/innovation/m3.png',
         'title' => 'Specialized Alloys',
         'description' => 'Custom alloy solutions for specific application requirements',
         'features' => [

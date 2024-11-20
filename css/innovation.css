@@ -4,10 +4,6 @@
     background: #f8f9fa;
 }
 
-.section-header {
-    margin-bottom: 50px;
-}
-
 .expertise-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -87,29 +83,220 @@
     letter-spacing: 0.3px;
 }
 
-/* Process Flow Styles */
-.process-section {
+/* Process Innovation Section Styles */
+.solutions-section {
     padding: 80px 0;
-    background: #f8f9fa;
+    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+    position: relative;
     overflow: hidden;
 }
 
-.process-timeline {
-    display: flex;
-    justify-content: space-between;
+.section-header {
+    text-align: center;
+    margin-bottom: 60px;
     position: relative;
-    margin: 60px 0;
 }
 
-.process-timeline::before {
+.section-tag {
+    margin-bottom: 20px;
+    position: relative;
+    display: inline-block;
+}
+
+.section-tag span {
+    display: inline-block;
+    padding: 8px 24px;
+    background: linear-gradient(135deg, rgba(74, 144, 226, 0.1), rgba(53, 122, 189, 0.1));
+    color: #4a90e2;
+    border-radius: 30px;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    position: relative;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(74, 144, 226, 0.2);
+}
+
+.section-tag::before,
+.section-tag::after {
     content: '';
     position: absolute;
-    top: 35px;
-    left: 0;
-    right: 0;
+    height: 1px;
+    width: 30px;
+    background: linear-gradient(90deg, #4a90e2, transparent);
+    top: 50%;
+    opacity: 0.3;
+}
+
+.section-tag::before {
+    right: 100%;
+    margin-right: 15px;
+}
+
+.section-tag::after {
+    left: 100%;
+    margin-left: 15px;
+    background: linear-gradient(90deg, transparent, #4a90e2);
+}
+
+.section-tag:hover span {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(74, 144, 226, 0.15);
+    background: linear-gradient(135deg, rgba(74, 144, 226, 0.15), rgba(53, 122, 189, 0.15));
+}
+
+.section-title {
+    font-size: 36px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    background: linear-gradient(45deg, #2c3e50, #3498db);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.section-desc {
+    max-width: 700px;
+    margin: 0 auto;
+    color: #666;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+.innovation-process {
+    display: flex;
+    gap: 30px;
+    margin: 60px auto 0;
+    padding: 0 20px;
+    transform: skewX(-10deg);
+}
+
+.process-step {
+    flex: 1;
+    background: #fff;
+    border-radius: 12px;
+    padding: 40px 30px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.process-step > * {
+    transform: skewX(10deg);
+}
+
+.step-number {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #4a90e2, #357abd);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 25px;
+}
+
+.step-number span {
+    color: #fff;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.step-icon {
+    width: 50px;
+    height: 50px;
+    background: rgba(74, 144, 226, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    transition: all 0.3s ease;
+}
+
+.step-icon i {
+    font-size: 24px;
+    color: #4a90e2;
+}
+
+.step-content {
+    text-align: center;
+    padding: 0 15px;
+}
+
+.step-content h4 {
+    font-size: 22px;
+    margin-bottom: 15px;
+    color: #2c3e50;
+    font-weight: 600;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.step-content h4::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
     height: 2px;
-    background: linear-gradient(90deg, #4CAF50 0%, #2196F3 33%, #FF9800 66%, #E91E63 100%);
-    z-index: 1;
+    background: linear-gradient(90deg, #4a90e2, #357abd);
+}
+
+.step-content p {
+    color: #666;
+    margin-bottom: 20px;
+    line-height: 1.7;
+    font-size: 15px;
+}
+
+.step-details {
+    padding-top: 20px;
+    margin-top: 20px;
+    border-top: 1px solid rgba(74, 144, 226, 0.1);
+    color: #666;
+    font-size: 14px;
+    line-height: 1.8;
+    display: none;
+}
+
+.process-step:hover {
+    transform: translateY(-10px) skewX(-10deg);
+    box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+    background: linear-gradient(to bottom right, #fff, #f8f9fa);
+}
+
+.process-step:hover .step-icon {
+    background: rgba(74, 144, 226, 0.2);
+    transform: rotate(360deg);
+}
+
+.process-step:hover h4::after {
+    width: 60px;
+    background: linear-gradient(90deg, #357abd, #4a90e2);
+}
+
+/* 响应式调整 */
+@media (max-width: 991px) {
+    .innovation-process {
+        flex-direction: column;
+        transform: none;
+        max-width: 600px;
+        margin: 40px auto 0;
+    }
+    
+    .process-step {
+        transform: none;
+    }
+    
+    .process-step > * {
+        transform: none;
+    }
+    
+    .process-step:hover {
+        transform: translateY(-5px);
+    }
 }
 
 /* Materials Section Styles */
