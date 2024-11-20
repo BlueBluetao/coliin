@@ -1,46 +1,45 @@
 <?php 
 require_once 'config/config.php';
+require_once 'config/5_axis_config.php';
 require_once 'includes/header.php';
 require_once 'includes/navigation.php';
 ?>
 
+<link rel="stylesheet" href="css/5-axis.css">
+<script src="js/5-axis.js" defer></script>
+
 <!-- Solution Hero Section -->
 <?php 
-$page_title = "5-Axis Machining";
-$breadcrumbs = [
-    ['title' => 'Home', 'link' => 'index.php'],
-    ['title' => 'Solutions', 'link' => 'solutions.php'],
-    ['title' => '5-Axis Machining']
-];
+$page_title = $axis_config['hero']['title'];
+$breadcrumbs = $axis_config['hero']['breadcrumbs'];
 require_once 'includes/solution-hero-section.php';
 ?>
 
 <!-- Technology Overview -->
 <section class="no-padding-top">
     <div class="container">
-        <div class="row flex-row">
-            <div class="col-md-6">
+        <div class="row">
+            <div class="col-md-12">
                 <div class="content-box">
-                    <h4 class="text-primary">TECHNOLOGY</h4>
-                    <h2>Advanced 5-Axis Machining</h2>
-                    <p>Our state-of-the-art 5-axis machining centers deliver precision and efficiency for complex parts manufacturing.</p>
-                    <ul class="solution-features">
-                        <?php
-                        $features = [
-                            'Simultaneous 5-axis movement',
-                            'Complex geometry capability',
-                            'High precision control',
-                            'Reduced setup time'
-                        ];
-                        foreach($features as $feature): ?>
-                        <li><i class="icon ion-md-checkmark-circle"></i><?php echo $feature; ?></li>
+                    <h4 class="text-primary"><?php echo $axis_config['technology']['subtitle']; ?></h4>
+                    <h2><?php echo $axis_config['technology']['title']; ?></h2>
+                    <p><?php echo $axis_config['technology']['overview']['content']; ?></p>
+                    
+                    <div class="row">
+                        <?php foreach($axis_config['technology']['overview']['advantages'] as $advantage): ?>
+                        <div class="col-md-6 mb-4">
+                            <div class="advantage-item">
+                                <div class="advantage-icon">
+                                    <i class="icon <?php echo $advantage['icon']; ?>"></i>
+                                </div>
+                                <div class="advantage-content">
+                                    <h4><?php echo $advantage['title']; ?></h4>
+                                    <p><?php echo $advantage['description']; ?></p>
+                                </div>
+                            </div>
+                        </div>
                         <?php endforeach; ?>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="image-box">
-                    <img src="images/solutions/5-axis-machine.jpg" alt="5-Axis Machine" class="img-fluid rounded">
+                    </div>
                 </div>
             </div>
         </div>
@@ -52,44 +51,13 @@ require_once 'includes/solution-hero-section.php';
     <div class="container">
         <div class="row">
             <div class="col-md-12 text-center">
-                <h4 class="text-primary">CAPABILITIES</h4>
-                <h2>What We Can Machine</h2>
+                <h4 class="text-primary"><?php echo $axis_config['capabilities']['subtitle']; ?></h4>
+                <h2><?php echo $axis_config['capabilities']['title']; ?></h2>
                 <div class="coliin-space-30"></div>
             </div>
         </div>
         <div class="row">
-            <?php
-            $capabilities = [
-                [
-                    'icon' => 'ion-md-cog',
-                    'title' => 'Aerospace Parts',
-                    'items' => [
-                        'Turbine blades',
-                        'Complex housings',
-                        'Structural components'
-                    ]
-                ],
-                [
-                    'icon' => 'ion-md-build',
-                    'title' => 'Medical Devices',
-                    'items' => [
-                        'Implants',
-                        'Surgical instruments',
-                        'Custom fixtures'
-                    ]
-                ],
-                [
-                    'icon' => 'ion-md-cube',
-                    'title' => 'Mold & Die',
-                    'items' => [
-                        'Complex mold cores',
-                        'Die components',
-                        'Pattern making'
-                    ]
-                ]
-            ];
-
-            foreach($capabilities as $capability): ?>
+            <?php foreach($axis_config['capabilities']['items'] as $capability): ?>
             <div class="col-md-4">
                 <div class="capability-box">
                     <div class="capability-icon">
@@ -113,25 +81,17 @@ require_once 'includes/solution-hero-section.php';
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <h4 class="text-primary">SPECIFICATIONS</h4>
-                <h2>Machine Specifications</h2>
+                <h4 class="text-primary"><?php echo $axis_config['specifications']['subtitle']; ?></h4>
+                <h2><?php echo $axis_config['specifications']['title']; ?></h2>
                 <div class="coliin-space-30"></div>
                 
                 <div class="specs-table">
                     <table class="table">
                         <tbody>
-                            <?php
-                            $specifications = [
-                                'Work Envelope' => '800 x 800 x 800 mm',
-                                'Spindle Speed' => 'Up to 20,000 RPM',
-                                'Axis Travel' => 'X/Y/Z: 800/800/800mm',
-                                'Positioning Accuracy' => '±0.005mm'
-                            ];
-
-                            foreach($specifications as $key => $value): ?>
+                            <?php foreach($axis_config['specifications']['items'] as $spec): ?>
                             <tr>
-                                <td><?php echo $key; ?></td>
-                                <td><?php echo $value; ?></td>
+                                <td><?php echo $spec['label']; ?></td>
+                                <td><?php echo $spec['value']; ?></td>
                             </tr>
                             <?php endforeach; ?>
                         </tbody>
@@ -147,33 +107,28 @@ require_once 'includes/solution-hero-section.php';
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <h4 class="text-primary">CASE STUDIES</h4>
-                <h2>Success Stories</h2>
+                <h4 class="text-primary"><?php echo $axis_config['cases']['subtitle']; ?></h4>
+                <h2><?php echo $axis_config['cases']['title']; ?></h2>
+                <div class="navigation-buttons">
+                    <button id="prev"><i class="icon ion-md-arrow-back"></i></button>
+                    <button id="next"><i class="icon ion-md-arrow-forward"></i></button>
+                </div>
                 <div class="coliin-space-30"></div>
             </div>
         </div>
         
-        <div class="case-slider" data-show="3" data-arrow="true">
-            <?php
-            $cases = [
-                [
-                    'image' => 'images/solutions/aerospace-case.jpg',
-                    'title' => 'Aerospace Component',
-                    'description' => 'Complex turbine blade manufacturing for aerospace client'
-                ]
-                // 可以添加更多案例
-            ];
-
-            foreach($cases as $case): ?>
+        <div class="case-slider">
+            <?php foreach($axis_config['cases']['items'] as $case): ?>
             <div class="case-item">
-                <div class="case-box">
+                <div class="case-study-box">
                     <div class="case-image">
                         <img src="<?php echo $case['image']; ?>" alt="<?php echo $case['title']; ?>">
                     </div>
-                    <div class="case-content">
-                        <h3><?php echo $case['title']; ?></h3>
-                        <p><?php echo $case['description']; ?></p>
-                        <a href="cases.php" class="btn btn-primary">View Case</a>
+                    <div class="case-overlay">
+                        <div class="case-content">
+                            <h3><?php echo $case['title']; ?></h3>
+                            <p><?php echo $case['description']; ?></p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -184,8 +139,8 @@ require_once 'includes/solution-hero-section.php';
 
 <!-- Quote Section -->
 <?php 
-$quote_title = $quote_sections['5-axis']['title'];
-$quote_description = $quote_sections['5-axis']['description'];
+$quote_title = $axis_config['quote']['title'];
+$quote_description = $axis_config['quote']['description'];
 require_once 'includes/quote-section.php';
 ?>
 
