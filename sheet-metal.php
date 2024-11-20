@@ -1,17 +1,18 @@
 <?php 
 require_once 'config/config.php';
+require_once 'config/sheet_metal_config.php';
 require_once 'includes/header.php';
-require_once 'includes/navigation.php';
 ?>
 
-<!-- Solution Hero Section -->
-<?php 
-$page_title = "Sheet Metal Processing";
-$breadcrumbs = [
-    ['title' => 'Home', 'link' => 'index.php'],
-    ['title' => 'Solutions', 'link' => 'solutions.php'],
-    ['title' => 'Sheet Metal Processing']
-];
+<!-- 添加页面特定的CSS -->
+<link rel="stylesheet" href="css/sheet-metal.css">
+
+<?php
+require_once 'includes/navigation.php';
+
+// Solution Hero Section
+$page_title = $page_config['title'];
+$breadcrumbs = $page_config['breadcrumbs'];
 require_once 'includes/solution-hero-section.php';
 ?>
 
@@ -19,29 +20,16 @@ require_once 'includes/solution-hero-section.php';
 <section class="no-padding-top">
     <div class="container">
         <div class="row flex-row">
-            <div class="col-md-6">
+            <div class="col-md-12">
                 <div class="content-box">
                     <h4 class="text-primary">SERVICES</h4>
-                    <h2>Sheet Metal Fabrication</h2>
-                    <p>Professional sheet metal fabrication services with advanced equipment and experienced craftsmen.</p>
+                    <h2><?php echo $services_overview['title']; ?></h2>
+                    <p><?php echo $services_overview['description']; ?></p>
                     <ul class="solution-features">
-                        <?php
-                        $features = [
-                            'Precision Cutting & Forming',
-                            'Custom Fabrication',
-                            'Rapid Prototyping',
-                            'Production Manufacturing'
-                        ];
-                        foreach($features as $feature): ?>
+                        <?php foreach($features as $feature): ?>
                         <li><i class="icon ion-md-checkmark-circle"></i><?php echo $feature; ?></li>
                         <?php endforeach; ?>
                     </ul>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="image-box">
-                    <img src="images/solutions/solution_demo.jpg" alt="Sheet Metal Processing" class="img-fluid rounded">
-                    <!-- <img src="images/solutions/sheet-metal-process.jpg" alt="Sheet Metal Processing" class="img-fluid rounded"> -->
                 </div>
             </div>
         </div>
@@ -59,31 +47,7 @@ require_once 'includes/solution-hero-section.php';
             </div>
         </div>
         <div class="row">
-            <?php
-            $methods = [
-                [
-                    'icon' => 'ion-md-cut',
-                    'title' => 'Laser Cutting',
-                    'description' => 'High-precision laser cutting for various materials and thicknesses'
-                ],
-                [
-                    'icon' => 'ion-md-hammer',
-                    'title' => 'Bending',
-                    'description' => 'Advanced CNC press brakes for precise bending operations'
-                ],
-                [
-                    'icon' => 'ion-md-flash',
-                    'title' => 'Welding',
-                    'description' => 'Professional welding services for various metals'
-                ],
-                [
-                    'icon' => 'ion-md-color-fill',
-                    'title' => 'Surface Treatment',
-                    'description' => 'Multiple finishing options for different requirements'
-                ]
-            ];
-
-            foreach($methods as $method): ?>
+            <?php foreach($methods as $method): ?>
             <div class="col-md-3">
                 <div class="process-box text-center">
                     <div class="process-icon">
@@ -108,21 +72,6 @@ require_once 'includes/solution-hero-section.php';
                 <div class="coliin-space-30"></div>
                 <div class="materials-list">
                     <?php
-                    $materials = [
-                        [
-                            'title' => 'Stainless Steel',
-                            'types' => '304, 316L, 201, etc.'
-                        ],
-                        [
-                            'title' => 'Carbon Steel',
-                            'types' => 'Q235, Q345, etc.'
-                        ],
-                        [
-                            'title' => 'Aluminum',
-                            'types' => '5052, 6061, 7075, etc.'
-                        ]
-                    ];
-
                     foreach($materials as $material): ?>
                     <div class="material-item">
                         <h4><?php echo $material['title']; ?></h4>
@@ -139,13 +88,6 @@ require_once 'includes/solution-hero-section.php';
                     <table class="table">
                         <tbody>
                             <?php
-                            $specifications = [
-                                'Sheet Thickness' => '0.5mm - 20mm',
-                                'Max Sheet Size' => '3000 x 1500mm',
-                                'Bending Accuracy' => '±0.1°',
-                                'Surface Finish' => 'Up to Ra 0.8'
-                            ];
-
                             foreach($specifications as $key => $value): ?>
                             <tr>
                                 <td><?php echo $key; ?></td>
@@ -164,41 +106,26 @@ require_once 'includes/solution-hero-section.php';
 <section class="bg-light">
     <div class="container">
         <div class="row">
-            <div class="col-md-12">
+            <div class="col-md-12 text-center">
                 <h4 class="text-primary">APPLICATIONS</h4>
                 <h2>Industry Applications</h2>
                 <div class="coliin-space-30"></div>
             </div>
         </div>
         <div class="row">
-            <?php
-            $applications = [
-                [
-                    // 'image' => 'images/applications/industrial-equipment.jpg',
-                    'image' => 'images/solutions/solution_demo.jpg',
-                    'title' => 'Industrial Equipment',
-                    'description' => 'Machine covers, frames, and enclosures'
-                ],
-                [
-                    // 'image' => 'images/applications/electronics.jpg',
-                    'image' => 'images/solutions/solution_demo.jpg',
-                    'title' => 'Electronics',
-                    'description' => 'Chassis, panels, and cabinets'
-                ],
-                [
-                    // 'image' => 'images/applications/automotive.jpg',
-                    'image' => 'images/solutions/solution_demo.jpg',
-                    'title' => 'Automotive',
-                    'description' => 'Body panels and structural components'
-                ]
-            ];
-
-            foreach($applications as $app): ?>
-            <div class="col-md-4">
-                <div class="application-box">
-                    <img src="<?php echo $app['image']; ?>" alt="<?php echo $app['title']; ?>">
-                    <h3><?php echo $app['title']; ?></h3>
-                    <p><?php echo $app['description']; ?></p>
+            <?php foreach($applications as $app): ?>
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="application-box hover-effect">
+                    <div class="image-wrapper">
+                        <img src="<?php echo $app['image']; ?>" alt="<?php echo $app['title']; ?>" class="img-fluid">
+                        <div class="overlay">
+                            <div class="overlay-content">
+                                <h3><?php echo $app['title']; ?></h3>
+                                <span class="category"><?php echo $app['category']; ?></span>
+                                <p><?php echo $app['description']; ?></p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
             <?php endforeach; ?>
