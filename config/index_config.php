@@ -2,7 +2,7 @@
 // 滑块数据
 $slider_data = [
     [
-        'image' => 'images/slider-1.jpg',
+        'image' => 'images/slider/slider-1.png',
         'subtitle' => 'WELCOME TO COLIIN...!',
         'title' => 'The leading provider of Industrial',
         'button' => [
@@ -11,7 +11,7 @@ $slider_data = [
         ]
     ],
     [
-        'image' => 'images/slider-2.jpg',
+        'image' => 'images/slider/slider-2.png',
         'subtitle' => 'WELCOME TO COLIIN...!',
         'title' => 'Leader in power Automation',
         'button' => [
@@ -20,7 +20,7 @@ $slider_data = [
         ]
     ],
     [
-        'image' => 'images/slider-3.jpg',
+        'image' => 'images/slider/slider-3.png', 
         'subtitle' => 'WELCOME TO COLIIN...!',
         'title' => 'Best solution for Industrial & Factories',
         'button' => [
