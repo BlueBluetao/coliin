@@ -3,8 +3,14 @@
 
 // Overview Section
 $supply_chain_overview = [
-    'title' => 'Integrated Supply Chain Solutions',
-    'description' => 'Comprehensive supply chain management services optimizing your procurement process and reducing operational costs.',
+    'title' => 'Intelligent Supply Chain Management',
+    'description' => '<div class="overview-description">
+        <p class="mb-4">The new model of supply chain management services and efficient intelligent quotation system has brought about a comprehensive and efficient management revolution in the manufacturing industry, spanning from software to hardware, design to production. With digitalization as its core driving force, this system deeply integrates intelligent technologies to establish an efficient bridge for seamless connection between supply and demand sides.</p>
+        
+        <p class="mb-4">By deeply integrating vast amounts of information in the supply chain and utilizing advanced market risk prediction models, the system effectively weakens barriers caused by information asymmetry, achieving real-time monitoring and forecasting of precise pricing, strict quality control, and accurate delivery management. This innovative model not only provides enterprises with a comprehensive and customized non-standard parts quotation solution but also greatly simplifies the quotation process, making it both fast and transparent.</p>
+        
+        <p class="mb-0">At the same time, it significantly shortens delivery cycles, reduces inventory costs, enhances enterprise market adaptability, and greatly improves customer satisfaction, providing global customers with more efficient and reliable products and solutions.</p>
+    </div>',
     'features' => [
         'Global Sourcing Network',
         'Quality Assurance', 

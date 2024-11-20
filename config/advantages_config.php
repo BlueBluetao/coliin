@@ -8,7 +8,9 @@ $advantages_config = [
     'overview' => [
         'tag' => 'OVERVIEW',
         'title' => 'Integrated Manufacturing Technology',
-        'description' => 'Our advanced manufacturing technology integrates multiple processes to deliver comprehensive solutions for complex manufacturing needs.',
+        'description' => '<p>The new integrated operation mode for customized hardware parts has drastically reduced delivery times from traditional several weeks or even months to just a few days to a week. This addresses long-standing issues in the customized hardware parts manufacturing sector, such as extended delivery cycles, low efficiency, high error rates, and unstable quality. Moreover, it resolves challenges from the traditional manufacturing process where each stage is independently scattered, leading to high product rework and waste rates, posing a heavy burden on costs.</p>
+
+<p>This innovative approach breaks through the limitations of traditional manufacturing patterns, reshaping industry benchmarks for speed and quality.</p>',
         'features' => [
             [
                 'icon' => 'ion-md-git-network',
@@ -41,7 +43,9 @@ $advantages_config = [
             'stat_number' => '85',
             'stat_symbol' => '%',
             'stat_label' => 'Faster Production',
-            'description' => 'Implementation of high-speed machining technology enables rapid material removal and significantly reduced processing times.'
+            'description' => '<p>The new integrated operation mode for customized hardware parts has drastically reduced delivery times from traditional several weeks or even months to just a few days to a week. This addresses long-standing issues in the customized hardware parts manufacturing sector, such as extended delivery cycles, low efficiency, high error rates, and unstable quality. Moreover, it resolves challenges from the traditional manufacturing process where each stage is independently scattered, leading to high product rework and waste rates, posing a heavy burden on costs.</p>
+
+<p>This innovative approach breaks through the limitations of traditional manufacturing patterns, reshaping industry benchmarks for speed and quality.</p>'
         ],
         [
             'icon' => 'ion-md-precision',
