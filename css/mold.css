@@ -1,0 +1,114 @@
+.process-box {
+    padding: 30px 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+    margin-bottom: 30px;
+    transition: all 0.3s ease;
+}
+
+.process-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+}
+
+.process-icon {
+    margin-bottom: 20px;
+}
+
+.process-icon .icon {
+    font-size: 48px;
+    color: var(--primary-color);
+}
+
+.process-box h3 {
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.process-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+}
+
+.process-list li {
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.process-list li:last-child {
+    border-bottom: none;
+}
+
+/* Applications 样式 */
+.application-grid {
+    margin: 30px 0;
+}
+
+.application-box {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+    overflow: hidden;
+    transition: all 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.application-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+}
+
+.application-box img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 1px solid #eee;
+}
+
+.application-box .content {
+    padding: 20px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.application-box h3 {
+    margin: 0 0 10px 0;
+    color: #333;
+    font-size: 1.2rem;
+}
+
+.application-box p {
+    margin: 0;
+    color: #666;
+    line-height: 1.5;
+}
+
+/* 响应式滚动容器 */
+.application-scroll {
+    display: flex;
+    overflow-x: auto;
+    padding: 20px 0;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none; /* Firefox */
+}
+
+.application-scroll::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Edge */
+}
+
+.application-scroll .col-md-4 {
+    flex: 0 0 300px; /* 固定宽度 */
+    margin-right: 20px;
+    scroll-snap-align: start;
+}
+
+.application-scroll .col-md-4:last-child {
+    margin-right: 0;
+} 
