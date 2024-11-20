@@ -5470,7 +5470,7 @@ table .cart-subtotal {
     flex-wrap: nowrap;  /* 防止换行 */
     overflow-x: auto;   /* 如果内容过多允许横向滚动 */
     gap: 20px;         /* 图标之间的间距 */
-    padding: 10px 0;    /* 上下添加内边距 */
+    padding: 10px 0;    /* 上下加内边距 */
     -webkit-overflow-scrolling: touch; /* 在移动设备上实现平滑滚动 */
 }
 
@@ -5595,7 +5595,7 @@ table .cart-subtotal {
     transform: scale(1.05);
 }
 
-/* 认证名��� */
+/* 认证名 */
 .certification-name {
     margin-top: 15px;
     font-size: 13px;
@@ -6717,4 +6717,46 @@ table .cart-subtotal {
     .feature-item {
         padding: 8px 15px;
     }
+}
+
+/* Back to top button */
+.back-to-top {
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    z-index: 999;
+}
+
+.back-to-top.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.back-to-top i {
+    position: relative;
+    color: #ffd100;  /* 默认黄色 */
+    font-size: 36px;
+    display: inline-block;
+    animation: spin 3s infinite linear;
+    -webkit-animation: spin 3s infinite linear;
+    will-change: transform;
+    transition: color 0.3s ease;  /* 添加颜色过渡效果 */
+}
+
+@keyframes spin {
+    from { transform: rotate(0); }
+    to { transform: rotate(360deg); }
+}
+
+.back-to-top:hover i {
+    color: #03132b;  /* 悬停时变为深蓝色 */
 }

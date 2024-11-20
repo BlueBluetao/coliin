@@ -55,6 +55,9 @@
             </div>
         </div>
     </div>
+    <div id="back-to-top" class="back-to-top">
+        <i class="icon ion-ios-settings"></i>
+    </div>
 </footer>
 
 <!-- 首先加载jQuery -->
@@ -72,8 +75,8 @@
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
 
-<!-- 最后加载自定义效果脚本 -->
-<!-- <script src="js/effects.js"></script> -->
+<!-- 添加 main.js -->
+<script src='js/main.js'></script>
 
 </body>
 </html> 
