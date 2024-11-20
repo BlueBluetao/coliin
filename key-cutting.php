@@ -1,47 +1,73 @@
 <?php 
 require_once 'config/config.php';
+require_once 'config/key_cutting_config.php';
 require_once 'includes/header.php';
 require_once 'includes/navigation.php';
 ?>
 
 <!-- Hero Section -->
 <?php 
-$page_title = "Key Cutting Solutions";
-$breadcrumbs = [
-    ['title' => 'Home', 'link' => 'index.php'],
-    ['title' => 'Solutions', 'link' => 'solutions.php'],
-    ['title' => 'Key Cutting']
-];
+$page_title = $key_cutting_config['page_title'];
+$breadcrumbs = $key_cutting_config['breadcrumbs'];
 require_once 'includes/hero-section.php';
 ?>
 
 <!-- Overview Section -->
 <section class="no-padding-top">
     <div class="container">
-        <div class="row flex-row">
-            <div class="col-md-6">
-                <div class="content-box">
-                    <h4 class="text-primary">OVERVIEW</h4>
-                    <h2>Key Cutting Services</h2>
-                    <p>Professional key cutting services for automotive and security applications.</p>
-                    <ul class="solution-features">
-                        <li><i class="icon ion-md-checkmark-circle"></i>High Precision Cutting</li>
-                        <li><i class="icon ion-md-checkmark-circle"></i>Multiple Key Types</li>
-                        <li><i class="icon ion-md-checkmark-circle"></i>Advanced Security Features</li>
-                    </ul>
+        <div class="row">
+            <div class="col-md-12">
+                <h2 class="text-center mb-5"><?php echo $key_cutting_config['overview']['title']; ?></h2>
+            </div>
+        </div>
+        <?php foreach($key_cutting_config['overview']['paragraphs'] as $paragraph): ?>
+        <div class="row mb-4">
+            <div class="col-md-12">
+                <div class="overview-box">
+                    <h3 class="text-primary"><?php echo $paragraph['title']; ?></h3>
+                    <p><?php echo $paragraph['content']; ?></p>
                 </div>
             </div>
-            <div class="col-md-6">
-                <div class="image-box">
-                    <img src="images/solutions/key-cutting.jpg" alt="Key Cutting" class="img-fluid rounded">
+        </div>
+        <?php endforeach; ?>
+    </div>
+</section>
+
+<!-- Products -->
+<section class="bg-light">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h4 class="text-primary text-center">OUR PRODUCTS</h4>
+                <h2 class="text-center">Key Cutting Machines</h2>
+                <div class="coliin-space-30"></div>
+            </div>
+        </div>
+        <div class="row">
+            <?php foreach($key_cutting_config['products'] as $product): ?>
+            <div class="col-md-4">
+                <div class="product-box">
+                    <div class="product-image">
+                        <img src="<?php echo $product['image']; ?>" alt="<?php echo $product['title']; ?>" class="img-fluid">
+                    </div>
+                    <div class="product-info">
+                        <h3><?php echo $product['title']; ?></h3>
+                        <h4 class="model">Model: <?php echo $product['model']; ?></h4>
+                        <ul class="feature-list">
+                            <?php foreach($product['features'] as $feature): ?>
+                            <li><i class="icon ion-md-checkmark"></i><?php echo $feature; ?></li>
+                            <?php endforeach; ?>
+                        </ul>
+                    </div>
                 </div>
             </div>
+            <?php endforeach; ?>
         </div>
     </div>
 </section>
 
 <!-- Key Types -->
-<section class="bg-light">
+<section>
     <div class="container">
         <div class="row">
             <div class="col-md-12 text-center">
@@ -51,41 +77,7 @@ require_once 'includes/hero-section.php';
             </div>
         </div>
         <div class="row">
-            <?php
-            $key_types = [
-                [
-                    'icon' => 'ion-md-key',
-                    'title' => 'Automotive Keys',
-                    'features' => [
-                        'Laser Cut Keys',
-                        'Transponder Keys',
-                        'Remote Keys',
-                        'Smart Keys'
-                    ]
-                ],
-                [
-                    'icon' => 'ion-md-lock',
-                    'title' => 'Security Keys',
-                    'features' => [
-                        'High Security Keys',
-                        'Dimple Keys',
-                        'Tubular Keys',
-                        'Safe Keys'
-                    ]
-                ],
-                [
-                    'icon' => 'ion-md-home',
-                    'title' => 'Residential Keys',
-                    'features' => [
-                        'Standard Keys',
-                        'Restricted Keys',
-                        'Master Keys',
-                        'Cylinder Keys'
-                    ]
-                ]
-            ];
-
-            foreach($key_types as $type): ?>
+            <?php foreach($key_cutting_config['key_types'] as $type): ?>
             <div class="col-md-4">
                 <div class="key-type-box text-center">
                     <div class="type-icon">
@@ -105,7 +97,7 @@ require_once 'includes/hero-section.php';
 </section>
 
 <!-- Features -->
-<section>
+<section class="bg-light">
     <div class="container">
         <div class="row">
             <div class="col-md-12">
@@ -115,31 +107,7 @@ require_once 'includes/hero-section.php';
             </div>
         </div>
         <div class="row">
-            <?php
-            $features = [
-                [
-                    'icon' => 'ion-md-eye',
-                    'title' => 'Optical Reading',
-                    'description' => 'Advanced key scanning system'
-                ],
-                [
-                    'icon' => 'ion-md-flash',
-                    'title' => 'Fast Cutting',
-                    'description' => 'Rapid key duplication'
-                ],
-                [
-                    'icon' => 'ion-md-cloud',
-                    'title' => 'Database',
-                    'description' => 'Extensive key codes library'
-                ],
-                [
-                    'icon' => 'ion-md-cloud',
-                    'title' => 'Security',
-                    'description' => 'Advanced security features'
-                ]
-            ];
-
-            foreach($features as $feature): ?>
+            <?php foreach($key_cutting_config['machine_features'] as $feature): ?>
             <div class="col-md-3">
                 <div class="feature-box">
                     <div class="feature-icon">
@@ -147,42 +115,6 @@ require_once 'includes/hero-section.php';
                     </div>
                     <h3><?php echo $feature['title']; ?></h3>
                     <p><?php echo $feature['description']; ?></p>
-                </div>
-            </div>
-            <?php endforeach; ?>
-        </div>
-    </div>
-</section>
-
-<!-- Applications -->
-<section class="bg-light">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <h4 class="text-primary">APPLICATIONS</h4>
-                <h2>Industry Applications</h2>
-                <div class="coliin-space-30"></div>
-            </div>
-        </div>
-        <div class="application-slider" data-show="3" data-arrow="true">
-            <?php
-            $applications = [
-                [
-                    'image' => 'images/solutions/automotive-keys.jpg',
-                    'title' => 'Automotive',
-                    'description' => 'Car dealerships and service centers'
-                ],
-                // 添加更多应用案例...
-            ];
-
-            foreach($applications as $app): ?>
-            <div class="application-item">
-                <div class="application-box">
-                    <img src="<?php echo $app['image']; ?>" alt="<?php echo $app['title']; ?>">
-                    <div class="application-content">
-                        <h3><?php echo $app['title']; ?></h3>
-                        <p><?php echo $app['description']; ?></p>
-                    </div>
                 </div>
             </div>
             <?php endforeach; ?>
