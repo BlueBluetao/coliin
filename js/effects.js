@@ -97,4 +97,49 @@ window.addEventListener('load', function() {
         // 初始化效果
         initializeEffects();
     });
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+    const applicationItems = document.querySelectorAll('.application-item');
+    const applicationImage = document.getElementById('application-image').querySelector('img');
+
+    // 关闭其他打开的项目
+    function closeOtherItems(currentItem) {
+        applicationItems.forEach(item => {
+            if (item !== currentItem && item.classList.contains('active')) {
+                item.classList.remove('active');
+                item.querySelector('.application-content').style.display = 'none';
+            }
+        });
+    }
+
+    applicationItems.forEach(item => {
+        item.addEventListener('click', function() {
+            // 关闭其他打开的项目
+            closeOtherItems(this);
+
+            // 切换当前项目的状态
+            this.classList.toggle('active');
+            
+            // 获取图片信息
+            const imagePath = this.getAttribute('data-image');
+            const title = this.querySelector('h3').textContent.trim();
+
+            // 切换图片
+            if (applicationImage) {
+                applicationImage.style.opacity = 0;
+                setTimeout(() => {
+                    applicationImage.src = imagePath;
+                    applicationImage.alt = title;
+                    applicationImage.style.opacity = 1;
+                }, 300);
+            }
+
+            // 切换描述显示
+            const content = this.querySelector('.application-content');
+            if (content) {
+                content.style.display = this.classList.contains('active') ? 'block' : 'none';
+            }
+        });
+    });
 }); 
