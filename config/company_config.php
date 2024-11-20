@@ -1,8 +1,7 @@
 <?php
 $company_config = [
     // Company basic info
-    'name' => 'Collin',
-    'english_name' => 'Moxperts',
+    'name' => 'Coliin Industrial',
     'location' => 'Shanghai',
     'years_experience' => '10+',
     

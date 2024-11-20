@@ -29,7 +29,7 @@ include 'includes/navigation.php';
                 <div class="col-md-6 col-sm-12 mb-4 mb-md-0">
                     <div class="story-content pr-xl-70">
                         <h4 class="text-primary mb-3"><?php echo $company_config['brief']['title']; ?></h4>
-                        <h2 class="mb-4"><?php echo $company_config['name']; ?> (<?php echo $company_config['english_name']; ?>)</h2>
+                        <h2 class="mb-4"><?php echo $company_config['name']; ?></h2>
                         <p class="mb-4"><?php echo $company_config['brief']['description']; ?></p>
                         <div class="service-list mt-4">
                             <h5 class="mb-3">Our Services:</h5>
