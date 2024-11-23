@@ -1,7 +1,7 @@
 <?php
 require_once 'config/config.php';
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
+error_reporting(E_ERROR);
+ini_set('display_errors', 0);
 
 header('Content-Type: application/json');
 
@@ -215,8 +215,21 @@ try {
             <ul>";
         
         foreach ($uploadedFiles as $file) {
+            // 生成唯一的下载token
+            $downloadToken = bin2hex(random_bytes(32));
+            
+            // 更新数据库，保存token
+            $stmt = $pdo->prepare("
+                UPDATE quote_files 
+                SET download_token = ? 
+                WHERE quote_id = ? AND saved_name = ?
+            ");
+            $stmt->execute([$downloadToken, $quoteId, $file['saved_name']]);
+
+            $downloadLink = SITE_URL . "/download.php?token=" . $downloadToken;
             $emailBody .= "<li>{$file['original_name']} (Size: " . 
-                         number_format($file['size'] / 1024, 2) . " KB)</li>";
+                         number_format($file['size'] / 1024, 2) . " KB) - " .
+                         "<a href='{$downloadLink}'>Download File</a></li>";
         }
         
         $emailBody .= "</ul>";

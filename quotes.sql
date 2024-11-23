@@ -16,4 +16,6 @@ CREATE TABLE quote_files (
     token_expires DATETIME NULL,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY (quote_id) REFERENCES quotes(id)
-); 
+);
+
+ALTER TABLE quote_files ADD COLUMN download_token VARCHAR(64) NOT NULL; 
