@@ -117,6 +117,14 @@ require_once 'includes/solution-hero-section.php';
                 </div>
                 <?php endforeach; ?>
             </div>
+            <div class="application-nav">
+                <button class="nav-btn prev" aria-label="Previous slide">
+                    <i class="icon ion-md-arrow-back"></i>
+                </button>
+                <button class="nav-btn next" aria-label="Next slide">
+                    <i class="icon ion-md-arrow-forward"></i>
+                </button>
+            </div>
         </div>
     </div>
 </section>
@@ -127,5 +135,7 @@ $quote_title = $quote_sections['mold']['title'];
 $quote_description = $quote_sections['mold']['description'];
 require_once 'includes/quote-section.php';
 ?>
+
+<script src="js/mold.js"></script>
 
 <?php require_once 'includes/footer.php'; ?> 

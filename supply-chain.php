@@ -213,14 +213,14 @@ include 'includes/header.php';
                 <h4 class="text-primary">GLOBAL SUPPLIER NETWORK</h4>
                 <h2>Strategic Global Collaboration</h2>
                 <div id="supplier-map" class="world-map"></div>
-                <div class="supplier-stats">
+                <!-- <div class="supplier-stats">
                     <?php foreach($supplier_regions as $region): ?>
                     <div class="stat-item">
                         <span class="region"><?php echo $region['region']; ?></span>
                         <span class="number animate-number"><?php echo $region['number']; ?></span>
                     </div>
                     <?php endforeach; ?>
-                </div>
+                </div> -->
             </div>
         </div>
     </div>
