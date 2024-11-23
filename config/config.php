@@ -335,3 +335,17 @@ $hero_sections = [
     ],
     // ... 其他页面的配置
 ];
+
+// Database configuration
+define('DB_HOST', 'localhost');
+define('DB_NAME', 'collin');
+define('DB_USER', 'root');
+define('DB_PASS', '111111');
+
+// Email configuration
+define('SMTP_HOST', 'smtp.163.com');
+define('SMTP_USER', 'develop_demo@163.com');
+define('SMTP_PASS', 'RKCIIOSWONAYOQIV');
+define('SMTP_PORT', 465);
+define('SMTP_FROM', 'develop_demo@163.com');
+define('ADMIN_EMAIL', '937069176@qq.com');
