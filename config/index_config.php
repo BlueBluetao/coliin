@@ -3,7 +3,7 @@
 $slider_data = [
     [
         'image' => 'images/slider/slider-1.png',
-        'subtitle' => 'WELCOME TO COLIIN...!',
+        'subtitle' => '',
         'title' => 'The leading provider of Industrial',
         'button' => [
             'text' => 'Explore now',
@@ -12,7 +12,7 @@ $slider_data = [
     ],
     [
         'image' => 'images/slider/slider-2.png',
-        'subtitle' => 'WELCOME TO COLIIN...!',
+        'subtitle' => '',
         'title' => 'Leader in power Automation',
         'button' => [
             'text' => 'Explore now',
@@ -21,7 +21,7 @@ $slider_data = [
     ],
     [
         'image' => 'images/slider/slider-3.png', 
-        'subtitle' => 'WELCOME TO COLIIN...!',
+        'subtitle' => '',
         'title' => 'Best solution for Industrial & Factories',
         'button' => [
             'text' => 'Explore now',

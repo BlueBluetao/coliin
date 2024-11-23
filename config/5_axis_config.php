@@ -116,6 +116,11 @@ $axis_config = [
                 'image' => 'images/axis/m4.png',
                 'title' => 'Industrial Equipment',
                 'description' => 'Precision industrial equipment parts'
+            ],
+            [
+                'image' => 'images/axis/m5.png',
+                'title' => 'Mechanical equipment',
+                'description' => 'Vertical machining center two lines and one hard'
             ]
         ]
     ],
