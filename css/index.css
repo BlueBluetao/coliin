@@ -1,0 +1,143 @@
+/* Service Cards Styling */
+.service-card {
+    height: 100%;          /* 确保卡片填充整个容器高度 */
+    min-height: 350px;     /* 设置最小高度 */
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    background: #fff;
+    border: 1px solid #eee;  /* 统一边框样式 */
+    transition: all 0.3s ease;
+    margin-bottom: 30px;    /* 卡片间距 */
+}
+
+.service-card:hover {
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.1);
+    border-color: transparent;
+}
+
+.service-card .icon {
+    height: 60px;          /* 固定图标容器高度 */
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.service-card .title {
+    font-size: 20px;
+    margin-bottom: 15px;
+    font-weight: 600;
+    color: #333;
+}
+
+.services-content {
+    height: 160px;         /* 固定内容区域高度 */
+    overflow: hidden;      /* 超出部分隐藏 */
+    margin-bottom: 20px;   /* 为View details留出空间 */
+}
+
+.service-card .description {
+    max-height: 4.5em;     /* 3行文字高度 */
+    line-height: 1.5;      
+    overflow: hidden;      
+    display: -webkit-box;
+    -webkit-line-clamp: 3; 
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    color: #666;
+    font-size: 14px;
+}
+
+.view-detail {
+    margin-top: auto;      /* 推到底部 */
+    display: inline-flex;
+    align-items: center;
+    color: #007bff;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.view-detail i {
+    margin-left: 5px;
+    transition: transform 0.3s ease;
+}
+
+.view-detail:hover i {
+    transform: translateX(5px);
+}
+
+/* 确保父容器使用网格或弹性布局 */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+}
+
+.col-lg-4 {
+    padding: 0 15px;
+    margin-bottom: 30px;
+}
+
+/* Partners Section Styling */
+.partners-section {
+    padding: 60px 0;
+    background: #f8f9fa;
+}
+
+.partners-section .section-title {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.partners-section .section-title h2 {
+    font-size: 36px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.partners-section .section-title p {
+    color: #666;
+    font-size: 16px;
+}
+
+.partner-slider {
+    padding: 20px 0;
+}
+
+.partner-item {
+    padding: 15px;
+}
+
+.partner-item .inner {
+    background: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+}
+
+.partner-item .inner:hover {
+    box-shadow: 0 0 25px rgba(0,0,0,0.1);
+}
+
+.partner-item .thumb {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.partner-item .thumb img {
+    max-height: 60px;
+    max-width: 80%;
+    object-fit: contain;
+    filter: grayscale(100%);
+    opacity: 0.7;
+    transition: all 0.3s ease;
+}
+
+.partner-item .thumb img:hover {
+    filter: grayscale(0%);
+    opacity: 1;
+}

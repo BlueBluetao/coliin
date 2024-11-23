@@ -103,51 +103,58 @@ $solutions_data = [
         'sub_description' => 'Discover our range of advanced manufacturing solutions designed to meet your specific needs.',
         'solutions' => [
             'key-cutting' => [
+                'icon' => 'fas fa-key',
                 'title' => 'Key Cutting Solutions',
                 'description' => 'Professional key cutting machines and systems for automotive and security industries.',
-                'image' => 'images/demo/300x200.png', // images/solutions/key-cutting-thumb.jpg
+                'image' => 'images/demo/300x200.png',
                 'features' => ['High Precision Cutting', 'Multiple Key Types', 'Advanced Security Features'],
                 'category' => 'tools'
             ],
             'auto-tools' => [
+                'icon' => 'fas fa-tools',
                 'title' => 'Auto Tools',
                 'description' => 'Professional-grade automotive tools and diagnostic equipment.',
-                'image' => 'images/demo/300x200.png', // images/solutions/auto-tools-thumb.jpg
+                'image' => 'images/demo/300x200.png',
                 'features' => ['Hand Tools', 'Power Tools', 'Diagnostic Equipment'],
                 'category' => 'tools'
             ],
             '5-axis' => [
+                'icon' => 'fas fa-cogs',
                 'title' => '5-Axis Machining',
                 'description' => 'Advanced 5-axis CNC machining for complex components.',
-                'image' => 'images/demo/300x200.png', // images/solutions/5-axis-thumb.jpg
+                'image' => 'images/demo/300x200.png',
                 'features' => ['Complex Geometries', 'High Precision', 'Multi-axis Control'],
                 'category' => 'machining'
             ],
             '3d-printing' => [
+                'icon' => 'fas fa-print',
                 'title' => '3D Printing',
                 'description' => 'Industrial additive manufacturing solutions.',
-                'image' => 'images/demo/300x200.png', // images/solutions/3d-printing-thumb.jpg
+                'image' => 'images/demo/300x200.png',
                 'features' => ['Rapid Prototyping', 'Multiple Materials', 'Complex Parts'],
                 'category' => 'automation'
             ],
             'cnc' => [
+                'icon' => 'fas fa-industry',
                 'title' => 'CNC Machining',
                 'description' => 'Precision CNC machining services.',
-                'image' => 'images/demo/300x200.png', // images/solutions/cnc-thumb.jpg
+                'image' => 'images/demo/300x200.png',
                 'features' => ['Milling & Turning', 'High Accuracy', 'Multiple Materials'],
                 'category' => 'machining'
             ],
             'sheet-metal' => [
+                'icon' => 'fas fa-layer-group',
                 'title' => 'Sheet Metal',
                 'description' => 'Professional sheet metal fabrication.',
-                'image' => 'images/demo/300x200.png', // images/solutions/sheet-metal-thumb.jpg
+                'image' => 'images/demo/300x200.png',
                 'features' => ['Cutting & Forming', 'Welding', 'Surface Treatment'],
                 'category' => 'machining'
             ],
             'mold' => [
+                'icon' => 'fas fa-cube',
                 'title' => 'Mold & Die',
                 'description' => 'Custom mold and die manufacturing.',
-                'image' => 'images/demo/300x200.png', // images/solutions/mold-thumb.jpg
+                'image' => 'images/demo/300x200.png',
                 'features' => ['Injection Molds', 'Die Casting', 'Tool Making'],
                 'category' => 'tools'
             ]

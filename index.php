@@ -4,6 +4,7 @@ require_once 'config/index_config.php';
 require_once 'includes/header.php';
 require_once 'includes/navigation.php';
 ?>
+<link rel="stylesheet" href="css/index.css">
 
 <div class="slider" data-show="1" data-arrow="true">
     <?php foreach ($slider_data as $slider): ?>
@@ -62,17 +63,21 @@ require_once 'includes/navigation.php';
     <div class="coliin-space-90"></div>
 </section>
 
-<section>
+<section class="partners-section">
     <div class="container">
+        <div class="section-title">
+            <h2><?php echo $partners_section['title']; ?></h2>
+            <p><?php echo $partners_section['subtitle']; ?></p>
+        </div>
         <div class="row">
             <div class="col-md-12">
                 <div class="partner-slider image-carousel text-center" data-show="5" data-arrow="false">
-                    <?php foreach ($partners_data as $partner): ?>
+                    <?php foreach ($partners_section['data'] as $partner): ?>
                     <div>
                         <div class="partner-item text-center clearfix">
                             <div class="inner">
                                 <div class="thumb">
-                                    <img src="<?php echo $partner['logo']; ?>" alt="">
+                                    <img src="<?php echo $partner['logo']; ?>" alt="Client Logo">
                                 </div>
                             </div>
                         </div>
@@ -82,47 +87,22 @@ require_once 'includes/navigation.php';
             </div>
         </div>
     </div>
+</section>
 
-    <div class="container">
+<div class="container">
         <div class="coliin-space"></div>
         <hr>
-        <div class="coliin-space"></div>
-    </div>
+    <div class="coliin-space"></div>
+</div>
 
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <h3><?php echo $form_config['title']; ?></h3>
-                <p><?php echo $form_config['description']; ?></p>
-            </div>
-        </div>
-        <div class="coliin-space-30"></div>
-        <form class="home-form" method="post" action="">
-            <div class="row">
-                <?php foreach ($form_config['fields'] as $field): ?>
-                <div class="col-md-3">
-                    <div class="form-group">
-                        <input type="<?php echo $field['type']; ?>" 
-                               name="<?php echo $field['name']; ?>" 
-                               class="form-control" 
-                               id="<?php echo $field['name']; ?>" 
-                               placeholder="<?php echo $field['placeholder']; ?>" 
-                               <?php echo $field['required'] ? 'required' : ''; ?>>
-                    </div>
-                </div>
-                <?php endforeach; ?>
-                <div class="col-md-3">
-                    <div class="form-group">
-                        <button type="submit" class="wpcf7-form-control wpcf7-submit btn btn-primary btn-full-width">
-                            <?php echo $form_config['submit_button']['text']; ?> 
-                            <i class="<?php echo $form_config['submit_button']['icon']; ?>"></i>
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </form>
-    </div>
-</section>
+<?php 
+// 设置 quote section 的自定义标题和描述
+$quote_title = 'Get a quote';
+$quote_description = 'With 25+ years of manufacturing expertise, we deliver precision-engineered solutions tailored to your specific requirements. Our global network and advanced capabilities ensure exceptional quality and competitive pricing for your projects.';
+
+// 引入 quote-section
+require_once 'includes/quote-section.php';
+?>
 
 <section style="background-image: url('images/bg-1.jpg');">
     <div class="container">

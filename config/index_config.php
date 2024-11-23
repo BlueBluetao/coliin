@@ -34,95 +34,99 @@ $slider_data = [
 $services_data = [
     [
         'icon' => 'images/services-icon-1.png',
-        'title' => 'Transportation & Distribution',
-        'description' => 'By specializing in the transportation of goods in and around the Midwestern United States, we are able to...',
-        'link' => 'services-detail.html'
+        'title' => 'CNC Machining Services',
+        'description' => 'Professional CNC machining services with rapid prototyping technology. 24-hour quotation and 3-day delivery guaranteed. Specialized in precision parts manufacturing for automotive, aerospace and industrial applications.',
+        'link' => 'cnc.php'
     ],
     [
         'icon' => 'images/services-icon-2.png',
-        'title' => 'Oil & Gas exploited',
-        'description' => 'We are a leading explorer for new oil and gas fields. We do this not only to replenish the reserves we produce from current fields, but also to meet...',
-        'link' => 'services-detail.html'
+        'title' => '3D Printing Solutions',
+        'description' => 'Advanced 3D printing services across global regions. Offering rapid prototyping and small-batch production with various materials. Professional solutions for diverse manufacturing requirements worldwide.',
+        'link' => '3d-printing.php'
     ],
     [
         'icon' => 'images/services-icon-3.png',
-        'title' => 'Automotive Manufacturing',
-        'description' => 'The automotive industry is now undergoing the greatest upheaval in its history due to the advancement...',
-        'link' => 'services-detail.html'
+        'title' => 'Sheet Metal Fabrication',
+        'description' => 'Comprehensive sheet metal fabrication services with European expertise. Delivering high-quality components for industrial applications. Advanced equipment and skilled technicians ensure precision results.',
+        'link' => 'sheet-metal.php'
     ],
     [
         'icon' => 'images/services-icon-4.png',
-        'title' => 'Industrial Construction',
-        'description' => 'Diam vehicula platea blandit malesua quam hac vehicula id non leo dui et dapibu turpis quis, tempor augue duis ut justo...',
-        'link' => 'services-detail.html'
+        'title' => 'Mold & Casting Services',
+        'description' => 'Professional mold making and rapid casting services for various industries. Specializing in plastic injection molding and custom solutions. Experienced team delivering quality results on every project.',
+        'link' => 'mold-casting.php'
     ],
     [
         'icon' => 'images/services-icon-5.png',
-        'title' => 'Manufacture',
-        'description' => 'With IoT business solutions, manufacturers have the power not only to improve and automate production, but expand their value chain...',
-        'link' => 'services-detail.html'
+        'title' => 'Digital Supply Chain',
+        'description' => 'One-stop digital supply chain platform connecting 500+ manufacturers worldwide. Ensuring transparent product delivery solutions with 99% on-time delivery rate. Streamlined process from order to delivery.',
+        'link' => 'supply-chain.php'
     ],
     [
         'icon' => 'images/services-icon-6.png',
-        'title' => 'Green Energy',
-        'description' => 'A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart...',
-        'link' => 'services-detail.html'
+        'title' => 'Global Manufacturing',
+        'description' => 'Extensive manufacturing network across North America, Europe, and Asia-Pacific. Serving renowned clients including GE, Hillman, and Lippert. Innovative solutions backed by global expertise and local support.',
+        'link' => 'advantages.php'
     ]
 ];
 
 // 项目数据
 $projects_data = [
     [
-        'image' => 'images/portfolio-1.jpg',
-        'meta' => 'Russia   |   12 November 2018',
-        'title' => 'Refurbishing Gears',
-        'description' => 'Sed ut perspiciatis unde omnis iste nas error sit voluptatem accusantium doloremque laudantium, totam  aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto ...',
-        'link' => 'project-detail.html'
+        'image' => 'images/index/m1.png',
+        'meta' => 'Key Cutting Innovation | 2024',
+        'title' => 'Smart Key Cutting System',
+        'description' => 'Pioneering intelligent key cutting technology with integrated data processing, security protocols, and automated control systems. Revolutionizing traditional key duplication with smart encoding and precision manufacturing.',
+        'link' => 'key-cutting.php'
     ],
     [
-        'image' => 'images/portfolio-2.jpg',
-        'meta' => 'Russia   |   12 November 2018',
-        'title' => 'Wind power in Russia',
-        'description' => 'Sed ut perspiciatis unde omnis iste nas error sit voluptatem accusantium doloremque laudantium, totam  aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto ...',
-        'link' => 'project-detail.html'
+        'image' => 'images/index/m2.png',
+        'meta' => 'Automation Technology | 2024',
+        'title' => 'Intelligent Key Adaptation',
+        'description' => 'Developed advanced key adaptation machine combining sensor technology, data processing, and CNC automation. Achieving high-precision key duplication for modern security requirements with real-time pressure monitoring.',
+        'link' => 'key-cutting.php'
     ],
     [
-        'image' => 'images/portfolio-3.jpg',
-        'meta' => 'Russia   |   12 November 2018',
-        'title' => 'Water Recycle',
-        'description' => 'Sed ut perspiciatis unde omnis iste nas error sit voluptatem accusantium doloremque laudantium, totam  aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto ...',
-        'link' => 'project-detail.html'
+        'image' => 'images/index/m3.png',
+        'meta' => 'Security Innovation | 2024',
+        'title' => 'Smart Chip Key Configuration',
+        'description' => 'Evolution from basic home keys to smart chip car keys. Integrating pressure sensor technology with real-time monitoring systems for precise cutting control and enhanced security features.',
+        'link' => 'key-cutting.php'
     ],
     [
-        'image' => 'images/portfolio-4.jpg',
-        'meta' => 'Russia   |   12 November 2018',
-        'title' => 'Industry Complex',
-        'description' => 'Sed ut perspiciatis unde omnis iste nas error sit voluptatem accusantium doloremque laudantium, totam  aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto ...',
-        'link' => 'project-detail.html'
+        'image' => 'images/index/m4.png',
+        'meta' => 'Material Innovation | 2024',
+        'title' => 'Laser Marking Innovation',
+        'description' => 'Advanced laser marking system development with new material applications. Implementing cutting-edge technology for precise marking and identification in security applications.',
+        'link' => 'key-cutting.php'
     ],
     [
-        'image' => 'images/portfolio-5.jpg',
-        'meta' => 'Russia   |   12 November 2018',
-        'title' => 'Warehouse Industry',
-        'description' => 'Sed ut perspiciatis unde omnis iste nas error sit voluptatem accusantium doloremque laudantium, totam  aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto ...',
-        'link' => 'project-detail.html'
+        'image' => 'images/index/m5.png',
+        'meta' => 'Security Systems | 2024',
+        'title' => 'Multi-Purpose Key Adapter',
+        'description' => 'Revolutionary multi-purpose intelligent key adapter development. Combining advanced security protocols with versatile adaptation capabilities for next-generation security solutions.',
+        'link' => 'key-cutting.php'
     ],
     [
-        'image' => 'images/portfolio-6.jpg',
-        'meta' => 'Russia   |   12 November 2018',
-        'title' => 'Machine Engineering',
-        'description' => 'Sed ut perspiciatis unde omnis iste nas error sit voluptatem accusantium doloremque laudantium, totam  aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto ...',
-        'link' => 'project-detail.html'
+        'image' => 'images/index/m6.png',
+        'meta' => 'Industry Innovation | 2024',
+        'title' => 'Automated Security Solutions',
+        'description' => 'Comprehensive security automation system integrating smart recognition, data processing, and precision manufacturing. Setting new industry standards for security and key management.',
+        'link' => 'automovie-tools.php'
     ]
 ];
 
-// 合作伙伴数据
-$partners_data = [
-    ['logo' => 'images/partner-logo-1.png'],
-    ['logo' => 'images/partner-logo-2.png'],
-    ['logo' => 'images/partner-logo-3.png'],
-    ['logo' => 'images/partner-logo-4.png'],
-    ['logo' => 'images/partner-logo-5.png']
+// 合作伙伴数据配置
+$partners_section = [
+    'title' => 'Our Clients',
+    'subtitle' => 'Trusted by Industry Leaders',
+    'data' => [
+        ['logo' => 'images/clients/duracell_logo.jpg'],
+        ['logo' => 'images/clients/general_electric_logo.jpg'],
+        ['logo' => 'images/clients/hillman_logo.jpg'],
+        ['logo' => 'images/clients/lippert_logo.jpg'],
+        ['logo' => 'images/clients/lci_logo.jpg']
+    ]
 ];
 
 // 工作流程数据
@@ -146,37 +150,7 @@ $work_process_data = [
 ];
 
 // 工作流程描述
-$work_process_description = 'Over the course of more than 25 years of hard work with many large and small projects. We have worked out the best working process.';
-
-// 表单配置
-$form_config = [
-    'title' => 'Get a quote',
-    'description' => 'As fellow entrepreneurs, we understand the need for space which gives your business room to breathe and grow.',
-    'fields' => [
-        [
-            'type' => 'text',
-            'name' => 'name',
-            'placeholder' => 'Your name',
-            'required' => true
-        ],
-        [
-            'type' => 'email',
-            'name' => 'email',
-            'placeholder' => 'Email address',
-            'required' => true
-        ],
-        [
-            'type' => 'text',
-            'name' => 'phone',
-            'placeholder' => 'Phone number',
-            'required' => true
-        ]
-    ],
-    'submit_button' => [
-        'text' => 'Submit now',
-        'icon' => 'icon ion-md-checkmark-circle'
-    ]
-];
+$work_process_description = 'Over the course of more than 10 years of hard work with many large and small projects. We have worked out the best working process.';
 
 // 特色项目部分配置
 $featured_project_config = [
@@ -184,7 +158,7 @@ $featured_project_config = [
     'title' => 'The great work we did',
     'view_all_link' => [
         'text' => 'View all project',
-        'url' => 'project.html'
+        'url' => 'solutions.php'
     ]
 ];
 ?> 

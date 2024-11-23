@@ -1,5 +1,6 @@
 <?php 
 require_once 'config/config.php';
+require_once 'config/solutions_config.php';
 require_once 'includes/header.php';
 require_once 'includes/navigation.php';
 ?>
@@ -14,95 +15,102 @@ $breadcrumbs = [
 require_once 'includes/solution-hero-section.php';
 ?>
 
+<link rel="stylesheet" href="css/solutions.css">
+
+
 <!-- Solutions Overview -->
 <section class="solutions-overview">
     <div class="container">
-        <!-- 标题部分 -->
-        <div class="row justify-content-center">
-            <div class="col-lg-12 text-center">
-                <div class="section-header">
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="section-header sticky-top" style="top: 100px;">
                     <span class="section-tag">OUR SOLUTIONS</span>
                     <h2 class="section-title"><?php echo $solutions_data['manufacturing']['description']; ?></h2>
                     <p class="section-desc"><?php echo $solutions_data['manufacturing']['sub_description']; ?></p>
+                    <div class="section-action mt-4">
+                        <a href="#" class="btn btn-outline-primary">
+                            Explore All Solutions
+                            <i class="fas fa-arrow-right ms-2"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
-        </div>
-
-        <!-- Solutions Grid -->
-        <div class="row g-4">
-            <?php foreach($solutions_data['manufacturing']['solutions'] as $key => $solution): ?>
-            <div class="col-lg-4 col-md-6">
-                <div class="solution-box">
-                    <div class="solution-image">
-                        <img src="<?php echo $solution['image']; ?>" alt="<?php echo $solution['title']; ?>">
-                        <div class="solution-overlay">
-                            <a href="<?php echo $key; ?>.php" class="btn btn-primary">Learn More</a>
+            <div class="col-lg-8">
+                <div class="solutions-grid">
+                    <?php foreach($solutions_data['manufacturing']['solutions'] as $key => $solution): ?>
+                    <div class="solution-card">
+                        <div class="solution-header">
+                            <div class="solution-icon">
+                                <i class="<?php echo $solution['icon']; ?>"></i>
+                            </div>
+                            <h3><?php echo $solution['title']; ?></h3>
+                        </div>
+                        <div class="solution-body">
+                            <p class="solution-desc"><?php echo $solution['description']; ?></p>
+                            <div class="solution-features">
+                                <?php foreach($solution['features'] as $feature): ?>
+                                <span class="feature-tag">
+                                    <i class="fas fa-check-circle"></i>
+                                    <?php echo $feature; ?>
+                                </span>
+                                <?php endforeach; ?>
+                            </div>
+                        </div>
+                        <div class="solution-footer">
+                            <a href="<?php echo $key; ?>.php" class="btn-learn-more">
+                                Learn More 
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
                         </div>
                     </div>
-                    <div class="solution-content">
-                        <h3><?php echo $solution['title']; ?></h3>
-                        <ul class="solution-features">
-                            <?php foreach($solution['features'] as $feature): ?>
-                            <li>
-                                <i class="fas fa-check"></i>
-                                <?php echo $feature; ?>
-                            </li>
-                            <?php endforeach; ?>
-                        </ul>
-                    </div>
+                    <?php endforeach; ?>
                 </div>
             </div>
-            <?php endforeach; ?>
         </div>
     </div>
 </section>
 
-<!-- Smart Quoting System -->
-<section class="smart-quoting-section">
+<!-- Smart System -->
+<section class="smart-system-section">
     <div class="container">
-        <!-- Header -->
-        <div class="row justify-content-center">
-            <div class="col-lg-12 text-center">
-                <div class="section-header">
-                    <span class="section-tag">SMART SYSTEM</span>
-                    <h2 class="section-title"><?php echo $solutions_data['smart_quoting']['title']; ?></h2>
-                    <p class="section-desc"><?php echo $solutions_data['smart_quoting']['content']; ?></p>
-                </div>
-            </div>
-        </div>
-
-        <!-- Features -->
-        <div class="row g-5">
-            <?php foreach($solutions_data['smart_quoting']['features'] as $feature): ?>
+        <div class="row align-items-center">
             <div class="col-lg-6">
-                <div class="feature-box">
-                    <div class="feature-content">
-                        <h3 class="feature-title"><?php echo $feature['title']; ?></h3>
-                        <p class="feature-desc"><?php echo $feature['description']; ?></p>
-                    </div>
-                    <div class="feature-image">
-                        <img src="<?php echo $feature['image']; ?>" alt="<?php echo $feature['title']; ?>" class="img-fluid">
-                    </div>
-                </div>
-            </div>
-            <?php endforeach; ?>
-        </div>
-
-        <!-- Risk Control -->
-        <div class="row justify-content-center mt-5">
-            <div class="col-lg-10">
-                <div class="risk-control-box">
-                    <div class="row align-items-center">
-                        <div class="col-lg-6">
-                            <h3 class="risk-title"><?php echo $solutions_data['smart_quoting']['risk_control']['title']; ?></h3>
-                            <p class="risk-desc"><?php echo $solutions_data['smart_quoting']['risk_control']['description']; ?></p>
-                        </div>
-                        <div class="col-lg-6">
-                            <div class="risk-image">
-                                <img src="<?php echo $solutions_data['smart_quoting']['risk_control']['image']; ?>" alt="Risk Control" class="img-fluid">
+                <div class="smart-system-content">
+                    <span class="section-tag"><?php echo $smart_quoting_config['section_tag']; ?></span>
+                    <h2 class="section-title"><?php echo $smart_quoting_config['title']; ?></h2>
+                    <p class="section-desc"><?php echo $smart_quoting_config['description']; ?></p>
+                    
+                    <div class="features-grid">
+                        <?php foreach($smart_quoting_config['features'] as $feature): ?>
+                        <div class="feature-item">
+                            <div class="feature-header">
+                                <i class="<?php echo $feature['icon']; ?>"></i>
+                                <h3><?php echo $feature['title']; ?></h3>
+                            </div>
+                            <p><?php echo $feature['description']; ?></p>
+                            <div class="feature-metric">
+                                <span class="metric-number"><?php echo $feature['stats']['number']; ?></span>
+                                <span class="metric-label"><?php echo $feature['stats']['text']; ?></span>
                             </div>
                         </div>
+                        <?php endforeach; ?>
                     </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="process-timeline">
+                    <div class="timeline-header">
+                        <h3>How It Works</h3>
+                    </div>
+                    <?php foreach($smart_quoting_config['process_steps'] as $step): ?>
+                    <div class="timeline-item">
+                        <div class="timeline-marker"><?php echo $step['number']; ?></div>
+                        <div class="timeline-content">
+                            <h4><?php echo $step['title']; ?></h4>
+                            <p><?php echo $step['description']; ?></p>
+                        </div>
+                    </div>
+                    <?php endforeach; ?>
                 </div>
             </div>
         </div>
