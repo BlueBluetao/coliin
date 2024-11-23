@@ -81,7 +81,7 @@ $materials = [
         'items' => ['Standard', 'Tough', 'Clear']
     ],
     [
-        'image' => 'images/solutions/solution_demo.jpg',
+        'image' => 'images/3d/m4.png',
         'title' => 'Composites',
         'items' => ['Carbon Fiber', 'Glass Filled', 'Kevlar']
     ]

@@ -107,8 +107,8 @@ require_once 'includes/solution-hero-section.php';
     <div class="container">
         <div class="row">
             <div class="col-md-12 text-center">
-                <h4 class="text-primary">APPLICATIONS</h4>
-                <h2>Industry Applications</h2>
+                <h4 class="text-primary large-text">APPLICATIONS</h4>
+                <h2 class="extra-large-text">Industry Applications</h2>
                 <div class="coliin-space-30"></div>
             </div>
         </div>
@@ -120,9 +120,9 @@ require_once 'includes/solution-hero-section.php';
                         <img src="<?php echo $app['image']; ?>" alt="<?php echo $app['title']; ?>" class="img-fluid">
                         <div class="overlay">
                             <div class="overlay-content">
-                                <h3><?php echo $app['title']; ?></h3>
-                                <span class="category"><?php echo $app['category']; ?></span>
-                                <p><?php echo $app['description']; ?></p>
+                                <h3 class="large-text"><?php echo $app['title']; ?></h3>
+                                <span class="category medium-text"><?php echo $app['category']; ?></span>
+                                <p class="medium-text"><?php echo $app['description']; ?></p>
                             </div>
                         </div>
                     </div>
