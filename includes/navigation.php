@@ -16,7 +16,7 @@
 </div>
 
 <header id="site-header" class="site-header mobile-header-blue header-style-1">
-    <div id="header_topbar" class="header-topbar md-hidden sm-hidden clearfix">
+    <!-- <div id="header_topbar" class="header-topbar md-hidden sm-hidden clearfix">
         <div class="container-custom">
             <div class="row">
                 <div class="col-md-8">
@@ -33,7 +33,7 @@
                 </div> -->
             </div>
         </div>
-    </div>
+    <!-- </div> -->
 
     <div class="main-header md-hidden sm-hidden">
         <div class="container-custom">
