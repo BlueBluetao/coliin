@@ -93,6 +93,7 @@ try {
     // 11. 处理文件上传
     $files = $_FILES['files'];
     $uploadedFiles = [];
+    $uploadErrors = [];
 
     // 标准化文件数组
     if (!is_array($files['name'])) {
@@ -101,64 +102,94 @@ try {
 
     // 12. 文件处理循环
     foreach ($files['name'] as $i => $fileName) {
-        // 跳过空文件
-        if (empty($fileName)) continue;
+        try {
+            // 跳过空文件
+            if (empty($fileName)) continue;
 
-        // 文件基础检查
-        if ($files['error'][$i] !== UPLOAD_ERR_OK) {
-            throw new Exception("Error uploading file: $fileName");
+            // 文件基础检查
+            if ($files['error'][$i] !== UPLOAD_ERR_OK) {
+                throw new Exception("Error uploading file: $fileName - Code: " . $files['error'][$i]);
+            }
+
+            // 文件大小检查 (50MB)
+            if ($files['size'][$i] > 50 * 1024 * 1024) {
+                throw new Exception("File $fileName exceeds size limit (50MB)");
+            }
+
+            // 文件类型检查
+            $extension = strtolower(pathinfo($fileName, PATHINFO_EXTENSION));
+            if (!array_key_exists($extension, $allowedTypes)) {
+                throw new Exception("File type .$extension is not allowed");
+            }
+
+            // 确保上传目录存在并可写
+            if (!is_dir($uploadDir)) {
+                if (!mkdir($uploadDir, 0777, true)) {
+                    throw new Exception("Failed to create directory for file: $fileName");
+                }
+            }
+
+            // 检查目录权限
+            if (!is_writable($uploadDir)) {
+                chmod($uploadDir, 0777);
+                if (!is_writable($uploadDir)) {
+                    throw new Exception("Upload directory is not writable for file: $fileName");
+                }
+            }
+
+            $newFileName = uniqid('file_', true) . '_' . preg_replace('/[^a-zA-Z0-9\.]/', '_', $fileName);
+            $uploadPath = $uploadDir . $newFileName;
+
+            // 移动文件前检查目标路径是否可写
+            if (file_exists($uploadPath) && !is_writable($uploadPath)) {
+                throw new Exception("Destination path is not writable for file: $fileName");
+            }
+
+            // 移动文件并验证
+            if (!move_uploaded_file($files['tmp_name'][$i], $uploadPath)) {
+                throw new Exception("Failed to move uploaded file: $fileName");
+            }
+
+            // 验证文件权限
+            chmod($uploadPath, 0644);
+
+            // 保存文件记录到数据库
+            $stmt = $pdo->prepare("
+                INSERT INTO quote_files (quote_id, original_name, saved_name, size) 
+                VALUES (?, ?, ?, ?)
+            ");
+            $stmt->execute([$quoteId, $fileName, $newFileName, $files['size'][$i]]);
+
+            $uploadedFiles[] = [
+                'original_name' => $fileName,
+                'saved_name' => $newFileName,
+                'size' => $files['size'][$i]
+            ];
+
+        } catch (Exception $fileError) {
+            $uploadErrors[] = $fileError->getMessage();
+            // 记录具体文件错误
+            error_log("File upload error: " . $fileError->getMessage());
         }
-
-        // 文件大小检查 (50MB)
-        if ($files['size'][$i] > 50 * 1024 * 1024) {
-            throw new Exception("File $fileName exceeds size limit (50MB)");
-        }
-
-        // 文件类型检查
-        $extension = strtolower(pathinfo($fileName, PATHINFO_EXTENSION));
-        if (!array_key_exists($extension, $allowedTypes)) {
-            throw new Exception("File type .$extension is not allowed");
-        }
-
-        // 文件名安全处理
-        $newFileName = uniqid('file_', true) . '_' . preg_replace('/[^a-zA-Z0-9\.]/', '_', $fileName);
-        $uploadPath = $uploadDir . $newFileName;
-
-        // 验证文件是否是真实的上传文件
-        if (!is_uploaded_file($files['tmp_name'][$i])) {
-            throw new Exception("Invalid file upload attempt");
-        }
-
-        // 移动文件
-        if (!move_uploaded_file($files['tmp_name'][$i], $uploadPath)) {
-            throw new Exception("Failed to save file: $fileName");
-        }
-
-        // 验证文件是否成功保存
-        if (!file_exists($uploadPath)) {
-            throw new Exception("File save verification failed");
-        }
-
-        // 保存文件记录
-        $stmt = $pdo->prepare("
-            INSERT INTO quote_files (quote_id, original_name, saved_name, size) 
-            VALUES (?, ?, ?, ?)
-        ");
-        $stmt->execute([$quoteId, $fileName, $newFileName, $files['size'][$i]]);
-
-        $uploadedFiles[] = [
-            'original_name' => $fileName,
-            'saved_name' => $newFileName,
-            'size' => $files['size'][$i]
-        ];
     }
 
-    // 13. 验证是否有成功上传的文件
+    // 13. 验证上传结果
     if (empty($uploadedFiles)) {
-        throw new Exception('No valid files were uploaded');
+        throw new Exception('No files were successfully uploaded. Errors: ' . implode('; ', $uploadErrors));
     }
 
-    // 后续代码（邮件发送等）保持不变...
+    // 提交事务
+    $pdo->commit();
+
+    // 设置成功响应
+    $response['success'] = true;
+    $response['message'] = 'Quote submitted successfully';
+    $response['data'] = [
+        'quote_id' => $quoteId,
+        'email' => $email,
+        'phone' => $phone
+    ];
+    $response['files'] = $uploadedFiles;
 
 } catch (Exception $e) {
     if (isset($pdo) && $pdo->inTransaction()) {
@@ -169,6 +200,7 @@ try {
     error_log("Quote submission error: " . $e->getMessage());
     
     $response['message'] = $e->getMessage();
+    $response['errors'] = isset($uploadErrors) ? $uploadErrors : [];
     echo json_encode($response);
     exit;
 }
