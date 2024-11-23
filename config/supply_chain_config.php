@@ -22,20 +22,24 @@ $supply_chain_overview = [
 // Statistics
 $supply_chain_stats = [
     [
-        'number' => '5000+',
+        'number' => '500+',
         'title' => 'Supplier Network'
+    ],
+    [
+        'number' => '100K+',
+        'title' => 'Quick Quote Parts'
     ],
     [
         'number' => '98.5%',
         'title' => 'Quote Accuracy'
     ],
     [
-        'number' => '30',
-        'title' => 'Countries Covered'
+        'number' => '98%+',
+        'title' => 'Processing Quality'
     ],
     [
-        'number' => '15min',
-        'title' => 'Average Quote Time'
+        'number' => '1min',
+        'title' => 'Fastest Quote Time'
     ]
 ];
 
@@ -69,8 +73,8 @@ $supply_chain_services = [
         'image' => 'images/supply-chain/supply-3.jpeg',
         'features' => [
             'Real-time Risk Monitoring',
-            'Alert Mechanism',
-            'Emergency Response',
+            'Alerts for abnormal price fluctuations and low inventory levels',
+            'Supplier Insufficient Capacity Alert',
             'Supply Chain Optimization'
         ]
     ]
@@ -85,7 +89,7 @@ $supply_chain_process = [
         'icon' => 'ion-md-analytics',
         'color' => '#4CAF50',
         'stats' => [
-            ['number' => '97%', 'text' => 'Manual Reduction'],
+            ['number' => '97%', 'text' => 'Automated and accurate quotation'],
             ['number' => '100%', 'text' => 'Analysis Accuracy']
         ]
     ],
@@ -96,7 +100,7 @@ $supply_chain_process = [
         'icon' => 'ion-md-people',
         'color' => '#2196F3',
         'stats' => [
-            ['number' => '1000+', 'text' => 'Active Suppliers'],
+            ['number' => '500+', 'text' => 'Active Suppliers'],
             ['number' => '99.9%', 'text' => 'Supply Reliability']
         ]
     ],
@@ -118,7 +122,7 @@ $supply_chain_process = [
         'icon' => 'ion-md-rocket',
         'color' => '#E91E63',
         'stats' => [
-            ['number' => '3 Days', 'text' => 'Sample Delivery'],
+            ['number' => '1-3 Days', 'text' => 'Sample Delivery'],
             ['number' => '95%', 'text' => 'On-time Delivery']
         ]
     ]

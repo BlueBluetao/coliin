@@ -85,10 +85,10 @@ include 'includes/header.php';
 <!-- Stats Section -->
 <section class="stats-section bg-gradient">
     <div class="container">
-        <div class="row">
+        <div class="row justify-content-center">
             <?php foreach($stats as $stat): ?>
-            <div class="col-md-3">
-                <div class="stat-box">
+            <div class="col">
+                <div class="stat-box text-center">
                     <div class="stat-number animate-number"><?php echo $stat['number']; ?></div>
                     <div class="stat-title"><?php echo $stat['title']; ?></div>
                 </div>
