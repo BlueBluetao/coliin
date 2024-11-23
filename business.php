@@ -1,16 +1,16 @@
 <?php 
 require_once 'config/config.php';
+require_once 'config/business_config.php';
 include 'includes/header.php';
 include 'includes/navigation.php';
-
 ?>
 
-<!-- Hero Section -->
-<div class="page-header" style="background: url('images/solutions/solution.png') no-repeat center center;">
+<!-- Page Header -->
+<div class="page-header" style="background: url('<?php echo $business_config['hero']['background_image']; ?>') no-repeat center center;">
     <div class="container">
         <div class="breadc-box no-line">
             <div class="row">
-                <div class="col-md-12">
+                <div class="col-md-6">
                     <h1 class="page-title">Business Structure</h1>
                     <ul id="breadcrumbs" class="breadcrumbs none-style">
                         <li><a href="index.php">Home</a></li>
@@ -22,102 +22,136 @@ include 'includes/navigation.php';
     </div>
 </div>
 
-<!-- Business Overview -->
-<section class="no-padding-top">
+<!-- Overview Section -->
+<section class="overview-section no-padding-top">
     <div class="container">
-        <div class="row align-items-center">
-            <div class="col-lg-6">
-                <div class="content-box">
-                    <span class="text-primary">Professional Metal Parts Manufacturer</span>
-                    <h2>One-Stop Metal Parts Manufacturing Solutions</h2>
-                    <p>We specialize in providing high-quality custom metal parts manufacturing services with advanced equipment and professional technical teams to meet various industry needs.</p>
-                    <ul class="solution-features">
-                        <li><i class="icon ion-ios-checkmark"></i>Professional Technical Support</li>
-                        <li><i class="icon ion-ios-checkmark"></i>Advanced Manufacturing Equipment</li>
-                        <li><i class="icon ion-ios-checkmark"></i>Strict Quality Control</li>
-                        <li><i class="icon ion-ios-checkmark"></i>Fast Delivery Cycle</li>
-                    </ul>
+        <div class="row">
+            <div class="col-lg-8 offset-lg-2">
+                <div class="overview-content text-center">
+                    <span class="text-primary">Global Manufacturing Partner</span>
+                    <h2>Digital Manufacturing Solutions Provider</h2>
                 </div>
             </div>
-            <div class="col-lg-6">
-                <img src="images/solutions/solution_demo.jpg" alt="Business Overview" class="img-fluid">
+        </div>
+        
+        <div class="row g-4 mt-4">
+            <div class="col-lg-4">
+                <div class="overview-card">
+                    <div class="card-icon">
+                        <i class="fas fa-industry"></i>
+                    </div>
+                    <h3>Digital Manufacturing</h3>
+                    <p>Comprehensive digital manufacturing solutions from concept to product for mechanical manufacturing companies worldwide.</p>
+                </div>
+            </div>
+            
+            <div class="col-lg-4">
+                <div class="overview-card">
+                    <div class="card-icon">
+                        <i class="fas fa-globe-americas"></i>
+                    </div>
+                    <h3>Global Supply Chain</h3>
+                    <p>One-stop digital supply chain platform connecting 500+ experienced manufacturers globally.</p>
+                </div>
+            </div>
+            
+            <div class="col-lg-4">
+                <div class="overview-card">
+                    <div class="card-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <h3>Smart Solutions</h3>
+                    <p>Advanced manufacturing capabilities with innovative solutions for various industries worldwide.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row g-4 mt-4">
+            <div class="col-lg-3">
+                <div class="stat-card">
+                    <div class="stat-number">24h</div>
+                    <div class="stat-label">Quick Response</div>
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="stat-card">
+                    <div class="stat-number">3 Days</div>
+                    <div class="stat-label">Fast Delivery</div>
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="stat-card">
+                    <div class="stat-number">99%</div>
+                    <div class="stat-label">On-time Rate</div>
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="stat-card">
+                    <div class="stat-number">500+</div>
+                    <div class="stat-label">Global Partners</div>
+                </div>
             </div>
         </div>
     </div>
 </section>
 
-<!-- Core Services -->
-<section class="services-section bg-light">
+<!-- Global Presence Section -->
+<section class="global-presence-section bg-light">
     <div class="container">
-        <div class="services-intro">
-            <h4 class="text-primary">Our Core Services</h4>
-            <h2>Professional Metal Parts Manufacturing Services</h2>
-        </div>
-
         <div class="row">
-            <!-- CNC Machining -->
-            <div class="col-lg-4 col-md-6">
-                <div class="service-box">
-                    <div class="service-thumb">
-                        <img src="images/solutions/steel.jpg" alt="CNC Machining">
-                    </div>
-                    <div class="service-content">
-                        <h4>CNC Machining</h4>
-                        <p>High-precision CNC machining services for various metal materials and complex parts.</p>
-                        <ul class="service-list">
-                            <li><i class="icon ion-ios-checkmark"></i>3-Axis, 4-Axis, 5-Axis Machining</li>
-                            <li><i class="icon ion-ios-checkmark"></i>High Precision Parts</li>
-                            <li><i class="icon ion-ios-checkmark"></i>Complex Surface Machining</li>
-                        </ul>
-                    </div>
+            <div class="col-lg-12">
+                <div class="section-head">
+                    <h4 class="text-primary">GLOBAL NETWORK</h4>
+                    <h2>Our Global Manufacturing Network</h2>
                 </div>
             </div>
+        </div>
+        <div class="row">
+            <?php foreach($business_config['global_presence']['regions'] as $region): ?>
+            <div class="col-lg-4">
+                <div class="region-card">
+                    <h3><?php echo $region['name']; ?></h3>
+                    <ul class="specialty-list">
+                        <?php foreach($region['specialties'] as $specialty): ?>
+                        <li><i class="icon ion-ios-checkmark"></i><?php echo $specialty; ?></li>
+                        <?php endforeach; ?>
+                    </ul>
+                </div>
+            </div>
+            <?php endforeach; ?>
+        </div>
+    </div>
+</section>
 
-            <!-- Sheet Metal -->
-            <div class="col-lg-4 col-md-6">
-                <div class="service-box">
-                    <div class="service-thumb">
-                        <img src="images/solutions/stainless.jpg" alt="Sheet Metal">
-                    </div>
-                    <div class="service-content">
-                        <h4>Sheet Metal Fabrication</h4>
-                        <p>Professional sheet metal fabrication including cutting, bending, and welding services.</p>
-                        <ul class="service-list">
-                            <li><i class="icon ion-ios-checkmark"></i>Laser Cutting & Punching</li>
-                            <li><i class="icon ion-ios-checkmark"></i>Bending & Welding</li>
-                            <li><i class="icon ion-ios-checkmark"></i>Surface Treatment</li>
-                        </ul>
-                    </div>
+<!-- Achievements Section -->
+<section class="achievements-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="section-head">
+                    <h4 class="text-primary">OUR ACHIEVEMENTS</h4>
+                    <h2>Key Performance Indicators</h2>
                 </div>
             </div>
-
-            <!-- Mold Development -->
-            <div class="col-lg-4 col-md-6">
-                <div class="service-box">
-                    <div class="service-thumb">
-                        <img src="images/solutions/plastics.jpg" alt="Mold Development">
-                    </div>
-                    <div class="service-content">
-                        <h4>Mold Development</h4>
-                        <p>Professional mold design and manufacturing services for mass production needs.</p>
-                        <ul class="service-list">
-                            <li><i class="icon ion-ios-checkmark"></i>Injection Mold Development</li>
-                            <li><i class="icon ion-ios-checkmark"></i>Stamping Die Design</li>
-                            <li><i class="icon ion-ios-checkmark"></i>Rapid Prototyping</li>
-                        </ul>
-                    </div>
+        </div>
+        <div class="row">
+            <?php foreach($business_config['achievements']['stats'] as $stat): ?>
+            <div class="col-lg-3 col-md-6">
+                <div class="achievement-card">
+                    <div class="achievement-number"><?php echo $stat['number']; ?></div>
+                    <div class="achievement-label"><?php echo $stat['label']; ?></div>
+                    <p><?php echo $stat['description']; ?></p>
                 </div>
             </div>
+            <?php endforeach; ?>
         </div>
     </div>
 </section>
 
 <!-- Quote Section -->
-<?php
-$quote_tag = 'Partnership';
-$quote_title = 'Professional Metal Parts Manufacturing Services';
-$quote_description = 'We look forward to establishing long-term partnerships and providing high-quality products and services.';
-
+<?php 
+$quote_title = "Start Your Manufacturing Project";
+$quote_description = "Contact us to discuss your specific manufacturing needs and get a quote within 24 hours.";
 include 'includes/quote-section.php'; 
 ?>
 

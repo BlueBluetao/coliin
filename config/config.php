@@ -6,27 +6,48 @@ define('COMPANY_ADDRESS', ' Shanghai, China');
 define('COMPANY_PHONE', '+86 21 59186319');
 define('COMPANY_EMAIL', 'Sales@coliin.com');
 
-// 导航菜单配置
-$nav_menu = [
-    'Home' => 'index.php',
-    'Solutions' => [
-        'Key Cutting' => 'key-cutting.php',
-        'Auto Tools' => 'automotive-tools.php',
-        '5-Axis' => '5-axis.php',
-        '3D Printing' => '3d-printing.php',
-        'CNC' => 'cnc.php',
-        'Sheet Metal' => 'sheet-metal.php',
-        'Mold & Die' => 'mold.php'
+// 主导航菜单配置
+$main_menu = [
+    [
+        'title' => 'Home',
+        'url' => 'index.php',
+        'current' => true
     ],
-    'Supply Chain' => 'supply-chain.php',
-    'Technology' => 'advantages.php',
-    'Innovation' => 'innovation.php',
-    'Contact' => [
-        'About Us' => 'about-company.php',
-        'Business' => 'business.php',
-        'Clients' => 'clients.php',
-        'Cases' => 'cases.php',
-        'Contact Us' => 'contact-us.php'
+    [
+        'title' => 'Solutions',
+        'url' => 'solutions.php',
+        'submenu' => [
+            ['title' => 'Key Cutting', 'url' => 'key-cutting.php'],
+            ['title' => 'Auto Tools', 'url' => 'automotive-tools.php'],
+            ['title' => '5-Axis', 'url' => '5-axis.php'],
+            ['title' => '3D Printing', 'url' => '3d-printing.php'],
+            ['title' => 'CNC', 'url' => 'cnc.php'],
+            ['title' => 'Sheet Metal', 'url' => 'sheet-metal.php'],
+            ['title' => 'Mold & Die', 'url' => 'mold.php']
+        ]
+    ],
+    [
+        'title' => 'Supply Chain',
+        'url' => 'supply-chain.php'
+    ],
+    [
+        'title' => 'Technology',
+        'url' => 'advantages.php'
+    ],
+    [
+        'title' => 'Innovation',
+        'url' => 'innovation.php'
+    ],
+    [
+        'title' => 'Contact',
+        'url' => 'about-company.php',
+        'submenu' => [
+            ['title' => 'About Us', 'url' => 'about-company.php'],
+            ['title' => 'Business', 'url' => 'business.php'],
+            ['title' => 'Clients', 'url' => 'clients.php'],
+            // ['title' => 'Cases', 'url' => 'cases.php'],
+            ['title' => 'Contact Us', 'url' => 'contact-us.php']
+        ]
     ]
 ];
 

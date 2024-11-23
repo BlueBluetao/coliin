@@ -46,40 +46,20 @@
                 <div class="col-md-9">
                     <div class="main-navigation">
                         <ul id="primary-menu" class="menu">
-                            <li class="menu-item current-menu-ancestor current-menu-parent">
-                                <a href="index.php">Home</a>
-                            </li>
-                            <li class="menu-item menu-item-has-children">
-                                <a href="solutions.php">Solutions</a>
-                                <ul class="sub-menu">
-                                    <li class="menu-item"><a href="key-cutting.php">Key Cutting</a></li>
-                                    <li class="menu-item"><a href="automotive-tools.php">Auto Tools</a></li>
-                                    <li class="menu-item"><a href="5-axis.php">5-Axis</a></li>
-                                    <li class="menu-item"><a href="3d-printing.php">3D Printing</a></li>
-                                    <li class="menu-item"><a href="cnc.php">CNC</a></li>
-                                    <li class="menu-item"><a href="sheet-metal.php">Sheet Metal</a></li>
-                                    <li class="menu-item"><a href="mold.php">Mold & Die</a></li>
-                                </ul>
-                            </li>
-                            <li class="menu-item">
-                                <a href="supply-chain.php">Supply Chain</a>
-                            </li>
-                            <li class="menu-item">
-                                <a href="advantages.php">Technology</a>
-                            </li>
-                            <li class="menu-item">
-                                <a href="innovation.php">Innovation</a>
-                            </li>
-                            <li class="menu-item menu-item-has-children">
-                                <a href="about-company.php">Contact</a>
-                                <ul class="sub-menu">
-                                    <li class="menu-item"><a href="about-company.php">About Us</a></li>
-                                    <li class="menu-item"><a href="business.php">Business</a></li>
-                                    <li class="menu-item"><a href="clients.php">Clients</a></li>
-                                    <li class="menu-item"><a href="cases.php">Cases</a></li>
-                                    <li class="menu-item"><a href="contact-us.php">Contact Us</a></li>
-                                </ul>
-                            </li>
+                            <?php foreach ($main_menu as $item): ?>
+                                <li class="menu-item <?php echo isset($item['submenu']) ? 'menu-item-has-children' : ''; ?> <?php echo isset($item['current']) && $item['current'] ? 'current-menu-ancestor current-menu-parent' : ''; ?>">
+                                    <a href="<?php echo $item['url']; ?>"><?php echo $item['title']; ?></a>
+                                    <?php if (isset($item['submenu'])): ?>
+                                        <ul class="sub-menu">
+                                            <?php foreach ($item['submenu'] as $submenu): ?>
+                                                <li class="menu-item">
+                                                    <a href="<?php echo $submenu['url']; ?>"><?php echo $submenu['title']; ?></a>
+                                                </li>
+                                            <?php endforeach; ?>
+                                        </ul>
+                                    <?php endif; ?>
+                                </li>
+                            <?php endforeach; ?>
                         </ul>
                         <a href="get-a-quote.php" class="btn btn-primary">Get a quote<i class="icon ion-md-paper-plane"></i></a>
                     </div>
@@ -104,39 +84,20 @@
                 <div class="col-xs-12">
                     <div class="mobile-nav">
                         <ul id="primary-menu-mobile" class="mobile-menu">
-                            <li class="menu-item current-menu-ancestor current-menu-parent">
-                                <a href="index.php">Home</a>
-                            </li>
-                            <li class="menu-item menu-item-has-children">
-                                <a href="solutions.php">Solutions</a>
-                                <ul class="sub-menu">
-                                    <li class="menu-item"><a href="key-cutting.php">Key Cutting</a></li>
-                                    <li class="menu-item"><a href="automotive-tools.php">Auto Tools</a></li>
-                                    <li class="menu-item"><a href="5-axis.php">5-Axis</a></li>
-                                    <li class="menu-item"><a href="3d-printing.php">3D Printing</a></li>
-                                    <li class="menu-item"><a href="cnc.php">CNC</a></li>
-                                    <li class="menu-item"><a href="sheet-metal.php">Sheet Metal</a></li>
-                                    <li class="menu-item"><a href="mold.php">Mold & Die</a></li>
-                                </ul>
-                            </li>
-                            <li class="menu-item">
-                                <a href="supply-chain.php">Supply Chain</a>
-                            </li>
-                            <li class="menu-item">
-                                <a href="advantages.php">Technology</a>
-                            </li>
-                            <li class="menu-item">
-                                <a href="innovation.php">Innovation</a>
-                            </li>
-                            <li class="menu-item menu-item-has-children">
-                                <a href="contact.php">Contact</a>
-                                <ul class="sub-menu">
-                                    <li class="menu-item"><a href="about-company.php">About Us</a></li>
-                                    <li class="menu-item"><a href="business.php">Business</a></li>
-                                    <li class="menu-item"><a href="clients.php">Clients</a></li>
-                                    <li class="menu-item"><a href="cases.php">Cases</a></li>
-                                </ul>
-                            </li>
+                            <?php foreach ($main_menu as $item): ?>
+                                <li class="menu-item <?php echo isset($item['submenu']) ? 'menu-item-has-children' : ''; ?> <?php echo isset($item['current']) && $item['current'] ? 'current-menu-ancestor current-menu-parent' : ''; ?>">
+                                    <a href="<?php echo $item['url']; ?>"><?php echo $item['title']; ?></a>
+                                    <?php if (isset($item['submenu'])): ?>
+                                        <ul class="sub-menu">
+                                            <?php foreach ($item['submenu'] as $submenu): ?>
+                                                <li class="menu-item">
+                                                    <a href="<?php echo $submenu['url']; ?>"><?php echo $submenu['title']; ?></a>
+                                                </li>
+                                            <?php endforeach; ?>
+                                        </ul>
+                                    <?php endif; ?>
+                                </li>
+                            <?php endforeach; ?>
                         </ul>
                         <a href="get-a-quote.php" class="btn btn-primary">Get a quote<i class="icon ion-md-paper-plane"></i></a>
                     </div>
