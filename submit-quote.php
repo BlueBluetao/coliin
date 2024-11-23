@@ -178,6 +178,63 @@ try {
         throw new Exception('No files were successfully uploaded. Errors: ' . implode('; ', $uploadErrors));
     }
 
+    // 14. 发送邮件通知
+    require 'mail/PHPMailer.php';
+    require 'mail/SMTP.php';
+    require 'mail/Exception.php';
+
+    $mail = new PHPMailer\PHPMailer\PHPMailer(true);
+
+    try {
+        // 服务器设置
+        $mail->isSMTP();
+        $mail->Host = SMTP_HOST;
+        $mail->SMTPAuth = true;
+        $mail->Username = SMTP_USER;
+        $mail->Password = SMTP_PASS;
+        $mail->SMTPSecure = PHPMailer\PHPMailer\PHPMailer::ENCRYPTION_STARTTLS;
+        $mail->Port = SMTP_PORT;
+        $mail->CharSet = 'UTF-8';
+
+        // 收件人设置
+        $mail->setFrom(SMTP_USER, 'Quote System');
+        $mail->addAddress($email); // 客户邮箱
+        $mail->addAddress(ADMIN_EMAIL); // 管理员邮箱
+
+        // 邮件内容
+        $mail->isHTML(true);
+        $mail->Subject = 'New Quote Request Submitted';
+        
+        // 构建邮件正文
+        $emailBody = "
+            <h2>New Quote Request Details</h2>
+            <p><strong>Quote ID:</strong> {$quoteId}</p>
+            <p><strong>Email:</strong> {$email}</p>
+            <p><strong>Phone:</strong> {$phone}</p>
+            <h3>Uploaded Files:</h3>
+            <ul>";
+        
+        foreach ($uploadedFiles as $file) {
+            $emailBody .= "<li>{$file['original_name']} (Size: " . 
+                         number_format($file['size'] / 1024, 2) . " KB)</li>";
+        }
+        
+        $emailBody .= "</ul>";
+        
+        $mail->Body = $emailBody;
+        $mail->AltBody = strip_tags($emailBody);
+
+        $mail->send();
+        
+        // 记录邮件发送成功
+        error_log("Quote submission notification email sent successfully for quote ID: " . $quoteId);
+        
+    } catch (Exception $e) {
+        // 记录邮件发送错误，但不中断流程
+        error_log("Email sending failed for quote ID {$quoteId}: " . $e->getMessage());
+        $response['emailError'] = "Email notification could not be sent, but quote was submitted successfully";
+    }
+
     // 提交事务
     $pdo->commit();
 
