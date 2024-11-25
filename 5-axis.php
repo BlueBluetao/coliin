@@ -46,6 +46,8 @@ require_once 'includes/solution-hero-section.php';
     </div>
 </section>
 
+<!-- videoplay -->
+
 <!-- Capabilities -->
 <section class="bg-light">
     <div class="container">
@@ -77,7 +79,7 @@ require_once 'includes/solution-hero-section.php';
 </section>
 
 <!-- Technical Specifications -->
-<section>
+<!-- <section>
     <div class="container">
         <div class="row">
             <div class="col-md-12">
@@ -100,10 +102,10 @@ require_once 'includes/solution-hero-section.php';
             </div>
         </div>
     </div>
-</section>
+</section> -->
 
 <!-- Case Studies -->
-<section class="bg-light">
+<!-- <section>
     <div class="container">
         <div class="row">
             <div class="col-md-12">
@@ -135,7 +137,7 @@ require_once 'includes/solution-hero-section.php';
             <?php endforeach; ?>
         </div>
     </div>
-</section>
+</section> -->
 
 <!-- Quote Section -->
 <?php 
