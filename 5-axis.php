@@ -47,6 +47,26 @@ require_once 'includes/solution-hero-section.php';
 </section>
 
 <!-- videoplay -->
+<section class="bg-primary no-padding">
+    <div class="">
+        <div class="flex-row">
+            <!-- 左侧视频区域 -->
+            <div class="video-section-left" style="background-image:url('images/axis/5-axis-machine.png');">
+                <div class="home-video video-player">
+                    <a class="video-play" data-lity href="videos/demo.mp4"><i class="icon ion-md-play"></i></a>
+                </div>
+            </div>
+            <!-- 右侧内容区域 -->
+            <div class="video-section-right">
+                <div class="block-right">
+                    <h4><?php echo $axis_config['video']['subtitle']; ?></h4>
+                    <h2><?php echo $axis_config['video']['title']; ?></h2>
+                    <p><?php echo $axis_config['video']['description']; ?></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
 <!-- Capabilities -->
 <section class="bg-light">

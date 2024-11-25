@@ -64,7 +64,7 @@ include 'includes/navigation.php';
         <div class="flex-row">
             <div class="video-section-left" style="background-image:url('images/advantages/tech-signature.jpg');">
                 <div class="home-video video-player">
-                    <a class="video-play" data-lity href="videos/demo.mp4"><i class="icon ion-md-play"></i></a>
+                    <a class="video-play" data-lity href="videos/tech.mp4"><i class="icon ion-md-play"></i></a>
                 </div>
             </div>
             <div class="video-section-right">

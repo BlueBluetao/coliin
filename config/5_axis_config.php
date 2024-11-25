@@ -127,5 +127,10 @@ $axis_config = [
     'quote' => [
         'title' => 'Ready to Get Started?',
         'description' => 'Contact us today to discuss your 5-axis machining needs'
+    ],
+    'video' => [
+        'subtitle' => 'MANUFACTURING EXCELLENCE',
+        'title' => 'Advanced 5-Axis CNC <br> Machining Technology',
+        'description' => 'Experience the precision and versatility of our 5-axis CNC machining capabilities. Our advanced manufacturing technology enables complex geometries, superior surface finishes, and exceptional accuracy in a single setup.',
     ]
 ]; 
