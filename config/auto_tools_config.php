@@ -21,18 +21,18 @@ $features = [
 $categories = [
     [
         'icon' => 'ion-md-build',
-        'title' => 'Hand Tools',
-        'items' => ['Socket Sets', 'Wrench Sets', 'Screwdrivers', 'Pliers']
+        'title' => 'Key Blade',
+        'items' => ['Key Cutting Tools', 'Key Blank Sets', 'Key Duplicators', 'Key Programming Tools']
     ],
     [
         'icon' => 'ion-md-flash',
-        'title' => 'Power Tools',
-        'items' => ['Impact Wrenches', 'Power Drills', 'Air Tools', 'Electric Tools']
+        'title' => 'VVDI Key Tools',
+        'items' => ['Key Programming Devices', 'Transponder Key Programmers', 'Key Cloning Tools', 'Remote Key Programmers']
     ],
     [
         'icon' => 'ion-md-laptop',
-        'title' => 'Diagnostic Tools',
-        'items' => ['OBD Scanners', 'Code Readers', 'Test Equipment', 'Analysis Tools']
+        'title' => 'VVDI Remote Tools',
+        'items' => ['Remote Key Fobs', 'Keyless Entry Systems', 'Remote Programming Tools', 'Diagnostic Tools']
     ]
 ];
 
@@ -64,18 +64,38 @@ $product_features = [
 $applications = [
     [
         'image' => 'images/auto/m1.png',
-        'title' => 'Auto Repair',
-        'description' => 'Professional repair shops'
+        'title' => 'VVDI2',
+        'description' => 'VVDI2 is a professional automotive key programming tool suitable for various car models.'
     ],
-    [
-        'image' => 'images/auto/m2.png',
-        'title' => 'Diagnostics',
-        'description' => 'Advanced diagnostic tools for accurate results'
-    ],
+    // [
+    //     'image' => 'images/auto/m2.png',
+    //     'title' => 'VVDI-PROG',
+    //     'description' => 'Professional repair shops'
+    // ],
     [
         'image' => 'images/auto/m3.png',
-        'title' => 'Maintenance',
-        'description' => 'Routine maintenance tools for all vehicle types'
+        'title' => 'VVDI-PROG',
+        'description' => 'VVDI-PROG is an advanced programming tool that supports programming various car keys and remotes.'
+    ],
+    [
+        'image' => 'images/auto/p1.jpg',
+        'title' => 'Key Tool Max',
+        'description' => 'An efficient key tool for programming and duplicating various car keys.'
+    ],
+    [
+        'image' => 'images/auto/p2.jpg',
+        'title' => 'Car Remotes',
+        'description' => 'Car remotes compatible with various models, providing convenient remote control features.'
+    ],
+    [
+        'image' => 'images/auto/p3.jpg',
+        'title' => 'Mini Key Tool',
+        'description' => 'A compact and portable key tool suitable for quick key programming.'
+    ],
+    [
+        'image' => 'images/auto/p4.jpg',
+        'title' => 'Key Tool Plus',
+        'description' => 'A multifunctional key tool that supports programming and duplicating various key types.'
     ]
 ];
 

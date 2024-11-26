@@ -32,9 +32,10 @@ include 'includes/header.php';
                     <div class="col-md-6 col-sm-12">
                         <h4 class="text-primary">CONTACT INFO</h4>
                         <div class="contact-info">
-                            <h2>Hotline : <span class="text-primary"><?php echo COMPANY_PHONE; ?></span></h2>
+                            <span style="font-weight: 900;line-height: 1;font-size:30px;">Hotline : <span class="text-primary"><?php echo COMPANY_PHONE; ?></span></span>
+
                             <p><i class="icon ion-md-mail"></i> <?php echo COMPANY_EMAIL; ?></p>
-                            <p><i class="icon ion-md-pin"></i> <?php echo COMPANY_ADDRESS; ?> (<a href="#" class="text-primary">View map</a>)</p>
+                            <p><i class="icon ion-md-pin"></i> <?php echo COMPANY_ADDRESS; ?> (<a href="#map" class="text-primary">View map</a>)</p>
                         </div>
                         <div class="space-coliin"></div>
                         <hr>
@@ -66,7 +67,7 @@ include 'includes/header.php';
         </section>
 
         <!-- Map Section -->
-        <section>
+        <section id="map">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
