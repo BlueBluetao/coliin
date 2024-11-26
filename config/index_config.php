@@ -121,11 +121,11 @@ $partners_section = [
     'title' => 'Our Clients',
     'subtitle' => 'Trusted by Industry Leaders',
     'data' => [
-        ['logo' => 'images/clients/duracell_logo.jpg'],
         ['logo' => 'images/clients/general_electric_logo.jpg'],
-        ['logo' => 'images/clients/hillman_logo.jpg'],
         ['logo' => 'images/clients/lippert_logo.jpg'],
-        ['logo' => 'images/clients/lci_logo.jpg']
+        ['logo' => 'images/clients/lci_logo.jpg'],
+        ['logo' => 'images/clients/hillman_logo.jpg'],
+        ['logo' => 'images/clients/duracell_logo.jpg'],
     ]
 ];
 

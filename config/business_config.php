@@ -84,7 +84,7 @@ $business_config = [
                 'name' => 'North America',
                 'specialties' => [
                     'CNC Components',
-                    'Transmission Parts',
+                    'Professional Automotive Tools',
                     'Electronic Components',
                     'Injection Molding',
                     '3D Printing'

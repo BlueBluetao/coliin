@@ -34,7 +34,7 @@ $company_config = [
     'services' => [
         'CNC Machining',
         '3D Printing Services',
-        'Transmission Parts',
+        'Professional Automotive Tools',
         'Sheet Metal Fabrication',
         'Rapid Casting Services',
         'Molded Parts Services'
