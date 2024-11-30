@@ -490,4 +490,313 @@
         flex: 0 0 50%;
         margin-bottom: 20px;
     }
+}
+
+/* 服务部分样式 */
+.service-row {
+    margin-bottom: 6rem;
+}
+
+.service-image-wrapper {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.service-image-wrapper:hover {
+    transform: translateY(-5px);
+}
+
+.service-image-wrapper img {
+    width: 100%;
+    height: auto;
+}
+
+.floating-badge {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background: var(--primary-color);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.badge-number {
+    color: white;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.service-content-wrapper {
+    padding: 1.5rem;
+}
+
+.service-title {
+    font-size: 1.8rem;
+    line-height: 1.3;
+    margin-bottom: 1rem;
+}
+
+.service-description {
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.feature-item {
+    margin-bottom: 0.75rem;
+}
+
+.feature-item i {
+    margin-right: 10px;
+    color: var(--primary-color);
+    font-size: 1.2rem;
+}
+
+/* 响应式优化 */
+@media (max-width: 991px) {
+    .service-content-wrapper {
+        padding: 2rem 0;
+    }
+    
+    .service-title {
+        font-size: 1.6rem;
+    }
+}
+
+/* 服务图片样式强 */
+.service-image-wrapper {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.service-image-wrapper.shadow-effect {
+    box-shadow: 
+        0 15px 30px rgba(0,0,0,0.15),
+        0 5px 15px rgba(0,0,0,0.08);
+    transform: perspective(1000px) rotateY(0deg);
+    transition: all 0.5s ease;
+}
+
+.service-image-wrapper.shadow-effect:hover {
+    transform: perspective(1000px) rotateY(-2deg) translateY(-5px);
+    box-shadow: 
+        0 20px 40px rgba(0,0,0,0.2),
+        0 10px 20px rgba(0,0,0,0.12);
+}
+
+.service-image-wrapper img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.5s ease;
+}
+
+.service-image-wrapper:hover img {
+    transform: scale(1.02);
+}
+
+/* 增强图片覆盖层效果 */
+.service-image-wrapper .image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+        45deg,
+        rgba(0,0,0,0.1),
+        rgba(0,0,0,0.02)
+    );
+    pointer-events: none;
+}
+
+/* 响应式调整 */
+@media (max-width: 991px) {
+    .service-image-wrapper.shadow-effect {
+        transform: none;
+        margin: 20px 0;
+    }
+    
+    .service-image-wrapper.shadow-effect:hover {
+        transform: translateY(-5px);
+    }
+}
+
+/* Services Section Styles */
+.service-section {
+    padding: 80px 0;
+    position: relative;
+}
+
+.section-header {
+    margin-bottom: 60px;
+}
+
+.section-line {
+    width: 80px;
+    height: 3px;
+    background: linear-gradient(to right, #2196F3, #4CAF50);
+    margin: 20px auto;
+}
+
+/* 图片容器样式 */
+.service-image-box {
+    position: relative;
+    margin: 20px 0;
+    max-width: 100%;
+}
+
+.image-wrapper {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    max-height: 600px;
+}
+
+.image-wrapper img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: all 0.3s ease;
+    object-fit: contain;
+}
+
+.shadow-hover {
+    transition: all 0.3s ease;
+}
+
+.shadow-hover:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+/* 内容部分样式 */
+.service-content {
+    padding: 35px 40px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(42, 75, 155, 0.1);
+}
+
+.service-title {
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #2a4b9b;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.service-title:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(to right, #2a4b9b, #4CAF50);
+}
+
+.service-description {
+    color: #333;
+    line-height: 1.8;
+    margin-bottom: 25px;
+    font-size: 16px;
+}
+
+.feature-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    padding: 12px 15px;
+    background: rgba(42, 75, 155, 0.03);
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.feature-item:hover {
+    background: rgba(42, 75, 155, 0.06);
+    transform: translateX(5px);
+}
+
+.feature-item i {
+    margin-right: 12px;
+    color: #2a4b9b;
+    font-size: 20px;
+}
+
+.feature-item span {
+    color: #555;
+    font-size: 15px;
+}
+
+/* 响应式调整 */
+@media (max-width: 991px) {
+    .service-content {
+        padding: 25px 20px;
+        margin: 20px 0;
+        background: rgba(255, 255, 255, 0.98);
+    }
+    
+    .service-title {
+        font-size: 24px;
+        padding-bottom: 12px;
+    }
+    
+    .service-title:after {
+        width: 50px;
+    }
+    
+    .feature-item {
+        padding: 10px 12px;
+    }
+}
+
+/* 间距调整 */
+.service-row {
+    margin-bottom: 80px;
+}
+
+.service-row:last-child {
+    margin-bottom: 0;
+}
+
+/* 优化内容间距 */
+.order-lg-1 .service-content {
+    padding-right: 40px;
+}
+
+.order-lg-2 + .order-lg-1 .service-content {
+    padding-left: 40px;
+}
+
+/* 响应式调整 */
+@media (max-width: 991px) {
+    .service-content {
+        padding: 30px 0;
+    }
+    
+    .service-title {
+        font-size: 24px;
+    }
+    
+    .service-description {
+        font-size: 15px;
+    }
+    
+    .image-wrapper {
+        max-height: none;
+    }
 } 

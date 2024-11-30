@@ -99,47 +99,48 @@ include 'includes/header.php';
 </section>
 
 <!-- Services Section -->
-<section class="bg-light">
+<section class="bg-light service-section">
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <div class="services-intro">
-                    <h4 class="text-primary">INTELLIGENT SUPPLY CHAIN SOLUTIONS</h4>
-                    <h2>Digital Transformation for Supply Chain Excellence</h2>
+                <div class="section-header text-center mb-5">
+                    <h4 class="text-primary fade-in">Intelligent Supply Chain Solutions</h4>
+                    <h2 class="section-title">Digital Transformation for Supply Chain Excellence</h2>
+                    <div class="section-line"></div>
                 </div>
             </div>
         </div>
-        <div class="row">
-            <?php foreach($services as $service): ?>
-            <div class="col-lg-4 col-md-6">
-                <div class="service-box">
-                    <div class="service-box-inner">
-                        <div class="service-front">
-                            <div class="service-thumb">
-                                <a href="#"><img src="<?php echo $service['image']; ?>" alt="<?php echo $service['title']; ?>"></a>
-                            </div>
-                            <div class="service-content">
-                                <h4><?php echo $service['title']; ?></h4>
-                                <p><?php echo $service['description']; ?></p>
-                                
-                            </div>
-                        </div>
-                        <div class="service-back">
-                            <h4><?php echo $service['title']; ?></h4>
-                            <div class="service-features">
-                                <?php foreach($service['features'] as $feature): ?>
-                                <div class="feature-item">
-                                    <i class="icon ion-md-checkmark-circle"></i>
-                                    <span><?php echo $feature; ?></span>
-                                </div>
-                                <?php endforeach; ?>
-                            </div>
-                        </div>
+        
+        <?php foreach($services as $index => $service): ?>
+        <div class="row align-items-center service-row mb-5">
+            <!-- 图片部分 - 8列 -->
+            <div class="col-lg-8 <?php echo $index % 2 == 0 ? '' : 'order-lg-2'; ?>">
+                <div class="service-image-box">
+                    <div class="image-wrapper">
+                        <img src="<?php echo $service['image']; ?>" 
+                             alt="<?php echo $service['title']; ?>" 
+                             class="img-fluid shadow-hover">
                     </div>
                 </div>
             </div>
-            <?php endforeach; ?>
+            
+            <!-- 内容部分 - 4列 -->
+            <div class="col-lg-4 <?php echo $index % 2 == 0 ? '' : 'order-lg-1'; ?>">
+                <div class="service-content">
+                    <h3 class="service-title"><?php echo $service['title']; ?></h3>
+                    <p class="service-description"><?php echo $service['description']; ?></p>
+                    <div class="service-features">
+                        <?php foreach($service['features'] as $feature): ?>
+                        <div class="feature-item">
+                            <i class="icon ion-md-checkmark-circle text-primary"></i>
+                            <span><?php echo $feature; ?></span>
+                        </div>
+                        <?php endforeach; ?>
+                    </div>
+                </div>
+            </div>
         </div>
+        <?php endforeach; ?>
     </div>
 </section>
 
@@ -148,9 +149,9 @@ include 'includes/header.php';
     <div class="container">
         <div class="row">
             <div class="col-md-12 text-center">
-                <h4 class="text-primary">INTELLIGENT PROCESS</h4>
-                <h2>Smart Supply Chain Process</h2>
-                <p class="lead">End-to-end intelligent solutions from demand analysis to delivery</p>
+                <h4 class="text-primary">PROCESS OPTIMIZATION</h4>
+                <h2>Intelligent Supply Chain Process</h2>
+                <p class="lead">Comprehensive solutions from demand planning to final delivery</p>
             </div>
         </div>
         <div class="process-timeline">
@@ -160,7 +161,6 @@ include 'includes/header.php';
                     <div class="step-number"><?php echo $step['number']; ?></div>
                     <h3><?php echo $step['title']; ?></h3>
                     <p><?php echo $step['description']; ?></p>
-                    <!-- 添加关键数据统计 -->
                     <div class="step-stats">
                         <?php foreach($step['stats'] as $stat): ?>
                         <div class="stat-item">
@@ -181,8 +181,8 @@ include 'includes/header.php';
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <h4 class="text-primary">BENEFITS</h4>
-                <h2>Why Choose Our Supply Chain Services</h2>
+                <h4 class="text-primary">KEY ADVANTAGES</h4>
+                <h2>Why Choose Our Supply Chain Solutions</h2>
                 <div class="coliin-space-30"></div>
             </div>
         </div>

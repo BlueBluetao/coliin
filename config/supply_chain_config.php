@@ -47,35 +47,35 @@ $supply_chain_stats = [
 $supply_chain_services = [
     [
         'title' => 'Intelligent Pricing System',
-        'description' => 'AI-powered pricing system delivering cost control and efficiency optimization',
-        'image' => 'images/supply-chain/supply-1.jpeg',
+        'description' => 'Advanced AI-driven pricing system that delivers precise cost control and operational efficiency optimization through real-time market analysis',
+        'image' => 'images/supply-chain/m1.png',
         'features' => [
-            'Real-time Data Analysis',
-            'Multi-dimensional Cost Analysis',
-            'Smart Supplier Matching',
-            'Automated Quotation Process'
+            'Real-time Market Data Analysis',
+            'Multi-dimensional Cost Modeling',
+            'Intelligent Supplier Matching',
+            'Automated RFQ Processing'
         ]
     ],
     [
-        'title' => 'Algorithm Model Optimization',
-        'description' => 'Machine learning-driven pricing models ensuring quote accuracy',
-        'image' => 'images/supply-chain/supply-2.jpeg',
+        'title' => 'Supply Chain Integration',
+        'description' => 'End-to-end supply chain management platform integrating procurement, logistics, and inventory optimization',
+        'image' => 'images/supply-chain/m2.png',
         'features' => [
-            'Historical Data Analysis',
-            'Market Trend Prediction',
-            'Dynamic Pricing Strategy',
-            'Continuous Optimization'
+            'Inventory Optimization',
+            'Demand Forecasting',
+            'Supplier Network Management',
+            'Just-in-Time Delivery'
         ]
     ],
     [
         'title' => 'Risk Control & Early Warning',
-        'description' => 'Comprehensive monitoring and alert system ensuring supply chain stability',
-        'image' => 'images/supply-chain/supply-3.jpeg',
+        'description' => 'Comprehensive supply chain risk monitoring and alert system ensuring operational stability and continuity',
+        'image' => 'images/supply-chain/m3.png',
         'features' => [
             'Real-time Risk Monitoring',
-            'Alerts for abnormal price fluctuations and low inventory levels',
-            'Supplier Insufficient Capacity Alert',
-            'Supply Chain Optimization'
+            'Price Fluctuation Analytics',
+            'Capacity Constraint Detection',
+            'Supply Chain Resilience Analysis'
         ]
     ]
 ];
