@@ -17,8 +17,8 @@
                     <div class="widget-footer">
                         <h4 class="text-white">SOLUTIONS</h4>
                         <ul class="list-items">
-                            <?php foreach($nav_menu['Solutions'] as $label => $link): ?>
-                                <li><a href="<?php echo $link; ?>"><?php echo $label; ?></a></li>
+                            <?php foreach($solutions_data['manufacturing']['solutions'] as $label => $link): ?>
+                                <li><a href="<?php echo $label; ?>.php"><?php echo $label; ?></a></li>
                             <?php endforeach; ?>
                         </ul>
                     </div>
