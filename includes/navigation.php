@@ -31,8 +31,8 @@
                         <li class="toggle_search topbar-search"><a href="#"><i class="icon ion-md-search"></i></a></li>
                     </ul>
                 </div> -->
-            </div>
-        </div>
+            <!-- </div> -->
+        <!-- </div> -->
     <!-- </div> -->
 
     <div class="main-header md-hidden sm-hidden">
