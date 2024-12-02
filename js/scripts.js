@@ -248,33 +248,39 @@
             responsive: [
                 {
                     breakpoint: 991,
-                    settings: {
-                        slidesToShow: $m_show,
-                        slidesToScroll: 1,
-                        infinite: true,
-                        arrows: $arr,
-                        dots: $dots
-                    }
-                },
-                {
-                    breakpoint: 767,
-                    settings: {
-                        slidesToShow: 1,
-                        slidesToScroll: 1,
-                        arrows: false,
-                        dots: true
-                    }
-                },
-                {
-                    breakpoint: 480,
-                    settings: {
-                        slidesToShow: 1,
-                        slidesToScroll: 1,
-                        arrows: false,
-                        dots: true
-                    }
+                    settings: "unslick"  // 在小屏幕时完全禁用 slick
                 }
             ]
+            // responsive: [
+            //     {
+            //         breakpoint: 991,
+            //         settings: {
+            //             slidesToShow: $m_show,
+            //             slidesToScroll: 1,
+            //             infinite: true,
+            //             arrows: $arr,
+            //             dots: $dots
+            //         }
+            //     },
+            //     {
+            //         breakpoint: 767,
+            //         settings: {
+            //             slidesToShow: 1,
+            //             slidesToScroll: 1,
+            //             arrows: false,
+            //             dots: true
+            //         }
+            //     },
+            //     {
+            //         breakpoint: 480,
+            //         settings: {
+            //             slidesToShow: 1,
+            //             slidesToScroll: 1,
+            //             arrows: false,
+            //             dots: true
+            //         }
+            //     }
+            // ]
         });
     });    
 
@@ -403,53 +409,60 @@
             autoplaySpeed: 7000,
             responsive: [
                 {
-                    breakpoint: 1199,
-                    settings: {
-                        slidesToShow: $s1,
-                        slidesToScroll: 1,
-                        infinite: true,
-                        arrows: $arr,
-                        dots: $dots
-                    }
-                },
-                {
                     breakpoint: 991,
-                    settings: {
-                        slidesToShow: $s2,
-                        slidesToScroll: 1,
-                        infinite: true,
-                        arrows: $arr,
-                        dots: $dots
-                    }
-                },
-                {
-                    breakpoint: 767,
-                    settings: {
-                        slidesToShow: $s2,
-                        slidesToScroll: 1,
-                        arrows: false,
-                        dots: false
-                    }
-                },
-                {
-                    breakpoint: 600,
-                    settings: {
-                        slidesToShow: 2,
-                        slidesToScroll: 1,
-                        arrows: false,
-                        dots: false
-                    }
-                },
-                {
-                    breakpoint: 480,
-                    settings: {
-                        slidesToShow: 1,
-                        slidesToScroll: 1,
-                        arrows: false,
-                        dots: false
-                    }
+                    settings: "unslick"  // 在小屏幕时完全禁用 slick
                 }
-            ]
+            ],
+
+            // responsive: [
+            //     {
+            //         breakpoint: 1199,
+            //         settings: {
+            //             slidesToShow: $s1,
+            //             slidesToScroll: 1,
+            //             infinite: true,
+            //             arrows: $arr,
+            //             dots: $dots
+            //         }
+            //     },
+            //     {
+            //         breakpoint: 991,
+            //         settings: {
+            //             slidesToShow: $s2,
+            //             slidesToScroll: 1,
+            //             infinite: true,
+            //             arrows: $arr,
+            //             dots: $dots
+            //         }
+            //     },
+            //     {
+            //         breakpoint: 767,
+            //         settings: {
+            //             slidesToShow: $s2,
+            //             slidesToScroll: 1,
+            //             arrows: false,
+            //             dots: false
+            //         }
+            //     },
+            //     {
+            //         breakpoint: 600,
+            //         settings: {
+            //             slidesToShow: 2,
+            //             slidesToScroll: 1,
+            //             arrows: false,
+            //             dots: false
+            //         }
+            //     },
+            //     {
+            //         breakpoint: 480,
+            //         settings: {
+            //             slidesToShow: 1,
+            //             slidesToScroll: 1,
+            //             arrows: false,
+            //             dots: false
+            //         }
+            //     }
+            // ]
         });
     });
 
@@ -471,36 +484,42 @@
             adaptiveHeight: true,
             prevArrow: '<button type="button" class="prev-nav"><i class="icon ion-ios-arrow-dropleft"></i></button>',
             nextArrow: '<button type="button" class="next-nav"><i class="icon ion-ios-arrow-dropright"></i></button>',
-            responsive: [
+            responsive : [      
                 {
                     breakpoint: 991,
-                    settings: {
-                        slidesToShow: $m_show,
-                        slidesToScroll: 1,
-                        infinite: true,
-                        arrows: $arr,
-                        dots: $dots
-                    }
-                },
-                {
-                    breakpoint: 767,
-                    settings: {
-                        slidesToShow: 1,
-                        slidesToScroll: 1,
-                        arrows: false,
-                        dots: true
-                    }
-                },
-                {
-                    breakpoint: 480,
-                    settings: {
-                        slidesToShow: 1,
-                        slidesToScroll: 1,
-                        arrows: false,
-                        dots: true
-                    }
+                    settings: "unslick"  // 在小屏幕时完全禁用 slick
                 }
-            ]
+            ],
+            // responsive: [
+            //     {
+            //         breakpoint: 991,
+            //         settings: {
+            //             slidesToShow: $m_show,
+            //             slidesToScroll: 1,
+            //             infinite: true,
+            //             arrows: $arr,
+            //             dots: $dots
+            //         }
+            //     },
+            //     {
+            //         breakpoint: 767,
+            //         settings: {
+            //             slidesToShow: 1,
+            //             slidesToScroll: 1,
+            //             arrows: false,
+            //             dots: true
+            //         }
+            //     },
+            //     {
+            //         breakpoint: 480,
+            //         settings: {
+            //             slidesToShow: 1,
+            //             slidesToScroll: 1,
+            //             arrows: false,
+            //             dots: true
+            //         }
+            //     }
+            // ]
         });
     });    
 
