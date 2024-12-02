@@ -45,37 +45,30 @@ include 'includes/header.php';
 <!-- Overview Section -->
 <section class="no-padding-top">
     <div class="container">
-        <div class="row flex-row">
-            <div class="col-md-6">
+        <div class="row">
+            <!-- 左侧描述部分 - 8列 -->
+            <div class="col-md-8">
                 <div class="content-box">
                     <h4 class="text-primary">OVERVIEW</h4>
                     <h2><?php echo $overview['title']; ?></h2>
-                    <p><?php echo $overview['description']; ?></p>
-                    <ul class="solution-features">
-                        <?php foreach($overview['features'] as $feature): ?>
-                        <li><i class="icon ion-md-checkmark-circle"></i><?php echo $feature; ?></li>
-                        <?php endforeach; ?>
-                    </ul>
+                    <div class="overview-description">
+                        <?php echo $overview['description']; ?>
+                    </div>
                 </div>
             </div>
-            <div class="col-md-6">
-                <div class="image-box-premium">
-                    <div class="image-inner">
-                        <img src="images/supply-chain/supply-overview.jpeg" alt="Supply Chain Management" class="img-fluid">
-                        <div class="image-overlay"></div>
-                        <div class="accent-circle"></div>
-                    </div>
-                    <div class="stats-card top-right">
-                        <i class="icon ion-md-trending-up"></i>
-                        <span class="value">98%</span>
-                        <span class="label">Efficiency Boost</span>
-                    </div>
-                    <div class="stats-card bottom-left">
-                        <i class="icon ion-md-pulse"></i>
-                        <span class="value">24/7</span>
-                        <span class="label">Real-time Monitoring</span>
-                    </div>
-                    <div class="decorative-line"></div>
+            
+            <!-- 右侧特性列表 - 4列 -->
+            <div class="col-md-4">
+                <div class="features-box">
+                    <h4 class="text-primary mb-4">KEY FEATURES</h4>
+                    <ul class="features-list">
+                        <?php foreach($overview['features'] as $feature): ?>
+                        <li class="feature-item">
+                            <i class="icon ion-md-checkmark-circle"></i>
+                            <span><?php echo $feature; ?></span>
+                        </li>
+                        <?php endforeach; ?>
+                    </ul>
                 </div>
             </div>
         </div>

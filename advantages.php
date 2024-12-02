@@ -6,6 +6,8 @@ include 'includes/header.php';
 include 'includes/navigation.php';
 ?>
 
+<!-- 在 header 之前添加新的 CSS 文件引入 -->
+<link rel="stylesheet" href="css/advantages.css">
 <!-- Hero Section -->
 <div class="page-header" style="background: url('<?php echo $advantages_config['hero_background']; ?>') no-repeat center center;">
     <div class="container">
@@ -26,18 +28,26 @@ include 'includes/navigation.php';
 <!-- Overview Section -->
 <section class="no-padding-top">
     <div class="container">
-        <div class="row flex-row">
-            <div class="col-md-6">
+        <div class="row">
+            <!-- 左侧描述部分 - 8列 -->
+            <div class="col-md-8">
                 <div class="content-box">
-                    <div class="section-tag">
-                        <span><?php echo $advantages_config['overview']['tag']; ?></span>
+                    <h4 class="text-primary">OVERVIEW</h4>
+                    <h2><?php echo $advantages_config['overview']['title']; ?></h2>
+                    <div class="overview-description">
+                        <?php echo $advantages_config['overview']['description']; ?>
                     </div>
-                    <h2 class="section-title"><?php echo $advantages_config['overview']['title']; ?></h2>
-                    <p class="section-desc"><?php echo $advantages_config['overview']['description']; ?></p>
-                    <ul class="solution-features">
+                </div>
+            </div>
+            
+            <!-- 右侧特性列表 - 4列 -->
+            <div class="col-md-4">
+                <div class="features-box">
+                    <h4 class="text-primary mb-4">KEY FEATURES</h4>
+                    <ul class="features-list">
                         <?php foreach($advantages_config['overview']['features'] as $feature): ?>
-                        <li>
-                            <i class="icon <?php echo $feature['icon']; ?>"></i>
+                        <li class="feature-item">
+                            <i class="icon ion-md-checkmark-circle"></i>
                             <div class="feature-info">
                                 <h4><?php echo $feature['title']; ?></h4>
                                 <p><?php echo $feature['desc']; ?></p>
@@ -45,13 +55,6 @@ include 'includes/navigation.php';
                         </li>
                         <?php endforeach; ?>
                     </ul>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="image-box">
-                    <div class="main-image">
-                        <img src="images/advantages/tech-overview.jpg" alt="Advanced Manufacturing Technology">
-                    </div>
                 </div>
             </div>
         </div>

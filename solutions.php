@@ -27,12 +27,12 @@ require_once 'includes/solution-hero-section.php';
                     <span class="section-tag">OUR SOLUTIONS</span>
                     <h2 class="section-title"><?php echo $solutions_data['manufacturing']['description']; ?></h2>
                     <p class="section-desc"><?php echo $solutions_data['manufacturing']['sub_description']; ?></p>
-                    <div class="section-action mt-4">
+                    <!-- <div class="section-action mt-4">
                         <a href="#" class="btn btn-outline-primary">
                             Explore All Solutions
                             <i class="fas fa-arrow-right ms-2"></i>
                         </a>
-                    </div>
+                    </div> -->
                 </div>
             </div>
             <div class="col-lg-8">
@@ -57,9 +57,9 @@ require_once 'includes/solution-hero-section.php';
                             </div>
                         </div>
                         <div class="solution-footer">
-                            <a href="<?php echo $key; ?>.php" class="btn-learn-more">
+                            <a href="<?php echo $key; ?>.php" class="btn btn-primary btn-learn-more">
                                 Learn More 
-                                <i class="fas fa-arrow-right"></i>
+                                <i class="fas fa-arrow-right ms-2"></i>
                             </a>
                         </div>
                     </div>
