@@ -12,56 +12,47 @@ $breadcrumbs = $key_cutting_config['breadcrumbs'];
 require_once 'includes/hero-section.php';
 ?>
 
-<!-- Overview Section -->
+<!-- Overview & Products Section -->
 <section class="no-padding-top">
     <div class="container">
         <div class="row">
-            <div class="col-md-12">
-                <h2 class="text-center mb-5"><?php echo $key_cutting_config['overview']['title']; ?></h2>
-            </div>
-        </div>
-        <?php foreach($key_cutting_config['overview']['paragraphs'] as $paragraph): ?>
-        <div class="row mb-4">
-            <div class="col-md-12">
-                <div class="overview-box">
+            <!-- Overview Content - Left Side -->
+            <div class="col-md-6">
+                <h2 class="mb-4"><?php echo $key_cutting_config['overview']['title']; ?></h2>
+                <?php foreach($key_cutting_config['overview']['paragraphs'] as $paragraph): ?>
+                <div class="overview-box mb-4">
                     <h3 class="text-primary"><?php echo $paragraph['title']; ?></h3>
                     <p><?php echo $paragraph['content']; ?></p>
                 </div>
+                <?php endforeach; ?>
             </div>
-        </div>
-        <?php endforeach; ?>
-    </div>
-</section>
 
-<!-- Products -->
-<section class="bg-light">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <h4 class="text-primary text-center">OUR PRODUCTS</h4>
-                <h2 class="text-center">Key Cutting Machines</h2>
-                <div class="coliin-space-30"></div>
-            </div>
-        </div>
-        <div class="row">
-            <?php foreach($key_cutting_config['products'] as $product): ?>
-            <div class="col-md-4">
-                <div class="product-box">
-                    <div class="product-image">
-                        <img src="<?php echo $product['image']; ?>" alt="<?php echo $product['title']; ?>" class="img-fluid">
-                    </div>
-                    <div class="product-info">
-                        <h3><?php echo $product['title']; ?></h3>
-                        <h4 class="model">Model: <?php echo $product['model']; ?></h4>
-                        <ul class="feature-list">
-                            <?php foreach($product['features'] as $feature): ?>
-                            <li><i class="icon ion-md-checkmark"></i><?php echo $feature; ?></li>
-                            <?php endforeach; ?>
-                        </ul>
+            <!-- Products - Right Side -->
+            <div class="col-md-6">
+                <h2 class="mb-4 text-center">Key Cutting Machines</h2>
+                <?php foreach($key_cutting_config['products'] as $product): ?>
+                <div class="product-box mb-4">
+                    <div class="row">
+                        <div class="col-md-5">
+                            <div class="product-image">
+                                <img src="<?php echo $product['image']; ?>" alt="<?php echo $product['title']; ?>" class="img-fluid">
+                            </div>
+                        </div>
+                        <div class="col-md-7">
+                            <div class="product-info">
+                                <h3><?php echo $product['title']; ?></h3>
+                                <h4 class="model">Model: <?php echo $product['model']; ?></h4>
+                                <ul class="feature-list">
+                                    <?php foreach($product['features'] as $feature): ?>
+                                    <li><i class="icon ion-md-checkmark"></i><?php echo $feature; ?></li>
+                                    <?php endforeach; ?>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
+                <?php endforeach; ?>
             </div>
-            <?php endforeach; ?>
         </div>
     </div>
 </section>

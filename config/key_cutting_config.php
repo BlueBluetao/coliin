@@ -92,7 +92,7 @@ $key_cutting_config = [
     // Products
     'products' => [
         [
-            'image' => 'images/key_cutting/k1.png',
+            'image' => 'images/key_cutting/k6.png',
             'title' => 'Automatic Key Machine',
             'model' => 'SEC-E9z',
             'features' => [
@@ -124,27 +124,27 @@ $key_cutting_config = [
                 'Large key database'
             ]
         ],
-        [
-            'image' => 'images/key_cutting/k4.png',
-            'title' => 'Heavy Duty Key Machine',
-            'model' => 'SEC-E9 Max',
-            'features' => [
-                '24/7 continuous operation',
-                'Enhanced cutting precision',
-                'Multiple clamp support',
-                'Industrial IoT ready'
-            ]
-        ],
-        [
-            'image' => 'images/key_cutting/k5.png',
-            'title' => 'Smart Key Machine',
-            'model' => 'SEC-E9 Smart',
-            'features' => [
-                'AI-powered key recognition',
-                'Remote operation capability',
-                'Real-time monitoring',
-                'Predictive maintenance'
-            ]
-        ]
+        // [
+        //     'image' => 'images/key_cutting/k4.png',
+        //     'title' => 'Heavy Duty Key Machine',
+        //     'model' => 'SEC-E9 Max',
+        //     'features' => [
+        //         '24/7 continuous operation',
+        //         'Enhanced cutting precision',
+        //         'Multiple clamp support',
+        //         'Industrial IoT ready'
+        //     ]
+        // ],
+        // [
+        //     'image' => 'images/key_cutting/k5.png',
+        //     'title' => 'Smart Key Machine',
+        //     'model' => 'SEC-E9 Smart',
+        //     'features' => [
+        //         'AI-powered key recognition',
+        //         'Remote operation capability',
+        //         'Real-time monitoring',
+        //         'Predictive maintenance'
+        //     ]
+        // ]
     ]
 ]; 

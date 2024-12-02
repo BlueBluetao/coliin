@@ -6791,24 +6791,17 @@ table .cart-subtotal {
 }
 
 .overview-box {
-    padding: 30px;
+    padding: 20px;
     background: #fff;
     border-radius: 8px;
-    box-shadow: 0 2px 15px rgba(0,0,0,0.1);
-    margin-bottom: 20px;
-}
-
-.overview-box h3 {
-    margin-bottom: 15px;
-    font-size: 24px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 .product-box {
     background: #fff;
     border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 2px 15px rgba(0,0,0,0.1);
-    margin-bottom: 30px;
+    padding: 15px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     transition: transform 0.3s ease;
 }
 
@@ -6816,110 +6809,22 @@ table .cart-subtotal {
     transform: translateY(-5px);
 }
 
-.product-image {
-    height: 250px;
-    overflow: hidden;
-}
-
 .product-image img {
+    border-radius: 6px;
     width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.product-info {
-    padding: 20px;
-}
-
-.product-info h3 {
-    margin-bottom: 10px;
-    font-size: 20px;
-}
-
-.model {
-    color: #666;
-    font-size: 16px;
-    margin-bottom: 15px;
+    height: auto;
 }
 
 .feature-list {
+    padding-left: 0;
     list-style: none;
-    padding: 0;
-    margin-bottom: 20px;
 }
 
 .feature-list li {
     margin-bottom: 8px;
-    display: flex;
-    align-items: center;
 }
 
-.feature-list li i {
-    margin-right: 10px;
+.feature-list i {
     color: #007bff;
-}
-
-/* 修改 slider 相关样式 */
-.slider-item {
-    height: 600px; /* 降低高度，原来可能是更高的值 */
-    position: relative;
-    overflow: hidden;
-}
-
-.slider-item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.slider .slider-content {
-    position: absolute;
-    bottom: 140px; /* 调整内容位置 */
-    z-index: 1;
-}
-
-.slider .slider-content h1 {
-    font-size: 48px; /* 可能需要调整标题大小以适应新高度 */
-    line-height: 1.2;
-    margin-bottom: 25px;
-}
-
-.slider .slider-content h4 {
-    font-size: 18px;
-    margin-bottom: 15px;
-}
-
-/* 调整箭头位置 */
-.slider .slick-arrow {
-    top: 50%;
-    transform: translateY(-50%);
-}
-
-.slider .prev-nav {
-    left: 30px;
-}
-
-.slider .next-nav {
-    right: 30px;
-}
-
-/* 确保响应式布局时内容正确显示 */
-@media (max-width: 991px) {
-    .slider-item {
-        height: 500px;
-    }
-    
-    .slider .slider-content h1 {
-        font-size: 36px;
-    }
-}
-
-@media (max-width: 767px) {
-    .slider-item {
-        height: 400px;
-    }
-    
-    .slider .slider-content h1 {
-        font-size: 30px;
-    }
+    margin-right: 8px;
 }
