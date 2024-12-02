@@ -1264,10 +1264,39 @@ input.form-control, select.form-control {
 /*--------------------------------------------------------------
 ## Main Header
 --------------------------------------------------------------*/
-.main-navigation {
-  text-align: right;
-  margin-top: -1px;
+.main-header {
+    height: 80px; /* 降低整体高度 */
+    display: flex;
+    align-items: center;
 }
+
+.main-header .container-custom {
+    width: 100%;
+}
+
+.main-header .row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo-brand {
+    padding: 0; /* 移除原有的padding */
+}
+
+.logo-brand img {
+    max-height: 50px; /* 控制logo图片高度 */
+    width: auto;
+}
+
+.main-navigation {
+    margin: 0; /* 移除原有的margin */
+}
+
+.main-navigation ul li a {
+    padding: 30px 25px; /* 调整菜单项的padding以适应新的header高度 */
+}
+
 .navigation-2 {
   z-index: 10;
 }
