@@ -2,6 +2,15 @@
 // 滑块数据
 $slider_data = [
     [
+        'image' => 'images/slider/slider-3.png', 
+        'subtitle' => '',
+        'title' => 'Best solution for Industrial & Factories',
+        'button' => [
+            'text' => 'Explore now',
+            'link' => '#'
+        ]
+    ],
+    [
         'image' => 'images/slider/slider-1.png',
         'subtitle' => '',
         'title' => 'The leading provider of Industrial',
@@ -14,15 +23,6 @@ $slider_data = [
         'image' => 'images/slider/slider-2.png',
         'subtitle' => '',
         'title' => 'Leader in power Automation',
-        'button' => [
-            'text' => 'Explore now',
-            'link' => '#'
-        ]
-    ],
-    [
-        'image' => 'images/slider/slider-3.png', 
-        'subtitle' => '',
-        'title' => 'Best solution for Industrial & Factories',
         'button' => [
             'text' => 'Explore now',
             'link' => '#'
