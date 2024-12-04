@@ -20,12 +20,25 @@
     font-size: 1em; /* 设置图标大小 */
 }
 
-.application-image img {
-    width: 100%;
-    height: auto;
-    transition: opacity 0.3s ease;
+.application-image {
+    position: sticky;
+    top: 20px;
+    overflow: hidden;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.application-image img {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    transition: all 0.4s ease;
+}
+
+/* 鼠标悬停效果 */
+.application-image:hover img {
+    transform: scale(1.05);
+    filter: brightness(1.05);
 }
 
 .application-list {
@@ -33,27 +46,32 @@
 }
 
 .application-item {
-    margin-bottom: 15px;
-    padding: 15px;
-    border-bottom: 1px solid #ddd;
+    margin-bottom: 10px;
+    padding: 12px 15px;
+    border: 1px solid #eee;
+    border-radius: 6px;
     transition: all 0.3s ease;
     background-color: #fff;
 }
 
+.application-item:hover {
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    border-color: #ddd;
+}
+
 .application-item h3 {
-    margin: 0;
-    padding: 0;
-    font-size: 1.2em;
-    color: #333;
+    font-size: 1.1em;
+    margin-bottom: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    cursor: pointer;
+    color: #333;
 }
 
 .application-content {
-    padding: 15px 0 0;
-    display: none;
+    padding: 10px 0 0;
+    font-size: 0.95em;
+    color: #666;
 }
 
 .application-item.active {
@@ -66,4 +84,5 @@
 
 .application-item.active .toggle-icon {
     transform: rotate(180deg);
-} 
+}
+ 

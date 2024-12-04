@@ -63,37 +63,32 @@ $product_features = [
 // 应用场景
 $applications = [
     [
-        'image' => 'images/auto/m1.png',
-        'title' => 'VVDI2',
-        'description' => 'VVDI2 is a professional automotive key programming tool suitable for various car models.'
-    ],
-    // [
-    //     'image' => 'images/auto/m2.png',
-    //     'title' => 'VVDI-PROG',
-    //     'description' => 'Professional repair shops'
-    // ],
-    [
-        'image' => 'images/auto/m3.png',
+        'image' => 'images/auto/4.jpg',
         'title' => 'VVDI-PROG',
         'description' => 'VVDI-PROG is an advanced programming tool that supports programming various car keys and remotes.'
     ],
     [
-        'image' => 'images/auto/p1.jpg',
+        'image' => 'images/auto/5.jpg',
         'title' => 'Key Tool Max',
         'description' => 'An efficient key tool for programming and duplicating various car keys.'
     ],
     [
-        'image' => 'images/auto/p2.jpg',
-        'title' => 'Car Remotes',
-        'description' => 'Car remotes compatible with various models, providing convenient remote control features.'
+        'image' => 'images/auto/6.jpg',
+        'title' => 'VVDI2',
+        'description' => 'VVDI2 is a professional automotive key programming tool suitable for various car models.'
     ],
     [
-        'image' => 'images/auto/p3.jpg',
+        'image' => 'images/auto/1.jpg',
         'title' => 'Mini Key Tool',
         'description' => 'A compact and portable key tool suitable for quick key programming.'
     ],
     [
-        'image' => 'images/auto/p4.jpg',
+        'image' => 'images/auto/2.jpg',
+        'title' => 'Car Remotes',
+        'description' => 'Car remotes compatible with various models, providing convenient remote control features.'
+    ],
+    [
+        'image' => 'images/auto/3.jpg',
         'title' => 'Key Tool Plus',
         'description' => 'A multifunctional key tool that supports programming and duplicating various key types.'
     ]
