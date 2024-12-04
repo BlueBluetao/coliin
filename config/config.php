@@ -43,7 +43,7 @@ $main_menu = [
         'url' => 'about-company.php',
         'submenu' => [
             ['title' => 'About Us', 'url' => 'about-company.php'],
-            ['title' => 'Business', 'url' => 'business.php'],
+            // ['title' => 'Business', 'url' => 'business.php'],
             ['title' => 'Clients', 'url' => 'clients.php'],
             // ['title' => 'Cases', 'url' => 'cases.php'],
             ['title' => 'Contact Us', 'url' => 'contact-us.php']

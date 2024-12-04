@@ -25,39 +25,15 @@ include 'includes/navigation.php';
     <!-- About Section -->
     <section class="about-section">
         <div class="container py-5">
-            <div class="row vertical-align">
-                <div class="col-md-6 col-sm-12 mb-4 mb-md-0">
-                    <div class="story-content pr-xl-70">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="story-content">
                         <h4 class="text-primary mb-3"><?php echo $company_config['brief']['title']; ?></h4>
                         <h2 class="mb-4"><?php echo $company_config['name']; ?></h2>
-                        <p class="mb-4"><?php echo $company_config['brief']['description']; ?></p>
-                        <div class="service-list mt-4">
-                            <h5 class="mb-3">Our Services:</h5>
-                            <ul class="list-unstyled">
-                                <?php foreach ($company_config['services'] as $service): ?>
-                                <li><i class="fas fa-check-circle mr-2"></i><?php echo $service; ?></li>
-                                <?php endforeach; ?>
-                            </ul>
-                        </div>
+                        <?php foreach ($company_config['brief']['description'] as $paragraph): ?>
+                        <p class="mb-4"><?php echo $paragraph; ?></p>
+                        <?php endforeach; ?>
                         <a href="contact-us.php" class="btn btn-primary mt-4">Contact Us</a>
-                    </div>
-                </div>
-                <div class="col-md-6 col-sm-12">
-                    <div class="about-img-wrapper position-relative">
-                        <div class="about-img-main animate-on-scroll fade-in">
-                            <img src="images/about/about_company.jpeg" alt="Company Overview" class="img-fluid rounded shadow">
-                        </div>
-                        <div class="experience-badge animate-on-scroll slide-in">
-                            <div class="experience-content">
-                                <div class="years-wrapper">
-                                    <span class="years-number counter" data-target="10">0</span>
-                                    <span class="plus-sign">+</span>
-                                </div>
-                                <div class="years-text">
-                                    Years of<br>Experience
-                                </div>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>

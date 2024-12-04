@@ -6828,3 +6828,28 @@ table .cart-subtotal {
     color: #007bff;
     margin-right: 8px;
 }
+
+.product-image {
+    padding: 15px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.product-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.product-info {
+    padding: 15px;
+}
+
+.product-box {
+    background: #f8f9fa;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 30px;
+}

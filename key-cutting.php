@@ -33,12 +33,12 @@ require_once 'includes/hero-section.php';
                 <?php foreach($key_cutting_config['products'] as $product): ?>
                 <div class="product-box mb-4">
                     <div class="row">
-                        <div class="col-md-5">
+                        <div class="col-md-7">
                             <div class="product-image">
                                 <img src="<?php echo $product['image']; ?>" alt="<?php echo $product['title']; ?>" class="img-fluid">
                             </div>
                         </div>
-                        <div class="col-md-7">
+                        <div class="col-md-5">
                             <div class="product-info">
                                 <h3><?php echo $product['title']; ?></h3>
                                 <h4 class="model">Model: <?php echo $product['model']; ?></h4>
