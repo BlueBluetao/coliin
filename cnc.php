@@ -30,8 +30,34 @@ require_once 'includes/solution-hero-section.php';
                 <div class="coliin-space-30"></div>
             </div>
         </div>
+        
+        <!-- Materials Display -->
+        <!-- <div class="row">
+            <div class="col-md-12 text-center">
+                <h4 class="text-primary">MATERIALS</h4>
+                <h2>Material Expertise</h2>
+                <div class="coliin-space-30"></div>
+            </div>
+        </div> -->
+        <div class="row mb-5">
+            <?php 
+            // 只显示前3个材料
+            $displayed_materials = array_slice($cnc_config['materials'], 0, 3);
+            foreach($displayed_materials as $material): 
+            ?>
+            <div class="col-md-4">
+                <div class="material-box">
+                    <img src="<?php echo $material['image']; ?>" alt="<?php echo $material['title']; ?>">
+                    <!-- <h3><?php echo $material['title']; ?></h3>
+                    <p><?php echo $material['description']; ?></p> -->
+                </div>
+            </div>
+            <?php endforeach; ?>
+        </div>
+
+        <!-- Advantages Section -->
         <div class="row">
-            <div class="col-md-6">
+            <div class="col-md-12">
                 <div class="content-box">
                     <h3>Our Advantages</h3>
                     <div class="advantages-grid">
@@ -44,19 +70,12 @@ require_once 'includes/solution-hero-section.php';
                     </div>
                 </div>
             </div>
-            <div class="col-md-6">
-                <div class="image-box">
-                    <div class="decoration decoration-1"></div>
-                    <div class="decoration decoration-2"></div>
-                    <img src="<?php echo $cnc_config['img']['overview']; ?>" alt="CNC Machine" class="img-fluid">
-                </div>
-            </div>
         </div>
     </div>
 </section>
 
 <!-- Machining Services -->
-<section class="bg-light">
+<section class="bg-light">>
     <div class="container">
         <div class="row">
             <div class="col-md-12 text-center">
@@ -87,32 +106,10 @@ require_once 'includes/solution-hero-section.php';
     </div>
 </section>
 
-<!-- Materials Section -->
-<section>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <h4 class="text-primary">MATERIALS</h4>
-                <h2>Material Expertise</h2>
-                <div class="coliin-space-30"></div>
-            </div>
-        </div>
-        <div class="row">
-            <?php foreach($cnc_config['materials'] as $material): ?>
-            <div class="col-md-3">
-                <div class="material-box">
-                    <img src="<?php echo $material['image']; ?>" alt="<?php echo $material['title']; ?>">
-                    <h3><?php echo $material['title']; ?></h3>
-                    <p><?php echo $material['description']; ?></p>
-                </div>
-            </div>
-            <?php endforeach; ?>
-        </div>
-    </div>
-</section>
+
 
 <!-- Business Support Services -->
-<section class="bg-light">
+<section>
     <div class="container">
         <div class="row">
             <div class="col-md-12 text-center">

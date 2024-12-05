@@ -61,17 +61,17 @@ $cnc_config = [
     ],
     'materials' => [
         [
-            'image' => 'images/cnc/m1.png',
+            'image' => 'images/cnc/s1.jpg',
             'title' => 'Aluminum',
             'description' => '6061, 7075, 5052'
         ],
         [
-            'image' => 'images/cnc/m7.png',
+            'image' => 'images/cnc/s3.jpg',
             'title' => 'Steel',
             'description' => '4140, 4340, Tool Steel'
         ],
         [
-            'image' => 'images/cnc/m5.png',
+            'image' => 'images/cnc/s2.jpg',
             'title' => 'Stainless Steel',
             'description' => '303, 304, 316'
         ],
