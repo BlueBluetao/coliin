@@ -20,7 +20,8 @@ require_once 'includes/solution-hero-section.php';
 <section class="no-padding-top">
     <div class="container">
         <div class="row flex-row">
-            <div class="col-md-12">
+            <!-- Services Column -->
+            <div class="col-md-6">
                 <div class="content-box">
                     <h4 class="text-primary">SERVICES</h4>
                     <h2><?php echo $services_overview['title']; ?></h2>
@@ -30,6 +31,30 @@ require_once 'includes/solution-hero-section.php';
                         <li><i class="icon ion-md-checkmark-circle"></i><?php echo $feature; ?></li>
                         <?php endforeach; ?>
                     </ul>
+                </div>
+            </div>
+            
+            <!-- Applications Column -->
+            <div class="col-md-6">
+                <div class="content-box">
+                    <h4 class="text-primary">APPLICATIONS</h4>
+                    <h2>Industry Applications</h2>
+                    <div class="applications-grid">
+                        <?php foreach($applications as $app): ?>
+                        <div class="application-box hover-effect mb-4">
+                            <div class="image-wrapper">
+                                <img src="<?php echo $app['image']; ?>" alt="<?php echo $app['title']; ?>" class="img-fluid">
+                                <div class="overlay">
+                                    <div class="overlay-content">
+                                        <h3 class="large-text"><?php echo $app['title']; ?></h3>
+                                        <span class="category medium-text"><?php echo $app['category']; ?></span>
+                                        <p class="medium-text"><?php echo $app['description']; ?></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <?php endforeach; ?>
+                    </div>
                 </div>
             </div>
         </div>
@@ -98,37 +123,6 @@ require_once 'includes/solution-hero-section.php';
                     </table>
                 </div>
             </div>
-        </div>
-    </div>
-</section>
-
-<!-- Applications -->
-<section class="bg-light">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12 text-center">
-                <h4 class="text-primary large-text">APPLICATIONS</h4>
-                <h2 class="extra-large-text">Industry Applications</h2>
-                <div class="coliin-space-30"></div>
-            </div>
-        </div>
-        <div class="row">
-            <?php foreach($applications as $app): ?>
-            <div class="col-lg-4 col-md-6 mb-4">
-                <div class="application-box hover-effect">
-                    <div class="image-wrapper">
-                        <img src="<?php echo $app['image']; ?>" alt="<?php echo $app['title']; ?>" class="img-fluid">
-                        <div class="overlay">
-                            <div class="overlay-content">
-                                <h3 class="large-text"><?php echo $app['title']; ?></h3>
-                                <span class="category medium-text"><?php echo $app['category']; ?></span>
-                                <p class="medium-text"><?php echo $app['description']; ?></p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <?php endforeach; ?>
         </div>
     </div>
 </section>
