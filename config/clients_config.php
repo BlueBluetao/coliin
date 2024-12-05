@@ -39,13 +39,13 @@ $clients_config = [
     'testimonials' => [
         [
             'content' => "Collin has consistently delivered high-quality precision components that meet our exacting standards. Their technical expertise and commitment to quality have made them a valuable partner in our supply chain.",
-            'image' => 'images/clients/testi1.jpg',
+            'image' => 'images/clients/testi-img-1.png',
             'name' => 'Senior Procurement Manager',
             'position' => 'Global Power Generation Company'
         ],
         [
             'content' => "We've been working with Collin for over 5 years, and their ability to handle complex machining requirements while maintaining tight tolerances has been instrumental to our success.",
-            'image' => 'images/clients/testi2.jpg',
+            'image' => 'images/clients/testi-img-2.png',
             'name' => 'Production Director',
             'position' => 'Leading Hardware Solutions Provider'
         ]
