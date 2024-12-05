@@ -12,11 +12,12 @@ $breadcrumbs = $page_config['breadcrumbs'];
 require_once 'includes/solution-hero-section.php';
 ?>
 <link rel="stylesheet" href="css/mold.css">
-<!-- Service Overview -->
+<!-- Service Overview & Applications -->
 <section class="no-padding-top">
     <div class="container">
         <div class="row flex-row">
-            <div class="col-md-12">
+            <!-- Overview Section - Left Side -->
+            <div class="col-md-6">
                 <div class="content-box">
                     <h4 class="text-primary">OVERVIEW</h4>
                     <h2>Professional Mold Making</h2>
@@ -26,6 +27,27 @@ require_once 'includes/solution-hero-section.php';
                         <li><i class="icon ion-md-checkmark-circle"></i><?php echo $feature; ?></li>
                         <?php endforeach; ?>
                     </ul>
+                </div>
+            </div>
+            
+            <!-- Applications Section - Right Side -->
+            <div class="col-md-6">
+                <div class="content-box">
+                    <h4 class="text-primary">APPLICATIONS</h4>
+                    <h2>Industry Applications</h2>
+                    <div class="applications-grid">
+                        <?php foreach($applications as $app): ?>
+                        <div class="application-card">
+                            <div class="app-image">
+                                <img src="<?php echo $app['image']; ?>" alt="<?php echo $app['title']; ?>">
+                            </div>
+                            <div class="app-info">
+                                <h3><?php echo $app['title']; ?></h3>
+                                <p><?php echo $app['description']; ?></p>
+                            </div>
+                        </div>
+                        <?php endforeach; ?>
+                    </div>
                 </div>
             </div>
         </div>
@@ -89,42 +111,6 @@ require_once 'includes/solution-hero-section.php';
                 </div>
             </div>
             <?php endforeach; ?>
-        </div>
-    </div>
-</section>
-
-<!-- Applications -->
-<section class="bg-light">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <h4 class="text-primary">APPLICATIONS</h4>
-                <h2>Industry Applications</h2>
-                <div class="coliin-space-30"></div>
-            </div>
-        </div>
-        <div class="application-grid">
-            <div class="application-scroll">
-                <?php foreach($applications as $app): ?>
-                <div class="col-md-4">
-                    <div class="application-box">
-                        <img src="<?php echo $app['image']; ?>" alt="<?php echo $app['title']; ?>">
-                        <div class="content">
-                            <h3><?php echo $app['title']; ?></h3>
-                            <p><?php echo $app['description']; ?></p>
-                        </div>
-                    </div>
-                </div>
-                <?php endforeach; ?>
-            </div>
-            <div class="application-nav">
-                <button class="nav-btn prev" aria-label="Previous slide">
-                    <i class="icon ion-md-arrow-back"></i>
-                </button>
-                <button class="nav-btn next" aria-label="Next slide">
-                    <i class="icon ion-md-arrow-forward"></i>
-                </button>
-            </div>
         </div>
     </div>
 </section>
