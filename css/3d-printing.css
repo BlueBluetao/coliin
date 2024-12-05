@@ -1,22 +1,17 @@
-/* 材料卡片样式 */
+/* 修改材料卡片样式 */
 .material-solution-card {
     background: #fff;
     border-radius: 8px;
     box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
-    margin-bottom: 30px;
+    margin-bottom: 0;
     overflow: hidden;
-}
-
-.material-solution-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
 }
 
 .material-image {
     position: relative;
     overflow: hidden;
-    height: 200px;
+    height: 220px;
 }
 
 .material-image img {
@@ -31,39 +26,38 @@
 }
 
 .material-content {
-    padding: 20px;
+    padding: 15px;
+    text-align: center;
 }
 
 .material-content h3 {
     color: #333;
-    font-size: 18px;
-    margin-bottom: 15px;
+    font-size: 16px;
+    margin: 0;
     font-weight: 600;
 }
 
-.material-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.material-list li {
-    display: flex;
-    align-items: center;
-    margin-bottom: 10px;
-    color: #666;
-    font-size: 14px;
-}
-
-.material-list li i {
-    color: #007bff;
-    margin-right: 10px;
-    font-size: 16px;
+/* 调整网格布局 */
+.materials-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    margin-top: 20px;
 }
 
 /* 响应式调整 */
+@media (max-width: 991px) {
+    .materials-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .content-box {
+        margin-bottom: 40px;
+    }
+}
+
 @media (max-width: 768px) {
     .material-image {
-        height: 180px;
+        height: 200px;
     }
 } 

@@ -66,23 +66,23 @@ $technologies = [
 // 材料配置
 $materials = [
     [
-        'image' => 'images/3d/m1.png',
-        'title' => 'Metal Powders',
+        'image' => 'images/3d/1.jpg',
+        'title' => 'Microscope',
         'items' => ['Stainless Steel', 'Titanium', 'Aluminum']
     ],
     [
-        'image' => 'images/3d/m2.png',
-        'title' => 'Engineering Plastics',
+        'image' => 'images/3d/2.jpg',
+        'title' => 'Granulometer',
         'items' => ['PA12 (Nylon)', 'TPU', 'PEEK']
     ],
     [
-        'image' => 'images/3d/m3.png',
-        'title' => 'Resins',
+        'image' => 'images/3d/3.jpg',
+        'title' => 'Scanning electron microscope',
         'items' => ['Standard', 'Tough', 'Clear']
     ],
     [
-        'image' => 'images/3d/m4.png',
-        'title' => 'Composites',
+        'image' => 'images/3d/4.jpg',
+        'title' => 'Differential scanning calorimeter',
         'items' => ['Carbon Fiber', 'Glass Filled', 'Kevlar']
     ]
 ];

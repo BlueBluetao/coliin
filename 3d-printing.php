@@ -12,11 +12,12 @@ $breadcrumbs = $page_config['breadcrumbs'];
 require_once 'includes/solution-hero-section.php';
 ?>
 
-<!-- Technology Overview -->
+<!-- Combined Technology & Materials Section -->
 <section class="no-padding-top">
     <div class="container">
-        <div class="row flex-row">
-            <div class="col-md-12">
+        <div class="row">
+            <!-- Technology Column -->
+            <div class="col-md-6">
                 <div class="content-box">
                     <h4 class="text-primary">TECHNOLOGY</h4>
                     <h2><?php echo $technology_overview['title']; ?></h2>
@@ -26,6 +27,24 @@ require_once 'includes/solution-hero-section.php';
                         <li><i class="icon ion-md-checkmark-circle"></i><?php echo $feature; ?></li>
                         <?php endforeach; ?>
                     </ul>
+                </div>
+            </div>
+            
+            <!-- Materials Column -->
+            <div class="col-md-6">
+                <h4 class="text-primary">Service</h4>
+                <h2>Available Products</h2>
+                <div class="materials-grid">
+                    <?php foreach($materials as $material): ?>
+                    <div class="material-solution-card">
+                        <div class="material-image">
+                            <img src="<?php echo $material['image']; ?>" alt="<?php echo $material['title']; ?>" class="img-fluid">
+                        </div>
+                        <div class="material-content">
+                            <h3><?php echo $material['title']; ?></h3>
+                        </div>
+                    </div>
+                    <?php endforeach; ?>
                 </div>
             </div>
         </div>
@@ -56,38 +75,6 @@ require_once 'includes/solution-hero-section.php';
                         <li><?php echo $feature; ?></li>
                         <?php endforeach; ?>
                     </ul>
-                </div>
-            </div>
-            <?php endforeach; ?>
-        </div>
-    </div>
-</section>
-
-<!-- Materials Section -->
-<section>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <h4 class="text-primary">MATERIALS</h4>
-                <h2>Available Materials</h2>
-                <div class="coliin-space-30"></div>
-            </div>
-        </div>
-        <div class="row">
-            <?php foreach($materials as $material): ?>
-            <div class="col-md-3">
-                <div class="material-solution-card">
-                    <div class="material-image">
-                        <img src="<?php echo $material['image']; ?>" alt="<?php echo $material['title']; ?>" class="img-fluid">
-                    </div>
-                    <div class="material-content">
-                        <h3><?php echo $material['title']; ?></h3>
-                        <ul class="material-list">
-                            <?php foreach($material['items'] as $item): ?>
-                            <li><i class="icon ion-md-arrow-forward"></i><?php echo $item; ?></li>
-                            <?php endforeach; ?>
-                        </ul>
-                    </div>
                 </div>
             </div>
             <?php endforeach; ?>
