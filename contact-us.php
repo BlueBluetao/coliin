@@ -2,6 +2,59 @@
 require_once 'config/config.php';
 $page_title = "Contact Us - " . SITE_NAME;
 include 'includes/header.php';
+
+$message = '';
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // 验证和清理输入数据
+    $name = filter_input(INPUT_POST, 'name', FILTER_SANITIZE_STRING);
+    $phone = filter_input(INPUT_POST, 'phone', FILTER_SANITIZE_STRING);
+    $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
+    $msg = filter_input(INPUT_POST, 'message', FILTER_SANITIZE_STRING);
+    
+    // 验证数据
+    $errors = [];
+    if (empty($name) || strlen($name) > 100) {
+        $errors[] = "Name cannot be empty and must not exceed 100 characters";
+    }
+    
+    if (empty($phone)) {
+        $errors[] = "Please enter your phone number";
+    } else if (strlen($phone) > 20) {
+        $errors[] = "Phone number cannot exceed 20 characters";
+    } else if (!preg_match("/^[0-9\-\+\(\)\s]+$/", $phone)) {
+        $errors[] = "Please enter a valid phone number format";
+    }
+    
+    if (empty($email) || !filter_var($email, FILTER_VALIDATE_EMAIL) || strlen($email) > 100) {
+        $errors[] = "Please enter a valid email address";
+    }
+    
+    if (empty($msg) || strlen($msg) > 1000) {
+        $errors[] = "Message cannot be empty and must not exceed 1000 characters";
+    }
+
+    $pdo = new PDO(
+        "mysql:host=" . DB_HOST . ";dbname=" . DB_NAME,
+        DB_USER,
+        DB_PASS,
+        array(
+            PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
+            PDO::ATTR_EMULATE_PREPARES => false
+        )
+    );
+    
+    if (empty($errors)) {
+        try {
+            $stmt = $pdo->prepare("INSERT INTO contacts (name, phone, email, message) VALUES (?, ?, ?, ?)");
+            $stmt->execute([$name, $phone, $email, $msg]);
+            $message = '<div class="alert alert-success">Thank you for your message. We will contact you soon!</div>';
+        } catch (PDOException $e) {
+            $message = '<div class="alert alert-danger">Sorry, submission failed. Please try again later.</div>';
+        }
+    } else {
+        $message = '<div class="alert alert-danger">' . implode('<br>', $errors) . '</div>';
+    }
+}
 ?>
 
 <div id="page" class="site">
@@ -41,7 +94,8 @@ include 'includes/header.php';
                         <hr>
                     </div>
                     <div class="col-md-12">
-                        <form class="form-contact" action="contact.php" method="post">
+                        <form class="form-contact" method="post">
+                            <?php echo $message; ?>
                             <h3>Contact form</h3>
                             <div class="row">
                                 <div class="col-md-4 form-group">

@@ -2,7 +2,7 @@
 $clients_config = [
     'page_title' => 'Our Clients',
     'hero' => [
-        'background_image' => 'images/solutions/solution.png',
+        'background_image' => 'images/clients/client-bg.jpg',
         'title' => 'Our Clients',
         'breadcrumbs' => [
             ['title' => 'Home', 'link' => 'index.php'],

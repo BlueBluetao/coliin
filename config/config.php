@@ -340,7 +340,7 @@ $hero_sections = [
 define('DB_HOST', 'localhost');
 define('DB_NAME', 'collin');
 define('DB_USER', 'root');
-define('DB_PASS', '111111');
+define('DB_PASS', '123456');
 
 // Email configuration
 define('SMTP_HOST', 'smtp.163.com');

@@ -6,7 +6,7 @@ include 'includes/navigation.php';
 
 <main class="main-content">
     <!-- Page Header -->
-    <div class="page-header" style="background: url('images/subheader-about.jpg') no-repeat center center;">
+    <div class="page-header" style="background: url('images/about/about-bg.jpg') no-repeat center center;">
         <div class="container">
             <div class="breadc-box no-line">
                 <div class="row">
