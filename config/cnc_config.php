@@ -22,7 +22,7 @@ $cnc_config = [
         ]
     ],
     'img' => [
-        'overview' => 'images/cnc/cnc-machine.jpg'
+        'overview' => asset_url('images/cnc/cnc-machine.jpg')
     ],
     'services' => [
         [
@@ -61,29 +61,29 @@ $cnc_config = [
     ],
     'materials' => [
         [
-            'image' => 'images/cnc/s1.jpg',
+            'image' => asset_url('images/cnc/s1.jpg'),
             'title' => 'Aluminum',
             'description' => '6061, 7075, 5052'
         ],
         [
-            'image' => 'images/cnc/s3.jpg',
+            'image' => asset_url('images/cnc/s3.jpg'),
             'title' => 'Steel',
             'description' => '4140, 4340, Tool Steel'
         ],
         [
-            'image' => 'images/cnc/s2.jpg',
+            'image' => asset_url('images/cnc/s2.jpg'),
             'title' => 'Stainless Steel',
             'description' => '303, 304, 316'
         ],
         [
-            'image' => 'images/cnc/m6.png',
+            'image' => asset_url('images/cnc/m6.png'),
             'title' => 'Engineering Plastics',
             'description' => 'Delrin, PEEK, Nylon'
         ]
     ],
     'support_services' => [
         [
-            'image' => 'images/cnc/documentation.jpeg',
+            'image' => asset_url('images/cnc/documentation.jpeg'),
             'title' => 'Online Documentation',
             'items' => [
                 'Dimensional Reports',
@@ -93,7 +93,7 @@ $cnc_config = [
             ]
         ],
         [
-            'image' => 'images/cnc/design.jpeg',
+            'image' => asset_url('images/cnc/design.jpeg'),
             'title' => 'Design Services',
             'items' => [
                 'Design Optimization',

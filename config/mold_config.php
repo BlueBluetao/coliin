@@ -87,28 +87,23 @@ $processes = [
 // 应用领域配置
 $applications = [
     [
-        'image' => 'images/mold/1.jpg',
+        'image' => asset_url('images/mold/1.jpg'),
         'title' => 'Automotive',
         'description' => 'Interior & exterior parts, under-hood components'
     ],
     [
-        'image' => 'images/mold/2.jpg',
+        'image' => asset_url('images/mold/2.jpg'),
         'title' => 'Electronics',
         'description' => 'Housings, connectors, precision components'
     ],
     [
-        'image' => 'images/mold/3.jpg',
+        'image' => asset_url('images/mold/3.jpg'),
         'title' => 'Medical',
         'description' => 'Medical devices, laboratory equipment'
     ],
     [
-        'image' => 'images/mold/4.jpg',
+        'image' => asset_url('images/mold/4.jpg'),
         'title' => 'Aerospace',
         'description' => 'Aerospace components, satellite parts'
-    ],
-    // [
-    //     'image' => 'images/mold/m5.png',
-    //     'title' => 'Consumer Products',
-    //     'description' => 'Consumer electronics, appliances, automotive parts'
-    // ]
+    ]
 ]; 

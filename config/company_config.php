@@ -17,6 +17,48 @@ $company_config = [
         ]
     ],
     
+    // Company overview images
+    'overview_images' => [
+        'facility' => asset_url('images/company/facility.jpg'),
+        'team' => asset_url('images/company/team.jpg'),
+        'equipment' => asset_url('images/company/equipment.jpg')
+    ],
+    
+    // Company milestones
+    'milestones' => [
+        [
+            'year' => '2014',
+            'title' => 'Company Founded',
+            'image' => asset_url('images/company/milestone-1.jpg'),
+            'description' => 'Established in Shanghai'
+        ],
+        [
+            'year' => '2016',
+            'title' => 'Global Expansion',
+            'image' => asset_url('images/company/milestone-2.jpg'),
+            'description' => 'Expanded to North America'
+        ],
+        [
+            'year' => '2018',
+            'title' => 'Digital Transformation',
+            'image' => asset_url('images/company/milestone-3.jpg'),
+            'description' => 'Launched digital platform'
+        ],
+        [
+            'year' => '2020',
+            'title' => 'Industry Leadership',
+            'image' => asset_url('images/company/milestone-4.jpg'),
+            'description' => 'Became industry leader'
+        ]
+    ],
+    
+    // Company certificates
+    'certificates' => [
+        'iso9001' => asset_url('images/company/iso9001.jpg'),
+        'iso14001' => asset_url('images/company/iso14001.jpg'),
+        'as9100' => asset_url('images/company/as9100.jpg')
+    ],
+    
     // Statistics
     'stats' => [
         'suppliers' => [

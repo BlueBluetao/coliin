@@ -3,7 +3,7 @@
 
 // Page Header
 define('INNOVATION_PAGE_TITLE', 'Precision & Innovation');
-define('INNOVATION_HEADER_BG', 'images/solutions/solution.png');
+define('INNOVATION_HEADER_BG', asset_url('images/solutions/solution.png'));
 
 // Skilled Craftsmanship Section
 define('CRAFTSMANSHIP_TITLE', 'Precision Manufacturing Excellence');
@@ -37,7 +37,7 @@ define('MATERIALS_SECTION_DESC', 'Utilizing cutting-edge materials and treatment
 
 $MATERIALS_DATA = [
     [
-        'image' => 'images/innovation/m1.png',
+        'image' => asset_url('images/innovation/m1.png'),
         'title' => 'High-Strength Alloy Steel',
         'description' => 'Premium alloy steels offering exceptional strength and durability',
         'features' => [
@@ -47,7 +47,7 @@ $MATERIALS_DATA = [
         ]
     ],
     [
-        'image' => 'images/innovation/m2.png',
+        'image' => asset_url('images/innovation/m2.png'),
         'title' => 'Premium Stainless Steel',
         'description' => 'High-grade stainless steel with excellent corrosion resistance',
         'features' => [
@@ -57,7 +57,7 @@ $MATERIALS_DATA = [
         ]
     ],
     [
-        'image' => 'images/innovation/m3.png',
+        'image' => asset_url('images/innovation/m3.png'),
         'title' => 'Specialized Alloys',
         'description' => 'Custom alloy solutions for specific application requirements',
         'features' => [
@@ -92,15 +92,15 @@ $INNOVATION_PROCESS = [
 
 $SOLUTIONS_SHOWCASE = [
     [
-        'image' => 'images/solutions/solution.png',
+        'image' => asset_url('images/solutions/solution.png'),
         'title' => 'Advanced Product Design'
     ],
     [
-        'image' => 'images/solutions/solution.png',
+        'image' => asset_url('images/solutions/solution.png'),
         'title' => 'Process Innovation'
     ],
     [
-        'image' => 'images/solutions/solution.png',
+        'image' => asset_url('images/solutions/solution.png'),
         'title' => 'Quality Excellence'
     ]
 ];

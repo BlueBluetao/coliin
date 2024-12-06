@@ -2,7 +2,7 @@
 // Page Configuration
 $advantages_config = [
     'page_title' => 'Technology Advantages',
-    'hero_background' => 'images/solutions/solution.png',
+    'hero_background' => asset_url('images/solutions/solution.png'),
     
     // Overview Section
     'overview' => [

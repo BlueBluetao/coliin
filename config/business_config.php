@@ -3,7 +3,7 @@ $business_config = [
     'hero' => [
         'tag' => 'Global Manufacturing Solutions',
         'title' => 'Digital Manufacturing Excellence',
-        'background_image' => 'images/solutions/solution.png',
+        'background_image' => asset_url('images/solutions/solution.png'),
         'description' => 'Empowering industries with advanced manufacturing solutions'
     ],
     
@@ -17,7 +17,7 @@ $business_config = [
             '99% On-time Delivery Rate',
             'Global Supply Chain Network'
         ],
-        'image' => 'images/business/overview.jpg',
+        'image' => asset_url('images/business/overview.jpg'),
         'cta_text' => 'Explore Our Solutions',
         'cta_link' => '#',
         'stats' => [
@@ -49,7 +49,7 @@ $business_config = [
                     'Rapid Prototyping',
                     'Complex Components'
                 ],
-                'image' => 'images/business/cnc.jpg'
+                'image' => asset_url('images/business/cnc.jpg')
             ],
             [
                 'icon' => 'fas fa-print',
@@ -60,7 +60,7 @@ $business_config = [
                     'Rapid Prototyping',
                     'Complex Geometries'
                 ],
-                'image' => 'images/business/3d-printing.jpg'
+                'image' => asset_url('images/business/3d-printing.jpg')
             ],
             [
                 'icon' => 'fas fa-layer-group',
@@ -71,7 +71,7 @@ $business_config = [
                     'Custom Fabrication',
                     'Surface Treatment'
                 ],
-                'image' => 'images/business/sheet-metal.jpg'
+                'image' => asset_url('images/business/sheet-metal.jpg')
             ]
         ]
     ],
@@ -140,9 +140,9 @@ $business_config = [
         'title' => 'Trusted by Industry Leaders',
         'description' => 'From startups to industry giants like GE, Hillman, and Lippert, we help companies achieve product innovation.',
         'logos' => [
-            'images/clients/ge-logo.png',
-            'images/clients/hillman-logo.png',
-            'images/clients/lippert-logo.png'
+            asset_url('images/clients/ge-logo.png'),
+            asset_url('images/clients/hillman-logo.png'),
+            asset_url('images/clients/lippert-logo.png')
         ]
     ]
 ];

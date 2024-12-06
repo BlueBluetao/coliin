@@ -68,40 +68,40 @@ $specifications = [
 // 应用领域配置
 $applications = [
     [
-        'image' => 'images/sheet/m1.png',
+        'image' => asset_url('images/sheet/m1.png'),
         'title' => 'Industrial Equipment',
         'category' => 'Industrial',
-        'description' => 'Precision sheet metal fabrication for industrial machinery covers, equipment frames, control cabinets, and custom enclosures with high durability and precise specifications.'
+        'description' => '...'
     ],
     [
-        'image' => 'images/sheet/m2.png',
+        'image' => asset_url('images/sheet/m2.png'),
         'title' => 'Electronics Housing',
         'category' => 'Electronics',
-        'description' => 'Professional manufacturing of electronics chassis, server racks, network cabinets, and EMI shielding enclosures with precise cutouts and superior finish.'
+        'description' => '...'
     ],
     [
-        'image' => 'images/sheet/m3.png',
+        'image' => asset_url('images/sheet/m3.png'),
         'title' => 'Automotive Parts',
         'category' => 'Automotive',
-        'description' => 'Custom automotive components including body panels, brackets, mounting frames, and structural parts with strict quality control and material traceability.'
+        'description' => '...'
     ],
     [
-        'image' => 'images/sheet/m4.png',
+        'image' => asset_url('images/sheet/m4.png'),
         'title' => 'Medical Equipment',
         'category' => 'Medical',
-        'description' => 'High-precision medical device enclosures, surgical equipment parts, and healthcare facility installations meeting strict medical industry standards and regulations.'
+        'description' => '...'
     ],
     [
-        'image' => 'images/sheet/m5.png',
+        'image' => asset_url('images/sheet/m5.png'),
         'title' => 'Aerospace Components',
         'category' => 'Aerospace',
-        'description' => 'Advanced aerospace sheet metal components with high-precision tolerances, specialized materials, and complete documentation for full traceability.'
+        'description' => '...'
     ],
     [
-        'image' => 'images/sheet/m7.png',
+        'image' => asset_url('images/sheet/m7.png'),
         'title' => 'Consumer Products',
         'category' => 'Consumer',
-        'description' => 'Versatile sheet metal solutions for consumer product housings, appliance parts, and decorative panels with aesthetic finish and cost-effective production.'
+        'description' => '...'
     ]
 ];
 

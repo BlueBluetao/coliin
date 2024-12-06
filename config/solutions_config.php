@@ -48,11 +48,13 @@ $smart_quoting_config = [
         [
             'number' => '01',
             'title' => 'Upload Design',
+            'image' => asset_url('images/solutions/upload.png'),
             'description' => 'Support for multiple CAD formats'
         ],
         [
             'number' => '02',
             'title' => 'Instant Analysis',
+            'image' => asset_url('images/solutions/analysis.png'),
             'description' => 'Automated DFM check'
         ],
         [

@@ -98,27 +98,27 @@ $axis_config = [
         'title' => 'Success Stories',
         'items' => [
             [
-                'image' => 'images/axis/m1.png',
+                'image' => asset_url('images/axis/m1.png'),
                 'title' => 'Aerospace Component',
                 'description' => 'Complex turbine blade manufacturing for aerospace client'
             ],
             [
-                'image' => 'images/axis/m2.png',
+                'image' => asset_url('images/axis/m2.png'),
                 'title' => 'Medical Device',
                 'description' => 'High-precision medical device components'
             ],
             [
-                'image' => 'images/axis/m3.png',
+                'image' => asset_url('images/axis/m3.png'),
                 'title' => 'Automotive Parts',
                 'description' => 'Custom automotive component manufacturing'
             ],
             [
-                'image' => 'images/axis/m4.png',
+                'image' => asset_url('images/axis/m4.png'),
                 'title' => 'Industrial Equipment',
                 'description' => 'Precision industrial equipment parts'
             ],
             [
-                'image' => 'images/axis/m5.png',
+                'image' => asset_url('images/axis/m5.png'),
                 'title' => 'Mechanical equipment',
                 'description' => 'Vertical machining center two lines and one hard'
             ]

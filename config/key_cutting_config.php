@@ -88,7 +88,7 @@ $key_cutting_config = [
     // Products
     'products' => [
         [
-            'image' => 'images/key_cutting/1.jpg',
+            'image' => asset_url('images/key_cutting/1.jpg'),
             'title' => 'Automatic Key Machine',
             'model' => 'SEC-E9z',
             'features' => [
@@ -99,7 +99,7 @@ $key_cutting_config = [
             ]
         ],
         [
-            'image' => 'images/key_cutting/2.jpg',
+            'image' => asset_url('images/key_cutting/2.jpg'),
             'title' => 'Mobile Key Cutting Machine',
             'model' => 'SEC-E9',
             'features' => [
@@ -110,7 +110,7 @@ $key_cutting_config = [
             ]
         ],
         [
-            'image' => 'images/key_cutting/3.jpg',
+            'image' => asset_url('images/key_cutting/3.jpg'),
             'title' => 'Professional Key Machine',
             'model' => 'SEC-E9 Pro',
             'features' => [

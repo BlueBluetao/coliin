@@ -63,32 +63,32 @@ $product_features = [
 // 应用场景
 $applications = [
     [
-        'image' => 'images/auto/4.jpg',
+        'image' => asset_url('images/auto/4.jpg'),
         'title' => 'VVDI-PROG',
         'description' => 'VVDI-PROG is an advanced programming tool that supports programming various car keys and remotes.'
     ],
     [
-        'image' => 'images/auto/5.jpg',
+        'image' => asset_url('images/auto/5.jpg'),
         'title' => 'Key Tool Max',
         'description' => 'An efficient key tool for programming and duplicating various car keys.'
     ],
     [
-        'image' => 'images/auto/6.jpg',
+        'image' => asset_url('images/auto/6.jpg'),
         'title' => 'VVDI2',
         'description' => 'VVDI2 is a professional automotive key programming tool suitable for various car models.'
     ],
     [
-        'image' => 'images/auto/1.jpg',
+        'image' => asset_url('images/auto/1.jpg'),
         'title' => 'Mini Key Tool',
         'description' => 'A compact and portable key tool suitable for quick key programming.'
     ],
     [
-        'image' => 'images/auto/2.jpg',
+        'image' => asset_url('images/auto/2.jpg'),
         'title' => 'Car Remotes',
         'description' => 'Car remotes compatible with various models, providing convenient remote control features.'
     ],
     [
-        'image' => 'images/auto/3.jpg',
+        'image' => asset_url('images/auto/3.jpg'),
         'title' => 'Key Tool Plus',
         'description' => 'A multifunctional key tool that supports programming and duplicating various key types.'
     ]

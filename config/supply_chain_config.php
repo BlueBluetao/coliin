@@ -48,7 +48,7 @@ $supply_chain_services = [
     [
         'title' => 'Intelligent Pricing System',
         'description' => 'Advanced AI-driven pricing system that delivers precise cost control and operational efficiency optimization through real-time market analysis',
-        'image' => 'images/supply-chain/m1.png',
+        'image' => asset_url('images/supply-chain/m1.png'),
         'features' => [
             'Real-time Market Data Analysis',
             'Multi-dimensional Cost Modeling',
@@ -59,7 +59,7 @@ $supply_chain_services = [
     [
         'title' => 'Supply Chain Integration',
         'description' => 'End-to-end supply chain management platform integrating procurement, logistics, and inventory optimization',
-        'image' => 'images/supply-chain/m2.png',
+        'image' => asset_url('images/supply-chain/m2.png'),
         'features' => [
             'Inventory Optimization',
             'Demand Forecasting',
@@ -70,7 +70,7 @@ $supply_chain_services = [
     [
         'title' => 'Risk Control & Early Warning',
         'description' => 'Comprehensive supply chain risk monitoring and alert system ensuring operational stability and continuity',
-        'image' => 'images/supply-chain/m3.png',
+        'image' => asset_url('images/supply-chain/m3.png'),
         'features' => [
             'Real-time Risk Monitoring',
             'Price Fluctuation Analytics',

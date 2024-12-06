@@ -54,21 +54,21 @@ $main_menu = [
 // 首页幻灯片配置
 $home_sliders = [
     [
-        'image' => 'demo/300x200.png',
+        'image' => asset_url('demo/300x200.png'),
         'title' => 'The leading provider of Industrial',
         'subtitle' => 'WELCOME TO COLIIN...!',
         'button_text' => 'Explore now',
         'button_link' => '#'
     ],
     [
-        'image' => 'demo/300x200.png',
+        'image' => asset_url('demo/300x200.png'),
         'title' => 'Leader in power Automation',
         'subtitle' => 'WELCOME TO COLIIN...!',
         'button_text' => 'Explore now',
         'button_link' => '#'
     ],
     [
-        'image' => 'demo/300x200.png',
+        'image' => asset_url('demo/300x200.png'),
         'title' => 'Best solution for Industrial & Factories',
         'subtitle' => 'WELCOME TO COLIIN...!',
         'button_text' => 'Explore now',
@@ -79,37 +79,37 @@ $home_sliders = [
 // 服务项目配置
 $services = [
     [
-        'icon' => 'demo/300x200.png',
+        'icon' => asset_url('demo/300x200.png'),
         'title' => 'Transportation & Distribution',
         'description' => 'By specializing in the transportation of goods in and around the Midwestern United States, we are able to...',
         'link' => 'services-detail.php'
     ],
     [
-        'icon' => 'demo/300x200.png',
+        'icon' => asset_url('demo/300x200.png'),
         'title' => 'Oil & Gas exploited',
         'description' => 'We are a leading explorer for new oil and gas fields. We do this not only to replenish the reserves we produce from current fields, but also to meet...',
         'link' => 'services-detail.php'
     ],
     [
-        'icon' => 'images/services-icon-3.png',
+        'icon' => asset_url('images/services-icon-3.png'),
         'title' => 'Automotive Manufacturing',
         'description' => 'The automotive industry is now undergoing the greatest upheaval in its history due to the advancement...',
         'link' => 'services-detail.php'
     ],
     [
-        'icon' => 'images/services-icon-4.png',
+        'icon' => asset_url('images/services-icon-4.png'),
         'title' => 'Industrial Construction',
         'description' => 'Diam vehicula platea blandit malesua quam hac vehicula id non leo dui et dapibu turpis quis, tempor augue duis ut justo...',
         'link' => 'services-detail.php'
     ],
     [
-        'icon' => 'images/services-icon-5.png',
+        'icon' => asset_url('images/services-icon-5.png'),
         'title' => 'Manufacture',
         'description' => 'With IoT business solutions, manufacturers have the power not only to improve and automate production, but expand their value chain...',
         'link' => 'services-detail.php'
     ],
     [
-        'icon' => 'images/services-icon-6.png',
+        'icon' => asset_url('images/services-icon-6.png'),
         'title' => 'Green Energy',
         'description' => 'A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart...',
         'link' => 'services-detail.php'
@@ -127,7 +127,7 @@ $solutions_data = [
                 'icon' => 'fas fa-key',
                 'title' => 'Key Cutting Solutions',
                 'description' => 'Professional key cutting machines and systems for automotive and security industries.',
-                'image' => 'images/demo/300x200.png',
+                'image' => asset_url('images/demo/300x200.png'),
                 'features' => ['High Precision Cutting', 'Multiple Key Types', 'Advanced Security Features'],
                 'category' => 'tools'
             ],
@@ -135,7 +135,7 @@ $solutions_data = [
                 'icon' => 'fas fa-tools',
                 'title' => 'Auto Tools',
                 'description' => 'Professional-grade automotive tools and diagnostic equipment.',
-                'image' => 'images/demo/300x200.png',
+                'image' => asset_url('images/demo/300x200.png'),
                 'features' => ['Hand Tools', 'Power Tools', 'Diagnostic Equipment'],
                 'category' => 'tools'
             ],
@@ -143,7 +143,7 @@ $solutions_data = [
                 'icon' => 'fas fa-cogs',
                 'title' => '5-Axis Machining',
                 'description' => 'Advanced 5-axis CNC machining for complex components.',
-                'image' => 'images/demo/300x200.png',
+                'image' => asset_url('images/demo/300x200.png'),
                 'features' => ['Complex Geometries', 'High Precision', 'Multi-axis Control'],
                 'category' => 'machining'
             ],
@@ -151,7 +151,7 @@ $solutions_data = [
                 'icon' => 'fas fa-print',
                 'title' => '3D Printing',
                 'description' => 'Industrial additive manufacturing solutions.',
-                'image' => 'images/demo/300x200.png',
+                'image' => asset_url('images/demo/300x200.png'),
                 'features' => ['Rapid Prototyping', 'Multiple Materials', 'Complex Parts'],
                 'category' => 'automation'
             ],
@@ -159,7 +159,7 @@ $solutions_data = [
                 'icon' => 'fas fa-industry',
                 'title' => 'CNC Machining',
                 'description' => 'Precision CNC machining services.',
-                'image' => 'images/demo/300x200.png',
+                'image' => asset_url('images/demo/300x200.png'),
                 'features' => ['Milling & Turning', 'High Accuracy', 'Multiple Materials'],
                 'category' => 'machining'
             ],
@@ -167,7 +167,7 @@ $solutions_data = [
                 'icon' => 'fas fa-layer-group',
                 'title' => 'Sheet Metal',
                 'description' => 'Professional sheet metal fabrication.',
-                'image' => 'images/demo/300x200.png',
+                'image' => asset_url('images/demo/300x200.png'),
                 'features' => ['Cutting & Forming', 'Welding', 'Surface Treatment'],
                 'category' => 'machining'
             ],
@@ -175,7 +175,7 @@ $solutions_data = [
                 'icon' => 'fas fa-cube',
                 'title' => 'Mold & Die',
                 'description' => 'Custom mold and die manufacturing.',
-                'image' => 'images/demo/300x200.png',
+                'image' => asset_url('images/demo/300x200.png'),
                 'features' => ['Injection Molds', 'Die Casting', 'Tool Making'],
                 'category' => 'tools'
             ]
@@ -189,18 +189,18 @@ $solutions_data = [
             [
                 'title' => 'Supplier Management',
                 'description' => 'Track supplier numbers and distribution to ensure optimal resource allocation.',
-                'image' => 'images/demo/300x200.png' // images/supplier-management.jpg
+                'image' => asset_url('images/demo/300x200.png') // images/supplier-management.jpg
             ],
             [
                 'title' => 'Algorithm Model for Pricing Optimization',
                 'description' => 'Utilizing machine learning algorithms, our system analyzes historical data in real-time to optimize pricing models, improving accuracy and reducing human error.',
-                'image' => 'images/demo/300x200.png' // images/pricing-optimization.jpg
+                'image' => asset_url('images/demo/300x200.png') // images/pricing-optimization.jpg
             ]
         ],
         'risk_control' => [
             'title' => 'Market Price Risk Control and Early Warning Mechanism',
             'description' => 'Our smart quoting system features built-in risk control and early warning mechanisms, collecting and analyzing vast amounts of data, including historical prices, transaction volumes, inventory levels, seasonal demand changes, and macroeconomic indicators. This transparency fosters collaboration among supply chain parties, accurately predicting market demand, price trends, and raw material supply conditions.',
-            'image' => 'images/demo/300x200.png' // images/risk-control.jpg
+            'image' => asset_url('images/demo/300x200.png') // images/risk-control.jpg
         ]
     ],
     'advantages' => [
@@ -232,11 +232,11 @@ $solutions_data = [
 
 // 合作伙伴配置
 $partners = [
-    ['logo' => 'images/partner-logo-1.png', 'name' => 'Partner 1'],
-    ['logo' => 'images/partner-logo-2.png', 'name' => 'Partner 2'],
-    ['logo' => 'images/partner-logo-3.png', 'name' => 'Partner 3'],
-    ['logo' => 'images/partner-logo-4.png', 'name' => 'Partner 4'],
-    ['logo' => 'images/partner-logo-5.png', 'name' => 'Partner 5']
+    ['logo' => asset_url('images/partner-logo-1.png'), 'name' => 'Partner 1'],
+    ['logo' => asset_url('images/partner-logo-2.png'), 'name' => 'Partner 2'],
+    ['logo' => asset_url('images/partner-logo-3.png'), 'name' => 'Partner 3'],
+    ['logo' => asset_url('images/partner-logo-4.png'), 'name' => 'Partner 4'],
+    ['logo' => asset_url('images/partner-logo-5.png'), 'name' => 'Partner 5']
 ];
 
 // 工作流程配置
@@ -327,11 +327,11 @@ $quote_sections = [
 $hero_sections = [
     'solutions' => [
         'title' => 'Manufacturing Solutions',
-        'background' => 'images/solutions/solution.png'
+        'background' => asset_url('images/solutions/solution.png')
     ],
     'auto-tools' => [
         'title' => 'Auto Tools',
-        'background' => 'images/solutions/solution.png'
+        'background' => asset_url('images/solutions/solution.png')
     ],
     // ... 其他页面的配置
 ];
@@ -349,3 +349,11 @@ define('SMTP_PASS', 'RKCIIOSWONAYOQIV');
 define('SMTP_PORT', 465);
 define('SMTP_FROM', 'develop_demo@163.com');
 define('ADMIN_EMAIL', '937069176@qq.com');
+
+// 在config.php中添加全局版本号配置
+
+// 添加一个辅助函数来处理资源URL
+function asset_url($path) {
+    $ASSETS_VERSION = "1.0";// 每次需要刷新缓存时更新这个版本号
+    return $path . '?v=' . $ASSETS_VERSION;
+}

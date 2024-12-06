@@ -1,7 +1,7 @@
 <?php
-require_once 'config/company_config.php';
 include 'includes/header.php';
 include 'includes/navigation.php';
+require_once 'config/company_config.php';
 ?>
 
 <main class="main-content">
