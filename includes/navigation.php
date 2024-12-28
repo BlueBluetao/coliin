@@ -39,7 +39,7 @@
         <div class="container-custom">
             <div class="row">
                 <div class="logo-brand">
-                    <a href="index.php"><img src="images/logo-test.png" alt="<?php echo SITE_NAME; ?>"></a>
+                    <a href="index.php"><img src="<?php echo COMPANY_LOGO; ?>" alt="<?php echo SITE_NAME; ?>"></a>
                 </div>
                 <div class="main-navigation">
                     <ul id="primary-menu" class="menu">

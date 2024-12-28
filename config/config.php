@@ -5,7 +5,7 @@ define('SITE_URL', 'http://localhost:8081');
 define('COMPANY_ADDRESS', ' Shanghai, China');
 define('COMPANY_PHONE', '+86 21 59186319');
 define('COMPANY_EMAIL', 'Sales@coliin.com');
-
+define('COMPANY_LOGO', 'images/logo-test.png');
 // 主导航菜单配置
 $main_menu = [
     [
