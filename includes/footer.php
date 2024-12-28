@@ -9,7 +9,6 @@
                             <li><a href="about-company.php">About Us</a></li>
                             <li><a href="business.php">Business</a></li>
                             <li><a href="clients.php">Clients</a></li>
-                            <li><a href="cases.php">Cases</a></li>
                         </ul>
                     </div>
                 </div>
