@@ -77,12 +77,12 @@
 
 /* 修改slider相关样式 */
 .slider {
-    max-height: 450px; /* 从500px降低到450px */
+    max-height: 450px;
     overflow: hidden;
 }
 
 .slider-item {
-    height: 450px; /* 从500px降低到450px */
+    height: 450px;
     position: relative;
 }
 
@@ -106,25 +106,18 @@
     margin-bottom: 15px;
 }
 
-/* 滑块响应式样式 */
-.slider {
-    max-height: 600px;
-    overflow: hidden;
-}
-
-.slider-item {
-    height: 600px;
-    position: relative;
-}
-
 /* 添加媒体查询，处理中等屏幕 */
 @media (max-width: 991px) {
     .slider {
-        max-height: 400px; /* 从500px降低到400px */
+        max-height: 400px;
     }
     
     .slider-item {
         height: 400px;
+    }
+    
+    .slider-content {
+        padding: 35px 0;
     }
     
     .slider-content h1 {
@@ -139,7 +132,7 @@
 /* 添加媒体查询，处理小屏幕 */
 @media (max-width: 767px) {
     .slider {
-        max-height: 350px; /* 从400px降低到350px */
+        max-height: 350px;
     }
     
     .slider-item {
@@ -164,7 +157,7 @@
 /* 添加媒体查询，处理超小屏幕 */
 @media (max-width: 480px) {
     .slider {
-        max-height: 250px; /* 从300px降低到250px */
+        max-height: 250px;
     }
     
     .slider-item {

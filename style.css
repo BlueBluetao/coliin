@@ -2962,7 +2962,7 @@ div:last-child >.process .process-icon:after {
 --------------------------------------------------------------*/
 .slider .slider-content {
   position: absolute; 
-  bottom: 240px; 
+  bottom: 140px; 
   margin-top: -1px;
 }
 .slider .slider-content h1 {
