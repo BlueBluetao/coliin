@@ -80,29 +80,29 @@ $applications = [
         'description' => '...'
     ],
     [
-        'image' => asset_url('images/sheet/m3.png'),
+        'image' => asset_url('images/sheet/s3.jpg'),
         'title' => 'Automotive Parts',
         'category' => 'Automotive',
         'description' => '...'
     ],
     [
-        'image' => asset_url('images/sheet/m4.png'),
+        'image' => asset_url('images/sheet/s4.jpg'),
         'title' => 'Medical Equipment',
         'category' => 'Medical',
         'description' => '...'
     ],
-    [
-        'image' => asset_url('images/sheet/m5.png'),
-        'title' => 'Aerospace Components',
-        'category' => 'Aerospace',
-        'description' => '...'
-    ],
-    [
-        'image' => asset_url('images/sheet/m7.png'),
-        'title' => 'Consumer Products',
-        'category' => 'Consumer',
-        'description' => '...'
-    ]
+    // [
+    //     'image' => asset_url('images/sheet/m5.png'),
+    //     'title' => 'Aerospace Components',
+    //     'category' => 'Aerospace',
+    //     'description' => '...'
+    // ],
+    // [
+    //     'image' => asset_url('images/sheet/m7.png'),
+    //     'title' => 'Consumer Products',
+    //     'category' => 'Consumer',
+    //     'description' => '...'
+    // ]
 ];
 
 // 服务概览配置
