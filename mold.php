@@ -41,10 +41,10 @@ require_once 'includes/solution-hero-section.php';
                             <div class="app-image">
                                 <img src="<?php echo $app['image']; ?>" alt="<?php echo $app['title']; ?>">
                             </div>
-                            <div class="app-info">
+                            <!-- <div class="app-info">
                                 <h3><?php echo $app['title']; ?></h3>
                                 <p><?php echo $app['description']; ?></p>
-                            </div>
+                            </div> -->
                         </div>
                         <?php endforeach; ?>
                     </div>
