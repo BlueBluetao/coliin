@@ -482,8 +482,8 @@
             autoplay: true,
             autoplaySpeed: 6000,
             adaptiveHeight: true,
-            prevArrow: '<button type="button" class="prev-nav"><i class="icon ion-ios-arrow-dropleft"></i></button>',
-            nextArrow: '<button type="button" class="next-nav"><i class="icon ion-ios-arrow-dropright"></i></button>',
+            prevArrow: '<button type="button" class="prev-nav"><i class="icon ion-ios-arrow-dropright"></i></button>',
+            nextArrow: '<button type="button" class="next-nav"><i class="icon ion-ios-arrow-dropleft"></i></button>',
             responsive : [      
                 {
                     breakpoint: 991,
