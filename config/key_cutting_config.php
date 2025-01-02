@@ -79,7 +79,7 @@ $key_cutting_config = [
             'description' => 'Extensive key codes library'
         ],
         [
-            'icon' => 'ion-md-cloud',
+            'icon' => 'ion-md-lock',
             'title' => 'Security',
             'description' => 'Advanced security features'
         ]

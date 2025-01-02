@@ -1,5 +1,5 @@
 <?php
-// 滑块数据
+// 首页幻灯片配置
 $slider_data = [
     [
         'image' => asset_url('images/slider/slider-3.png'),
@@ -76,42 +76,42 @@ $projects_data = [
         'image' => asset_url('images/index/m1.png'),
         'meta' => 'Key Cutting Innovation | 2024',
         'title' => 'Smart Key Cutting System',
-        'description' => 'Pioneering intelligent key cutting technology with integrated data processing, security protocols, and automated control systems. Revolutionizing traditional key duplication with smart encoding and precision manufacturing.',
+        'description' => 'Advanced key cutting system integrating smart encoding and automated control for precision manufacturing.',
         'link' => 'key-cutting.php'
     ],
     [
         'image' => asset_url('images/index/m2.png'),
         'meta' => 'Automation Technology | 2024',
         'title' => 'Intelligent Key Adaptation',
-        'description' => 'Developed advanced key adaptation machine combining sensor technology, data processing, and CNC automation. Achieving high-precision key duplication for modern security requirements with real-time pressure monitoring.',
+        'description' => 'High-precision key duplication system combining sensor technology and CNC automation.',
         'link' => 'key-cutting.php'
     ],
     [
         'image' => asset_url('images/index/m3.png'),
         'meta' => 'Security Innovation | 2024',
         'title' => 'Smart Chip Key Configuration',
-        'description' => 'Evolution from basic home keys to smart chip car keys. Integrating pressure sensor technology with real-time monitoring systems for precise cutting control and enhanced security features.',
+        'description' => 'Advanced chip key programming system with real-time monitoring and enhanced security features.',
         'link' => 'key-cutting.php'
     ],
     [
         'image' => asset_url('images/index/m4.png'),
         'meta' => 'Material Innovation | 2024',
         'title' => 'Laser Marking Innovation',
-        'description' => 'Advanced laser marking system development with new material applications. Implementing cutting-edge technology for precise marking and identification in security applications.',
+        'description' => 'State-of-the-art laser marking system for precise identification in security applications.',
         'link' => 'key-cutting.php'
     ],
     [
         'image' => asset_url('images/index/m5.png'),
         'meta' => 'Security Systems | 2024',
         'title' => 'Multi-Purpose Key Adapter',
-        'description' => 'Revolutionary multi-purpose intelligent key adapter development. Combining advanced security protocols with versatile adaptation capabilities for next-generation security solutions.',
+        'description' => 'Versatile key adapter system with advanced security protocols for next-gen solutions.',
         'link' => 'key-cutting.php'
     ],
     [
         'image' => asset_url('images/index/m6.png'),
         'meta' => 'Industry Innovation | 2024',
         'title' => 'Automated Security Solutions',
-        'description' => 'Comprehensive security automation system integrating smart recognition, data processing, and precision manufacturing. Setting new industry standards for security and key management.',
+        'description' => 'Comprehensive security system integrating smart recognition and precision manufacturing.',
         'link' => 'automovie-tools.php'
     ]
 ];

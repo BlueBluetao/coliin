@@ -51,30 +51,6 @@ $main_menu = [
     ]
 ];
 
-// 首页幻灯片配置
-$home_sliders = [
-    [
-        'image' => asset_url('demo/300x200.png'),
-        'title' => 'The leading provider of Industrial',
-        'subtitle' => 'WELCOME TO COLIIN...!',
-        'button_text' => 'Explore now',
-        'button_link' => '#'
-    ],
-    [
-        'image' => asset_url('demo/300x200.png'),
-        'title' => 'Leader in power Automation',
-        'subtitle' => 'WELCOME TO COLIIN...!',
-        'button_text' => 'Explore now',
-        'button_link' => '#'
-    ],
-    [
-        'image' => asset_url('demo/300x200.png'),
-        'title' => 'Best solution for Industrial & Factories',
-        'subtitle' => 'WELCOME TO COLIIN...!',
-        'button_text' => 'Explore now',
-        'button_link' => '#'
-    ]
-];
 
 // 服务项目配置
 $services = [
@@ -230,15 +206,6 @@ $solutions_data = [
     ]
 ];
 
-// 合作伙伴配置
-$partners = [
-    ['logo' => asset_url('images/partner-logo-1.png'), 'name' => 'Partner 1'],
-    ['logo' => asset_url('images/partner-logo-2.png'), 'name' => 'Partner 2'],
-    ['logo' => asset_url('images/partner-logo-3.png'), 'name' => 'Partner 3'],
-    ['logo' => asset_url('images/partner-logo-4.png'), 'name' => 'Partner 4'],
-    ['logo' => asset_url('images/partner-logo-5.png'), 'name' => 'Partner 5']
-];
-
 // 工作流程配置
 $work_process = [
     [
@@ -291,50 +258,6 @@ $config = [
     'maintenance_mode' => false
 ];
 
-// 报价部分配置
-$quote_sections = [
-    'auto-tools' => [
-        'title' => 'Let us know what you need',
-        'description' => 'Professional automotive tools and solutions'
-    ],
-    'cnc' => [
-        'title' => 'Let us know what you need',
-        'description' => 'Professional CNC machining services'
-    ],
-    'mold' => [
-        'title' => 'Let us know what you need',
-        'description' => 'Professional mold & die manufacturing'
-    ],
-    'sheet-metal' => [
-        'title' => 'Let us know what you need',
-        'description' => 'Professional sheet metal fabrication services'
-    ],
-    '3d-printing' => [
-        'title' => 'Let us know what you need',
-        'description' => 'Professional 3D printing solutions'
-    ],
-    '5-axis' => [
-        'title' => 'Let us know what you need',
-        'description' => 'Precision 5-axis machining solutions'
-    ],
-    'key-cutting' => [
-        'title' => 'Let us know what you need',
-        'description' => 'Professional key cutting equipment'
-    ]
-];
-
-// Hero Section 配置
-$hero_sections = [
-    'solutions' => [
-        'title' => 'Manufacturing Solutions',
-        'background' => asset_url('images/solutions/solution.png')
-    ],
-    'auto-tools' => [
-        'title' => 'Auto Tools',
-        'background' => asset_url('images/solutions/solution.png')
-    ],
-    // ... 其他页面的配置
-];
 
 // Database configuration
 define('DB_HOST', 'localhost');
